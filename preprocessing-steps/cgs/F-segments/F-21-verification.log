@@ -1,0 +1,30 @@
+[flopsy5:preprocessing-steps/cgs/G-segments] terui% fep asir
+This is Risa/Asir, full GMP Version 20210326 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision: 1.157 $ (20200320), Copyright 2000-2019, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[1938] load("F-21-1.rr")$
+[1940] F_21_1;
+[35453*((2)^(1/2))^2*z^2+(-3119864*((2)^(1/2))^3-7374224*((2)^(1/2))^2+580448*((2)^(1/2)))*z+137274016*((2)^(1/2))^4+324465856*((2)^(1/2))^3-736469888*((2)^(1/2))^2-60366592*((2)^(1/2))+4364778560,(363248495401*((2)^(1/2))^4-2895926472714*((2)^(1/2))^2)*x^2+(363248495401*((2)^(1/2))^4-2895926472714*((2)^(1/2))^2)*y^2+(-11894444061632*((2)^(1/2))^3+47413046265024*((2)^(1/2)))*z+38934205513984*((2)^(1/2))^6-97434900172544*((2)^(1/2))^4+1237022182409728*((2)^(1/2))^3-44381453578482240*((2)^(1/2))^2-4930956811562496*((2)^(1/2))+356530555367345280]
+
+---
+
+[flopsy5:~/Documents/project/ev3-cgs-qe-ik] terui% /Applications/Mathematica.app/Contents/MacOS/wolframscript
+Wolfram Language 12.0.0 Engine for Mac OS X x86 (64-bit)
+Copyright 1988-2019 Wolfram Research, Inc.
+
+In[1]:= Discriminant[35453*((2)^(1/2))^2*z^2+(-3119864*((2)^(1/2))^3-7374224*((2)^(1/2))^2+580448*((2)^(1/2)))
+*z+137274016*((2)^(1/2))^4+324465856*((2)^(1/2))^3-736469888*((2)^(1/2))^2-60366592*((2)^(1/2))+4364778560, z]
+                                                                                                              
+
+Out[1]= -694360086683648
+
+---
+
+Since the discriminant of In[1] < 0, the z component of F_21_1 has no real root.
+Thus, this partition does not contain real points.
