@@ -1,0 +1,59 @@
+[flopsy5:preprocessing-steps/cgs/G-segments] terui% fep asir
+This is Risa/Asir, full GMP Version 20210326 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision: 1.157 $ (20200320), Copyright 2000-2019, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[1938] load("F-08-1.rr")$
+[1940] F_08_1;
+[z-44*((2)^(1/2))-104,x^2+y^2-1936*((2)^(1/2))^2]
+
+---
+
+[flopsy5:~/Documents/project/ev3-cgs-qe-ik] terui% /Applications/Mathematica.app/Contents/MacOS/wolframscript
+Wolfram Language 12.0.0 Engine for Mac OS X x86 (64-bit)
+Copyright 1988-2019 Wolfram Research, Inc.
+
+In[1]:= Discriminant[z-44*((2)^(1/2))-104,z]                                                                  
+
+Out[1]= 1
+
+In[2]:= Reduce[Exists[{x,y}, x^2+y^2-1936*((2)^(1/2))^2==0], Reals]                                           
+
+Out[2]= True
+
+---
+
+With the discriminant and the QE computation, F_08_1 has a real root 
+
+-----
+
+Investigate if the root of F_08_1 is included in the root of F_08_2.
+Compute a Groebner basis of F_08_1.
+Then, calculate the normal form of F_08_2 w.r.t. F_08_1.
+
+-----
+
+[1941] GGG_08_1 = nd_gr(G_08_1, [x,y,z], 0, 2);
+[z-44*((2)^(1/2))-104,x^2+y^2-1936*((2)^(1/2))^2]
+[1943] load("G-08-2.rr");
+[1945] p_nf(G_08_2[0], GGG_08_1, [x,y,z], 2);
+(20694503194609448595488768*((2)^(1/2))^13-494948447685454300335046656*((2)^(1/2))^11+2632018104684365868716523520*((2)^(1/2))^9+20960398460828487290493861888*((2)^(1/2))^7-250881534394083092084178288640*((2)^(1/2))^5+667185278885030794624814284800*((2)^(1/2))^3)*y
+
+---
+
+In[3]:= (20694503194609448595488768*((2)^(1/2))^13-494948447685454300335046656*((2)^(1/2))^11+2632018104684365
+868716523520*((2)^(1/2))^9+20960398460828487290493861888*((2)^(1/2))^7-250881534394083092084178288640*((2)^(1/
+2))^5+667185278885030794624814284800*((2)^(1/2))^3)*y                                                         
+
+Out[3]= 526125995433827440235720474624 Sqrt[2] y
+
+---
+
+Since the normal form of F_08_2 w.r.t. F_08_1 is not equal to zero, 
+the root of F_08_1 is not included in the root of F_08_2.
+Thus, this partition contains real root(s).

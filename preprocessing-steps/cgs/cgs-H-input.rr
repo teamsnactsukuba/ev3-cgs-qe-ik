@@ -1,0 +1,12 @@
+load("KapuCGS.rr");
+load("inconsistent.rr");
+
+// Computing CGS: H with lex order
+
+H = kcgs_main([-112*c_4*s_7+16*c_4-112*c_7*s_4-136*s_4+44*2^(1/2),
+112*c_4*c_7+136*c_4-112*s_4*s_7+16*s_4+44*2^(1/2)+104-z,
+s_4^2+c_4^2-1,s_7^2+c_7^2-1],[z],[c_4,s_4,c_7,s_7],2)$
+
+// bsave(H, "H.dat")$
+
+end$

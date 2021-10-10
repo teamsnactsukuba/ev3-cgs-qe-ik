@@ -1,0 +1,32 @@
+[flopsy5:preprocessing-steps/cgs/G-segments] terui% fep asir
+This is Risa/Asir, full GMP Version 20210326 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision: 1.157 $ (20200320), Copyright 2000-2019, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[1938] load("F-02-2.rr")$
+[1940] subst(F_02_2[0], y, 0, x, 0, z, 0);
+251521193958491291648*((2)^(1/2))^11+2972523201327624355840*((2)^(1/2))^10+13498996971623491305472*((2)^(1/2))^9+27985937445887848480768*((2)^(1/2))^8+11129602387022505312256*((2)^(1/2))^7-78639957976094376722432*((2)^(1/2))^6-177601357427108204249088*((2)^(1/2))^5-124914711792756006584320*((2)^(1/2))^4+103689208848472000692224*((2)^(1/2))^3+240335975682666498359296*((2)^(1/2))^2+148678988669027233038336*((2)^(1/2))
+
+[flopsy5:~/Documents/project/ev3-cgs-qe-ik] terui% /Applications/Mathematica.app/Contents/MacOS/wolframscript
+Wolfram Language 12.0.0 Engine for Mac OS X x86 (64-bit)
+Copyright 1988-2019 Wolfram Research, Inc.
+
+In[1]:= a = 251521193958491291648*((2)^(1/2))^11+2972523201327624355840*((2)^(1/2))^10+13498996971623491305472
+*((2)^(1/2))^9+27985937445887848480768*((2)^(1/2))^8+11129602387022505312256*((2)^(1/2))^7-7863995797609437672
+2432*((2)^(1/2))^6-177601357427108204249088*((2)^(1/2))^5-124914711792756006584320*((2)^(1/2))^4+1036892088484
+72000692224*((2)^(1/2))^3+240335975682666498359296*((2)^(1/2))^2+148678988669027233038336*((2)^(1/2))         
+
+Out[1]= -105210818037756488318976 - 41278574493633957855232 Sqrt[2]
+
+In[2]:= a != 0                                                                                                
+
+Out[2]= True
+
+--- 
+
+Since x = y = z = 0 is contained in F_02_1 but not contained in F_02_2, this partition contain real point(s).

@@ -1,0 +1,20 @@
+[flopsy5:preprocessing-steps/cgs/G-segments] terui% fep asir
+This is Risa/Asir, full GMP Version 20210326 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision: 1.157 $ (20200320), Copyright 2000-2019, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[1938] load("F-07-1.rr")$
+[1940] F_07_1;
+[x^2+y^2,z^4+(-176*((2)^(1/2))-416)*z^3+(15488*((2)^(1/2))^2+54912*((2)^(1/2))+64896)*z^2+(-681472*((2)^(1/2))^3-3221504*((2)^(1/2))^2-5710848*((2)^(1/2))-4499456)*z+14992384*((2)^(1/2))^4+70873088*((2)^(1/2))^3+167518208*((2)^(1/2))^2+197976064*((2)^(1/2))+116985856]
+[1941] load("F-07-2.rr")$
+[1944] subst(F_07_2[0], x, 0, y, 0);
+0
+
+---
+
+Since x = y = 0 is contained in F_07_2, this partition does not contain real points.
