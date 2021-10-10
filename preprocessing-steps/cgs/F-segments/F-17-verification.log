@@ -1,0 +1,59 @@
+flopsy5:preprocessing-steps/cgs/G-segments] terui% fep asir
+This is Risa/Asir, full GMP Version 20210326 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision: 1.157 $ (20200320), Copyright 2000-2019, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[1938] load("F-17-1.rr")$
+[1940] F_17_1;
+[z^2+(-88*((2)^(1/2))-208)*z+3872*((2)^(1/2))^2+9152*((2)^(1/2))-16896,289*x^2+289*y^2+30976*((2)^(1/2))^2-2071552]
+
+---
+
+[flopsy5:~/Documents/project/ev3-cgs-qe-ik] terui% /Applications/Mathematica.app/Contents/MacOS/wolframscript
+Wolfram Language 12.0.0 Engine for Mac OS X x86 (64-bit)
+Copyright 1988-2019 Wolfram Research, Inc.
+
+In[1]:= Discriminant[z^2+(-88*((2)^(1/2))-208)*z+3872*((2)^(1/2))^2+9152*((2)^(1/2))-16896,z]                 
+
+Out[1]= 95360
+
+In[2]:= Reduce[Exists[{x,y}, 289*x^2+289*y^2+30976*((2)^(1/2))^2-2071552 == 0], Reals]                        
+
+Out[2]= True
+
+---
+
+With the discriminant and the QE computation, F_17_1 has a real root 
+
+-----
+
+Investigate if the root of F_17_1 is included in the root of F_17_2.
+Compute a Groebner basis of F_17_1.
+Then, calculate the normal form of F_17_2 w.r.t. F_17_1.
+
+-----
+
+[1941] GGG_17_1 = nd_gr(F_17_1, [x, y, z], 0, 2);
+[z^2+(-88*((2)^(1/2))-208)*z+3872*((2)^(1/2))^2+9152*((2)^(1/2))-16896,289*x^2+289*y^2+30976*((2)^(1/2))^2-2071552]
+[1942] load("F-17-2.rr")$
+[1944] p_nf(F_17_2[0], GGG_17_1, [x,y,z], 2);
+(27360108520112056156880896*((2)^(1/2))^11-5925452626122342938681278464*((2)^(1/2))^9+506295346422465891025936875520*((2)^(1/2))^7-21462667558583120533430623076352*((2)^(1/2))^5+453183149715839305113674737356800*((2)^(1/2))^3-3824450065861719229080701409280000*((2)^(1/2)))*y
+
+---
+
+In[3]:= (27360108520112056156880896*((2)^(1/2))^11-5925452626122342938681278464*((2)^(1/2))^9+5062953464224658
+91025936875520*((2)^(1/2))^7-21462667558583120533430623076352*((2)^(1/2))^5+453183149715839305113674737356800*
+((2)^(1/2))^3-3824450065861719229080701409280000*((2)^(1/2)))*y                                               
+
+Out[3]= -2999978005611538687760088812134400 Sqrt[2] y
+
+---
+
+Since the normal form of F_17_2 w.r.t. F_17_1 is not equal to zero, 
+the root of F_17_1 is not included in the root of F_17_2.
+Thus, this partition contains real root(s).

@@ -1,0 +1,46 @@
+[flopsy5:preprocessing-steps/cgs/G-segments] terui% fep asir
+This is Risa/Asir, full GMP Version 20210326 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision: 1.157 $ (20200320), Copyright 2000-2019, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[1938] load("F-16-1.rr")$
+[1940] F_16_1;
+[z^2+(-88*((2)^(1/2))-208)*z+3872*((2)^(1/2))^2+9152*((2)^(1/2))-24064,289*x^4+(578*y^2+30976*((2)^(1/2))^2+2071552)*x^2+289*y^4+(30976*((2)^(1/2))^2+2071552)*y^2]
+
+---
+
+[flopsy5:~/Documents/project/ev3-cgs-qe-ik] terui% /Applications/Mathematica.app/Contents/MacOS/wolframscript
+Wolfram Language 12.0.0 Engine for Mac OS X x86 (64-bit)
+Copyright 1988-2019 Wolfram Research, Inc.
+
+In[1]:= Discriminant[z^2+(-88*((2)^(1/2))-208)*z+3872*((2)^(1/2))^2+9152*((2)^(1/2))-24064, z]                
+
+Out[1]= 124032
+
+In[2]:= Reduce[Exists[{x,y}, 289*x^4+(578*y^2+30976*((2)^(1/2))^2+2071552)*x^2+289*y^4+(30976*((2)^(1/2))^2+20
+71552)*y^2 == 0], Reals]                                                                                      
+
+Out[2]= True
+
+---
+
+With the discriminant and the QE computation, F_16_1 has a real root
+With the form of 
+
+289*x^4+(578*y^2+30976*((2)^(1/2))^2+2071552)*x^2+289*y^4+(30976*((2)^(1/2))^2+2071552)*y^2
+
+x and y satisfying only x = y = 0
+
+---
+
+[1945] subst(F_16_2[0], x, 0, y, 0);
+0
+
+---
+
+Since x = y = 0 is contained in F_03_2, this partition does not contain real points.
