@@ -14,7 +14,7 @@ http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
 
 ---
 
-The affine variety of F_35_1 is equal to C^3
+The affine variety of F_35_1 is equal to C
 
 ---
 
@@ -41,5 +41,5 @@ Out[2]= -30976
 
 ---
 
-We see that none of (x,y,z) in R^3 belongs to the affine variety of F-35-2.
+We see that none of z in R belongs to the affine variety of F-35-2.
 Thus, this partition contains real point(s).
