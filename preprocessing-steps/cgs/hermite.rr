@@ -37,7 +37,7 @@ def quadratic_form (H, G, X, Ord) {
 			for(K = 0; K < N; K++) {
 				A1 = dp_true_nf(oh_base.range(0, L - 1), R[K]*Q, G1, 1);  // Get the normal form of the product, A1 = [numerator, denominator] = (numerator)/(denominator)
 				A = A1[0]/A1[1];
-				Row = make_row_nabe(A, B); // Take coefficients
+				Row = make_row_nabe(A, B); // Take the coefficients w.r.t. B
 				L1 = cons(Row, L1); // Add each row to L1
 			}
 			L1 = reverse(L1);
