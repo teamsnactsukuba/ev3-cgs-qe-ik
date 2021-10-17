@@ -2,7 +2,6 @@
 // Computing Multivarite Hermitian Quadratic Form
 // Copyright (C) Team SNAC Tsukuba, 2021
 
-
 import("oh_base.rr")$
 import("nabeshima.rr")$
 
@@ -11,7 +10,7 @@ def quadratic_form (H, G, X, Ord) {
 	// Calculate the Hermite quadratic form
 	// Inputs:
 	// 	H: a polynomial to multiply
-	// 	G: a Groebner basis of the residue class ring
+	// 	G: a Groebner basis of an ideal
 	// 	X: the list of variables in the polynomial ring
 	// 	Ord: a monomial order (defined by Asir)
 	// Output:
@@ -23,8 +22,9 @@ def quadratic_form (H, G, X, Ord) {
 	G1 = ltov(G0); // Change the list to the vector to apply dp_nf
 	L = length(G);
 	C = dp_mbase(G0); // Calculate the monomial base of the residue class ring
-	B = sort_leftl(C);  // Sort the elements
-	B = reverse(B); // added
+	B = vtol(qsort(ltov(C))); // Sort the elements
+	// B = sort_leftl(C);  // Sort the elements
+	// B = reverse(B); // added
 	N = length(B);
 	W = newmat(N, N); // The Hermitian quadratic form
 	H1 = dp_ptod(H, X); // Transform H to the distributed representation
@@ -91,6 +91,18 @@ def char_poly (A, Var) {
 	B = T * Var - A;
 	return matrix_det(B);
 
+}
+
+
+def rev(A, B) {
+
+	// A function used in qsort 
+	// for sorting decreaing order
+	// Source: Asir User's Manual, Section 6.6.9: qsort
+	// http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/asir2000/html-en/man/man_33.html#qsort
+	// (Accessed 2021-10-17)
+
+	return A>B?-1:(A<B?1:0); 
 }
 
 
