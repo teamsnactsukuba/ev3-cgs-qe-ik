@@ -1,6 +1,6 @@
 load("hermite.rr")$
-F = bload("F.dat")$
-H = bload("H.dat")$
+F = bload("../cgs/F.dat")$
+H = bload("../cgs/H.dat")$
 L = [0,1,5,8,10,12,14,17,18,24,30,31,32]$
 
 while (L != []) {
