@@ -3,7 +3,7 @@
 // Copyright (C) Team SNAC Tsukuba, 2021
 
 import("oh_base.rr")$
-import("nabeshima.rr")$
+import("inconsistent.rr")$ // From Prof. Nabeshima's CGS program: see https://www.rs.tus.ac.jp/~nabeshima/softwares.html
 
 def quadratic_form (H, G, X, Ord) {
 
