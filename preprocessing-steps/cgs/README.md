@@ -41,8 +41,8 @@ Verification of the existence of real points was executed by hand using Risa/Asi
 Logs of the verification are stored as follows:
 
 - The segments of the CGS of F: see 
-[F-segments/REAEME.md](./F-segments/REAEME.md) 
+[F-segments/](./F-segments/) 
 - The segments of the CGS of H: see 
-[H-segments/REAEME.md](./H-segments/REAEME.md) 
+[H-segments/](./H-segments/) 
 
 
