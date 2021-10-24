@@ -1,0 +1,28 @@
+F = bload("../../preprocessing-steps/cgs/F.dat")$
+H = bload("../../preprocessing-steps/cgs/H.dat")$
+L = [0,1,5,8,10,12,14,17,18,24,30,31,32]$
+Vlist = [c_1,s_1,c_4,s_4,c_7,s_7]$
+
+while (L != []) {
+    I = car(L);
+    L = cdr(L);
+    F2 = F[I][1];
+    L2 = length(F2);
+    printf("I = %a:\n", I);
+    // F2d = map(dp_ptod, F[I][1], Vlist)$
+    // print(F2)$
+    for (J = 0; J < L2; J++) {
+        // printf("ht(g_%a) = %a\n", J, dp_dtop(dp_hm(F2d[J]), Vlist));
+        printf("g_%a: %a\n", J, p_terms(F2[J], Vlist, 2));
+    }
+    print('');
+}
+printf("I = 36 (H[2]):\n")$
+F2 = H[2][1]$
+L2 = length(F2)$
+for (J = 0; J < L2; J++) {
+    printf("g_%a: %a\n", J, p_terms(F2[J], Vlist, 2));
+}
+
+
+end$

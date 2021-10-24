@@ -1,0 +1,2086 @@
+terui@poulenc:~/project/ev3/otakishuto/experiments/main-new$ ./cgs-qe-ik-2.py 
+2021-09-05 13:37:30.690887
+OpenXM_Home = /home/terui/openxm/OpenXM
+Platform = Linux
+PATH=/opt/ros/melodic/share/euslisp/jskeus/eus//Linux64/bin:/opt/ros/melodic/bin:/opt/ros/melodic/share/euslisp/jskeus/eus//Linux64/bin:/home/terui/openxm/OpenXM/bin:/opt/ros/melodic/share/euslisp/jskeus/eus//Linux64/bin:/opt/ros/melodic/share/euslisp/jskeus/eus//Linux64/bin:/home/terui/openxm/OpenXM/bin:/home/terui/.local/bin:/opt/ros/melodic/share/euslisp/jskeus/eus//Linux64/bin:/opt/ros/melodic/share/euslisp/jskeus/eus//Linux64/bin:/home/terui/openxm/OpenXM/bin:/home/terui/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+Found: /usr/bin/xterm
+ox_command_string: C=bload("/home/terui/project/ev3/otakishuto/experiments/main-new/C.dat")$
+ox_command_string: load("/home/terui/project/ev3/otakishuto/experiments/main-new/subst_char_poly.rr")$
+-----
+Case: 100
+X = -6005/47
+Y = -895/89
+Z = 16235/98
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -6005/47, -895/89, 16235/98)$
+Time for real roots counting: 0.25987815856933594
+Time for solving the system of algebraic equations: 0.1759967803955078
+theta1 = 0.0785458902815019
+theta4 = -0.831318753972544 + pi
+theta7 = -1.52577837014776
+theta1 = 0.0785458902815018
+theta4 = 1.07144138685341
+theta7 = 1.29156088101401
+theta1 = 0.0785458902815018 - pi
+theta4 = 0.732876691683961 - pi
+theta7 = -0.615125461272345 + pi
+theta1 = 0.0785458902815018 - pi
+theta4 = -0.515709687265539
+theta7 = 0.380907972138629 - pi
+Time for error estimation: 0.02191448211669922
+Time for solving inverse kinematic problem: 0.5459835529327393
+-----
+Case: 101
+X = 7325/98
+Y = -633/5
+Z = 6963/89
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 7325/98, -633/5, 6963/89)$
+Time for real roots counting: 0.3004004955291748
+Time for solving the system of algebraic equations: 0.18503427505493164
+theta1 = -1.03746404374216 + pi
+theta4 = -0.675639184958007 + pi
+theta7 = -0.967774705557455
+theta1 = -1.03746404374216
+theta4 = -1.37049688182976
+theta7 = 0.890977353120553 - pi
+theta1 = -1.03746404374216
+theta4 = -0.00307932058826415 + pi
+theta7 = -1.12519484225415 + pi
+theta1 = -1.03746404374216 + pi
+theta4 = -1.43560981725212 + pi
+theta7 = 0.733557216423578
+Time for error estimation: 0.04053187370300293
+Time for solving inverse kinematic problem: 0.5884213447570801
+-----
+Case: 102
+X = 5042/27
+Y = 2549/72
+Z = 12854/79
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 5042/27, 2549/72, 12854/79)$
+Time for real roots counting: 0.29015231132507324
+Time for solving the system of algebraic equations: 0.17105889320373535
+theta1 = 0.187358969000447
+theta4 = 0.789589582750304 - pi
+theta7 = -1.17918349170688 + pi
+theta1 = 0.187358969000447
+theta4 = -0.610372181935568
+theta7 = 0.944966002573106 - pi
+Time for error estimation: 0.011065483093261719
+Time for solving inverse kinematic problem: 0.5439300537109375
+-----
+Case: 103
+X = 14251/97
+Y = -5996/93
+Z = 27375/92
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 14251/97, -5996/93, 27375/92)$
+Time for real roots counting: 0.28737592697143555
+Time for solving the system of algebraic equations: 0.1617593765258789
+theta1 = -0.413533646255828
+theta4 = -1.26718998649775
+theta7 = -1.54389052098497 + pi
+theta1 = -0.413533646255828
+theta4 = 0.217140982669362
+theta7 = 1.30967303185114 - pi
+Time for error estimation: 0.010226964950561523
+Time for solving inverse kinematic problem: 0.5296969413757324
+-----
+Case: 104
+X = -11782/63
+Y = -4489/53
+Z = 1357/5
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -11782/63, -4489/53, 1357/5)$
+Time for real roots counting: 0.3007793426513672
+Time for solving the system of algebraic equations: 0.19564032554626465
+theta1 = 0.425256845564559 - pi
+theta4 = -0.137332707620516
+theta7 = 1.46139674747222 - pi
+theta1 = 0.425256845564559 - pi
+theta4 = -1.50225486437319
+theta7 = 1.44597841698385
+Time for error estimation: 0.01333761215209961
+Time for solving inverse kinematic problem: 0.5747203826904297
+-----
+Case: 105
+X = -384/85
+Y = 1747/49
+Z = 2909/27
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -384/85, 1747/49, 2909/27)$
+Time for real roots counting: 0.2957611083984375
+Time for solving the system of algebraic equations: 0.2254171371459961
+theta1 = -1.44475667985470
+theta4 = 1.31755841992144
+theta7 = -1.05111082896018 + pi
+theta1 = -1.4447566798547 + pi
+theta4 = -1.2479745685751 + pi
+theta7 = -0.598747220355517 + pi
+theta1 = -1.44475667985470
+theta4 = -0.00870757834289008 + pi
+theta7 = 0.816893339826452 - pi
+theta1 = -1.4447566798547 + pi
+theta4 = 0.637361371610073 - pi
+theta7 = 0.364529731221787 - pi
+Time for error estimation: 0.02626776695251465
+Time for solving inverse kinematic problem: 0.6134774684906006
+-----
+Case: 106
+X = 1335/34
+Y = -371/47
+Z = 16034/95
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 1335/34, -371/47, 16034/95)$
+Time for real roots counting: 0.2988853454589844
+Time for solving the system of algebraic equations: 0.19029760360717773
+theta1 = -0.198391456425386 + pi
+theta4 = 0.729553952110694
+theta7 = -0.94144111093734 + pi
+theta1 = -0.198391456425386 + pi
+theta4 = -0.54526074352059 + pi
+theta7 = 0.707223621803606 - pi
+Time for error estimation: 0.01321268081665039
+Time for solving inverse kinematic problem: 0.575322151184082
+-----
+Case: 107
+X = 3485/38
+Y = 12903/98
+Z = 8516/87
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 3485/38, 12903/98, 8516/87)$
+Time for real roots counting: 0.2870757579803467
+Time for solving the system of algebraic equations: 0.21410465240478516
+theta1 = 0.962387104560765
+theta4 = -1.16760134676148
+theta7 = 0.86719371468095 - pi
+theta1 = 0.962387104560765 - pi
+theta4 = -0.831427328020608 + pi
+theta7 = -0.842023517289377
+theta1 = 0.962387104560765
+theta4 = 0.18612970051887 - pi
+theta7 = -1.10141120381257 + pi
+theta1 = 0.962387104560765 - pi
+theta4 = -1.48040191409631 + pi
+theta7 = 0.607806028153581
+Time for error estimation: 0.02912116050720215
+Time for solving inverse kinematic problem: 0.5953559875488281
+-----
+Case: 108
+X = 10753/97
+Y = -6287/38
+Z = 10528/79
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 10753/97, -6287/38, 10528/79)$
+Time for real roots counting: 0.3018004894256592
+Time for solving the system of algebraic equations: 0.18703103065490723
+theta1 = -0.980464829131726
+theta4 = 0.622111089985795 - pi
+theta7 = -1.30499247560776 + pi
+theta1 = -0.980464829131726
+theta4 = -0.860323173967390
+theta7 = 1.07077498647402 - pi
+Time for error estimation: 0.014073610305786133
+Time for solving inverse kinematic problem: 0.5862593650817871
+-----
+Case: 109
+X = 10603/99
+Y = -6485/68
+Z = 8443/80
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 10603/99, -6485/68, 8443/80)$
+Time for real roots counting: 0.2892160415649414
+Time for solving the system of algebraic equations: 0.1725146770477295
+theta1 = -0.727511404069477 + pi
+theta4 = 1.49829351515184
+theta7 = 0.954956723395742
+theta1 = -0.727511404069477
+theta4 = 0.11085127539693 - pi
+theta7 = -0.932820575587198 + pi
+theta1 = -0.727511404069477 + pi
+theta4 = -0.69011409321689 + pi
+theta7 = -1.18917421253600
+theta1 = -0.727511404069477
+theta4 = -1.16050369778674
+theta7 = 0.69860308645966 - pi
+Time for error estimation: 0.022817134857177734
+Time for solving inverse kinematic problem: 0.5586373805999756
+-----
+Case: 110
+X = 6585/79
+Y = -431/4
+Z = 18129/79
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 6585/79, -431/4, 18129/79)$
+Time for real roots counting: 0.2945990562438965
+Time for solving the system of algebraic equations: 0.21008849143981934
+theta1 = -0.91236713957457 + pi
+theta4 = 0.862439813382155
+theta7 = 1.04858867366246
+theta1 = -0.912367139574570
+theta4 = 1.45332387747714 - pi
+theta7 = -0.896564678257331 + pi
+theta1 = -0.91236713957457 + pi
+theta4 = -1.24534724001288 + pi
+theta7 = -1.28280616279613
+theta1 = -0.912367139574570
+theta4 = 0.195415771867896
+theta7 = 0.662347189123525 - pi
+Time for error estimation: 0.025352001190185547
+Time for solving inverse kinematic problem: 0.5990116596221924
+-----
+Case: 111
+X = -11353/87
+Y = -2013/40
+Z = 964/25
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -11353/87, -2013/40, 964/25)$
+Time for real roots counting: 0.29442834854125977
+Time for solving the system of algebraic equations: 0.1665947437286377
+theta1 = 0.368074085300326 - pi
+theta4 = 1.4626915853135 - pi
+theta7 = 1.15691756442648 - pi
+theta1 = 0.368074085300326
+theta4 = -0.6350646684981 + pi
+theta7 = -0.686069900560161
+theta1 = 0.368074085300326 - pi
+theta4 = -0.135729381153615 + pi
+theta7 = -1.39113505356021 + pi
+theta1 = 0.368074085300326
+theta4 = -1.14545652103655 + pi
+theta7 = 0.451852411426431
+Time for error estimation: 0.021660804748535156
+Time for solving inverse kinematic problem: 0.54469895362854
+-----
+Case: 112
+X = -460/9
+Y = -13213/94
+Z = 7918/89
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -460/9, -13213/94, 7918/89)$
+Time for real roots counting: 0.2982208728790283
+Time for solving the system of algebraic equations: 0.17739295959472656
+theta1 = 1.22204422875551
+theta4 = -0.710755824313698 + pi
+theta7 = -0.997730237909363
+theta1 = 1.22204422875551 - pi
+theta4 = -1.27605303612933
+theta7 = 0.838661751030582 - pi
+theta1 = 1.22204422875551 - pi
+theta4 = 0.0618393288472514 - pi
+theta7 = -1.07287924016428 + pi
+theta1 = 1.22204422875551
+theta4 = -1.49704816865279 + pi
+theta7 = 0.763512748775585
+Time for error estimation: 0.024224042892456055
+Time for solving inverse kinematic problem: 0.5608828067779541
+-----
+Case: 113
+X = -1320/43
+Y = -6064/97
+Z = 7000/57
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -1320/43, -6064/97, 7000/57)$
+Time for real roots counting: 0.2909679412841797
+Time for solving the system of algebraic equations: 0.24928569793701172
+theta1 = 1.11434133204825
+theta4 = -0.299291526775559 + pi
+theta7 = 1.05100354242426 - pi
+theta1 = 1.11434133204825
+theta4 = 1.16964846469809
+theta7 = -1.28522103155799 + pi
+theta1 = 1.11434133204825 - pi
+theta4 = -0.542864865976436 + pi
+theta7 = -0.41135215157727 + pi
+theta1 = 1.11434133204825 - pi
+theta4 = 1.1156186482334 - pi
+theta7 = 0.177134662443541 - pi
+Time for error estimation: 0.024776697158813477
+Time for solving inverse kinematic problem: 0.6366121768951416
+-----
+Case: 114
+X = 3887/47
+Y = -1329/86
+Z = 8662/29
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 3887/47, -1329/86, 8662/29)$
+Time for real roots counting: 0.30152463912963867
+Time for solving the system of algebraic equations: 0.18103528022766113
+theta1 = -0.184726912958002
+theta4 = -0.898022580853197
+theta7 = -1.24054355307836 + pi
+theta1 = -0.184726912958002 + pi
+theta4 = 0.370728010704841
+theta7 = 1.20089982442163
+theta1 = -0.184726912958002 + pi
+theta4 = 1.53387000047699
+theta7 = -1.43511731362074
+theta1 = -0.184726912958002
+theta4 = 0.804429351505063
+theta7 = 1.00632606401257 - pi
+Time for error estimation: 0.017235755920410156
+Time for solving inverse kinematic problem: 0.5761067867279053
+-----
+Case: 115
+X = 166
+Y = 10056/89
+Z = 493/4
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 166, 10056/89, 493/4)$
+Time for real roots counting: 0.29213380813598633
+Time for solving the system of algebraic equations: 0.16965126991271973
+theta1 = 0.597624555719962
+theta4 = 0.572367127551319 - pi
+theta7 = -1.3473682657614 + pi
+theta1 = 0.597624555719962
+theta4 = -0.939569854011962
+theta7 = 1.11315077662767 - pi
+Time for error estimation: 0.012279033660888672
+Time for solving inverse kinematic problem: 0.5384955406188965
+-----
+Case: 116
+X = 10993/69
+Y = -1469/89
+Z = 4219/91
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 10993/69, -1469/89, 4219/91)$
+Time for real roots counting: 0.29146838188171387
+Time for solving the system of algebraic equations: 0.19405364990234375
+theta1 = -0.103232879490604
+theta4 = 0.0232358074215679 - pi
+theta7 = -1.44642286263449 + pi
+theta1 = -0.103232879490604
+theta4 = -1.56038562575206
+theta7 = 1.21220537350076 - pi
+Time for error estimation: 0.013888359069824219
+Time for solving inverse kinematic problem: 0.5662899017333984
+-----
+Case: 117
+X = -2303/73
+Y = -433/16
+Z = 18163/97
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -2303/73, -433/16, 18163/97)$
+Time for real roots counting: 0.29823970794677734
+Time for solving the system of algebraic equations: 0.18110036849975586
+theta1 = 0.709017254926845
+theta4 = 0.561660132235768
+theta7 = -0.974150066651183 + pi
+theta1 = 0.709017254926845
+theta4 = -0.727121774088877 + pi
+theta7 = 0.739932577517449 - pi
+theta1 = 0.709017254926845 - pi
+theta4 = 0.391894950020456
+theta7 = -0.244066625983469 + pi
+theta1 = 0.709017254926845 - pi
+theta4 = 1.39576618981756
+theta7 = 0.00984913684974393 - pi
+Time for error estimation: 0.021170616149902344
+Time for solving inverse kinematic problem: 0.5676591396331787
+-----
+Case: 118
+X = 6553/69
+Y = 3833/39
+Z = 221
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 6553/69, 3833/39, 221)$
+Time for real roots counting: 0.3018810749053955
+Time for solving the system of algebraic equations: 0.202470064163208
+theta1 = 0.802529652894079 - pi
+theta4 = 0.889826932667957
+theta7 = 1.07767842289074
+theta1 = 0.802529652894079
+theta4 = 1.37351224020561 - pi
+theta7 = -0.852173726334878 + pi
+theta1 = 0.802529652894079 - pi
+theta4 = -1.19307286364069 + pi
+theta7 = -1.31189591202526
+theta1 = 0.802529652894079
+theta4 = 0.129369182694753
+theta7 = 0.61795623720175 - pi
+Time for error estimation: 0.01742243766784668
+Time for solving inverse kinematic problem: 0.5861046314239502
+-----
+Case: 119
+X = -1626/23
+Y = 8869/67
+Z = 4795/99
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -1626/23, 8869/67, 4795/99)$
+Time for real roots counting: 0.30324339866638184
+Time for solving the system of algebraic equations: 0.22690439224243164
+theta1 = -1.08027074666557 + pi
+theta4 = -0.0503432038372134 + pi
+theta7 = -1.36598700941072 + pi
+theta1 = -1.08027074666557 + pi
+theta4 = 1.56611525260821 - pi
+theta7 = 1.13176952027698 - pi
+theta1 = -1.08027074666557
+theta4 = -0.745959556565444 + pi
+theta7 = -0.565082267172107
+theta1 = -1.08027074666557
+theta4 = -1.14829833852865 + pi
+theta7 = 0.330864778038381
+Time for error estimation: 0.02720808982849121
+Time for solving inverse kinematic problem: 0.6335029602050781
+-----
+Case: 120
+X = 7061/45
+Y = 12790/91
+Z = 6711/32
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 7061/45, 12790/91, 6711/32)$
+Time for real roots counting: 0.292055606842041
+Time for solving the system of algebraic equations: 0.14548158645629883
+theta1 = 0.730449064700490
+theta4 = 1.19349572486435 - pi
+theta7 = -1.44515644550568 + pi
+theta1 = 0.730449064700490
+theta4 = -0.389187669182480
+theta7 = 1.21093895637194 - pi
+Time for error estimation: 0.011969327926635742
+Time for solving inverse kinematic problem: 0.5201406478881836
+-----
+Case: 121
+X = -8711/70
+Y = -15223/94
+Z = 1525/6
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -8711/70, -15223/94, 1525/6)$
+Time for real roots counting: 0.30289196968078613
+Time for solving the system of algebraic equations: 0.19147276878356934
+theta1 = 0.915611469625242 - pi
+theta4 = -0.169867928797655
+theta7 = 1.34278036840502 - pi
+theta1 = 0.915611469625242 - pi
+theta4 = 1.51299832035805 - pi
+theta7 = 1.56459479605102
+Time for error estimation: 0.013273239135742188
+Time for solving inverse kinematic problem: 0.5720314979553223
+-----
+Case: 122
+X = -17425/93
+Y = -3380/87
+Z = 5669/65
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -17425/93, -3380/87, 5669/65)$
+Time for real roots counting: 0.29852986335754395
+Time for solving the system of algebraic equations: 0.19661545753479004
+theta1 = 0.204454409203974 - pi
+theta4 = 0.346858796813609 - pi
+theta7 = -1.41119333480192 + pi
+theta1 = 0.204454409203974 - pi
+theta4 = -1.21086607725345
+theta7 = 1.17697584566819 - pi
+Time for error estimation: 0.011830806732177734
+Time for solving inverse kinematic problem: 0.5806317329406738
+-----
+Case: 123
+X = -18421/99
+Y = -7805/66
+Z = 2215/18
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -18421/99, -7805/66, 2215/18)$
+Time for real roots counting: 0.29015159606933594
+Time for solving the system of algebraic equations: 0.16267824172973633
+theta1 = 0.566151179859064 - pi
+theta4 = -0.977989360509326
+theta7 = 1.31004702635113 - pi
+theta1 = 0.566151179859064 - pi
+theta4 = 0.679560005831128 - pi
+theta7 = -1.54426451548486 + pi
+Time for error estimation: 0.012537479400634766
+Time for solving inverse kinematic problem: 0.5353031158447266
+-----
+Case: 124
+X = -4713/64
+Y = -2117/54
+Z = 13747/100
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -4713/64, -2117/54, 13747/100)$
+Time for real roots counting: 0.30133867263793945
+Time for solving the system of algebraic equations: 0.18227362632751465
+theta1 = 0.489203261361807
+theta4 = -0.456057060522575 + pi
+theta7 = 1.14719639105007 - pi
+theta1 = 0.489203261361807
+theta4 = 1.08011394426156
+theta7 = -1.3814138801838 + pi
+theta1 = 0.489203261361807 - pi
+theta4 = 0.0525364876309998 - pi
+theta7 = -0.324044814555693 + pi
+theta1 = 0.489203261361807 - pi
+theta4 = 1.45228718026707 - pi
+theta7 = 0.0898273254219644 - pi
+Time for error estimation: 0.024419546127319336
+Time for solving inverse kinematic problem: 0.5735836029052734
+-----
+Case: 125
+X = -11989/75
+Y = 3254/37
+Z = 11109/55
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -11989/75, 3254/37, 11109/55)$
+Time for real roots counting: 0.29712390899658203
+Time for solving the system of algebraic equations: 0.2016584873199463
+theta1 = -0.502971018784449 + pi
+theta4 = 1.09899183027269 - pi
+theta7 = -1.15574910647414 + pi
+theta1 = -0.502971018784449 + pi
+theta4 = -0.286604681152744
+theta7 = 0.921531617340327 - pi
+theta1 = -0.502971018784449
+theta4 = -1.49419866872845 + pi
+theta7 = -0.349716534366396
+theta1 = -0.502971018784449
+theta4 = 1.43819279451929
+theta7 = 0.115499045232724
+Time for error estimation: 0.024196624755859375
+Time for solving inverse kinematic problem: 0.594851016998291
+-----
+Case: 126
+X = 192
+Y = -3027/44
+Z = 14387/69
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 192, -3027/44, 14387/69)$
+Time for real roots counting: 0.29253339767456055
+Time for solving the system of algebraic equations: 0.1543116569519043
+theta1 = -0.344058368530009
+theta4 = 1.17307379831642 - pi
+theta7 = -1.37570859009515 + pi
+theta1 = -0.344058368530009
+theta4 = -0.359004948527282
+theta7 = 1.14149110096144 - pi
+Time for error estimation: 0.01286458969116211
+Time for solving inverse kinematic problem: 0.5349786281585693
+-----
+Case: 127
+X = -14929/98
+Y = 6839/71
+Z = 6032/51
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -14929/98, 6839/71, 6032/51)$
+Time for real roots counting: 0.29645752906799316
+Time for solving the system of algebraic equations: 0.17141366004943848
+theta1 = -0.563838227948935 + pi
+theta4 = 0.429632944812984 - pi
+theta7 = -1.17431674617936 + pi
+theta1 = -0.563838227948935 + pi
+theta4 = -0.967316684695310
+theta7 = 0.940099257045606 - pi
+theta1 = -0.563838227948935
+theta4 = -1.15024659238967 + pi
+theta7 = -0.357713374875110
+theta1 = -0.563838227948935
+theta4 = -1.36663231766228 + pi
+theta7 = 0.123495885741397
+Time for error estimation: 0.02132415771484375
+Time for solving inverse kinematic problem: 0.5547478199005127
+-----
+Case: 128
+X = 541/29
+Y = -8609/58
+Z = 15539/94
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 541/29, -8609/58, 15539/94)$
+Time for real roots counting: 0.29953646659851074
+Time for solving the system of algebraic equations: 0.24224162101745605
+theta1 = -1.44576946226317 + pi
+theta4 = 1.19824128685022
+theta7 = 0.995265840392432
+theta1 = -1.44576946226317
+theta4 = 0.723452145384919 - pi
+theta7 = -0.806915179089018 + pi
+theta1 = -1.44576946226317 + pi
+theta4 = -0.955366802062436 + pi
+theta7 = -1.22948332952631
+theta1 = -1.44576946226317
+theta4 = -0.510221658966004
+theta7 = 0.572697689955394 - pi
+Time for error estimation: 0.02832937240600586
+Time for solving inverse kinematic problem: 0.6369552612304688
+-----
+Case: 129
+X = 11119/98
+Y = -4842/53
+Z = 625/32
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 11119/98, -4842/53, 625/32)$
+Time for real roots counting: 0.29296422004699707
+Time for solving the system of algebraic equations: 0.15801787376403809
+theta1 = -0.677909821342909
+theta4 = -0.0876506973822812 + pi
+theta7 = 1.54555696359375
+theta1 = -0.677909821342909
+theta4 = 1.35623032833127 - pi
+theta7 = 1.36181820086232 - pi
+Time for error estimation: 0.012949228286743164
+Time for solving inverse kinematic problem: 0.5338280200958252
+-----
+Case: 130
+X = 3187/26
+Y = -1751/64
+Z = 757/65
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 3187/26, -1751/64, 757/65)$
+Time for real roots counting: 0.2902557849884033
+Time for solving the system of algebraic equations: 0.16926217079162598
+theta1 = -0.219602116453264
+theta4 = -0.223093583736739 + pi
+theta7 = 1.56429228456499
+theta1 = -0.219602116453264
+theta4 = 1.23539760721478 - pi
+theta7 = 1.34308287989107 - pi
+theta1 = -0.219602116453264 + pi
+theta4 = -0.571686524057037 + pi
+theta7 = -0.547668291665068
+theta1 = -0.219602116453264 + pi
+theta4 = -0.958441848023325 + pi
+theta7 = 0.313450802531340
+Time for error estimation: 0.021932125091552734
+Time for solving inverse kinematic problem: 0.5459375381469727
+-----
+Case: 131
+X = -607/23
+Y = -2218/35
+Z = 17487/79
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -607/23, -2218/35, 17487/79)$
+Time for real roots counting: 0.30275535583496094
+Time for solving the system of algebraic equations: 0.17092299461364746
+theta1 = 1.17618616654015
+theta4 = 0.463649634003837
+theta7 = -1.31661362534712 + pi
+theta1 = 1.17618616654015
+theta4 = -1.02679867473538 + pi
+theta7 = 1.08239613621337 - pi
+theta1 = 1.17618616654015 - pi
+theta4 = -0.912255485563344
+theta7 = -0.520208808318666 + pi
+theta1 = 1.17618616654015 - pi
+theta4 = 0.914544465157720
+theta7 = 0.285991319184956 - pi
+Time for error estimation: 0.019540786743164062
+Time for solving inverse kinematic problem: 0.5595295429229736
+-----
+Case: 132
+X = -12785/93
+Y = 3940/99
+Z = 27887/100
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -12785/93, 3940/99, 27887/100)$
+Time for real roots counting: 0.301715612411499
+Time for solving the system of algebraic equations: 0.16761493682861328
+theta1 = -0.28179287334324 + pi
+theta4 = 0.331163606948291
+theta7 = 1.04948824077987 - pi
+theta1 = -0.281792873343240
+theta4 = 1.49740964886054
+theta7 = -0.812143015695179
+theta1 = -0.28179287334324 + pi
+theta4 = -1.34251577755945
+theta7 = -1.28370572991401 + pi
+theta1 = -0.281792873343240
+theta4 = 0.874915494927621
+theta7 = 0.577925526561821
+Time for error estimation: 0.016995906829833984
+Time for solving inverse kinematic problem: 0.5506026744842529
+-----
+Case: 133
+X = -7174/39
+Y = -4031/79
+Z = 4678/19
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -7174/39, -4031/79, 4678/19)$
+Time for real roots counting: 0.3049886226654053
+Time for solving the system of algebraic equations: 0.1496431827545166
+theta1 = 0.270585711810253 - pi
+theta4 = 1.45260790883652 - pi
+theta7 = -1.4124585610987 + pi
+theta1 = 0.270585711810253 - pi
+theta4 = -0.106039717901529
+theta7 = 1.17824107196493 - pi
+Time for error estimation: 0.013218402862548828
+Time for solving inverse kinematic problem: 0.5309979915618896
+-----
+Case: 134
+X = -14432/75
+Y = 5811/64
+Z = 16003/63
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -14432/75, 5811/64, 16003/63)$
+Time for real roots counting: 0.30103111267089844
+Time for solving the system of algebraic equations: 0.18463683128356934
+theta1 = -0.440876580938841 + pi
+theta4 = -0.228164688806184
+theta7 = 1.42354580595264 - pi
+theta1 = -0.440876580938841 + pi
+theta4 = 1.51824747337385 - pi
+theta7 = 1.48382935850341
+Time for error estimation: 0.01175379753112793
+Time for solving inverse kinematic problem: 0.554879903793335
+-----
+Case: 135
+X = 2056/41
+Y = -2987/97
+Z = 17653/98
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 2056/41, -2987/97, 17653/98)$
+Time for real roots counting: 0.3034095764160156
+Time for solving the system of algebraic equations: 0.1518995761871338
+theta1 = -0.550707427811958 + pi
+theta4 = 0.685549541602669
+theta7 = -1.1221028434406 + pi
+theta1 = -0.550707427811958 + pi
+theta4 = -0.680064989853425 + pi
+theta7 = 0.887885354306869 - pi
+Time for error estimation: 0.012148141860961914
+Time for solving inverse kinematic problem: 0.5276973247528076
+-----
+Case: 136
+X = 8986/55
+Y = 8990/71
+Z = 8565/76
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 8986/55, 8990/71, 8565/76)$
+Time for real roots counting: 0.301267147064209
+Time for solving the system of algebraic equations: 0.1484382152557373
+theta1 = 0.659305514887528
+theta4 = 0.551352897201483 - pi
+theta7 = -1.43897994319814 + pi
+theta1 = 0.659305514887528
+theta4 = -1.02676299352585
+theta7 = 1.20476245406441 - pi
+Time for error estimation: 0.011298418045043945
+Time for solving inverse kinematic problem: 0.517085075378418
+-----
+Case: 137
+X = -15404/85
+Y = 9957/68
+Z = 2611/32
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -15404/85, 9957/68, 2611/32)$
+Time for real roots counting: 0.2971184253692627
+Time for solving the system of algebraic equations: 0.147721529006958
+theta1 = -0.679592842165506 + pi
+theta4 = -1.29542478217339
+theta7 = -1.52331634205375
+theta1 = -0.679592842165506 + pi
+theta4 = 0.609376153529165 - pi
+theta7 = 1.28909885292002
+Time for error estimation: 0.009359121322631836
+Time for solving inverse kinematic problem: 0.5126802921295166
+-----
+Case: 138
+X = 5609/36
+Y = 447/25
+Z = 1927/96
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 5609/36, 447/25, 1927/96)$
+Time for real roots counting: 0.2988402843475342
+Time for solving the system of algebraic equations: 0.14411377906799316
+theta1 = 0.114258597338845
+theta4 = -0.00681085436173139 + pi
+theta7 = 1.48583011615229
+theta1 = 0.114258597338845
+theta4 = 1.38996102289414 - pi
+theta7 = 1.42154504830377 - pi
+Time for error estimation: 0.0104217529296875
+Time for solving inverse kinematic problem: 0.5151100158691406
+-----
+Case: 139
+X = -67
+Y = -2543/13
+Z = 3758/39
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -67, -2543/13, 3758/39)$
+Time for real roots counting: 0.2979600429534912
+Time for solving the system of algebraic equations: 0.1476895809173584
+theta1 = 1.24081066444577 - pi
+theta4 = -1.14763695594612
+theta7 = 1.27270705283992 - pi
+theta1 = 1.24081066444577 - pi
+theta4 = 0.481374544124934 - pi
+theta7 = -1.50692454197365 + pi
+Time for error estimation: 0.013141870498657227
+Time for solving inverse kinematic problem: 0.5170531272888184
+-----
+Case: 140
+X = 4294/93
+Y = 16087/99
+Z = 22067/100
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 4294/93, 16087/99, 22067/100)$
+Time for real roots counting: 0.29906678199768066
+Time for solving the system of algebraic equations: 0.169724702835083
+theta1 = 1.29394859816946
+theta4 = -0.0882755344715198
+theta7 = 0.868364972896882 - pi
+theta1 = 1.29394859816946 - pi
+theta4 = -1.41046915554127 + pi
+theta7 = -0.729502449077020
+theta1 = 1.29394859816946
+theta4 = 1.26611952335347 - pi
+theta7 = -1.10258246203441 + pi
+theta1 = 1.29394859816946 - pi
+theta4 = 1.18204860129068
+theta7 = 0.495284959946351
+Time for error estimation: 0.01974630355834961
+Time for solving inverse kinematic problem: 0.568169355392456
+-----
+Case: 141
+X = 8592/89
+Y = 10974/79
+Z = 9233/34
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 8592/89, 10974/79, 9233/34)$
+Time for real roots counting: 0.30432915687561035
+Time for solving the system of algebraic equations: 0.14507007598876953
+theta1 = 0.963453818395382
+theta4 = -1.47253434171919
+theta7 = -1.39811495047884 + pi
+theta1 = 0.963453818395382
+theta4 = 0.120838726704193
+theta7 = 1.16389746134497 - pi
+Time for error estimation: 0.013267755508422852
+Time for solving inverse kinematic problem: 0.5551488399505615
+-----
+Case: 142
+X = 8362/57
+Y = 704/9
+Z = 16575/62
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 8362/57, 704/9, 16575/62)$
+Time for real roots counting: 0.2955968379974365
+Time for solving the system of algebraic equations: 0.15062284469604492
+theta1 = 0.489858008648768
+theta4 = -1.49738905819706
+theta7 = -1.3471821946076 + pi
+theta1 = 0.489858008648768
+theta4 = 0.132397805217255
+theta7 = 1.11296470547403 - pi
+Time for error estimation: 0.011890888214111328
+Time for solving inverse kinematic problem: 0.5198276042938232
+-----
+Case: 143
+X = -989/5
+Y = 5554/81
+Z = 17650/99
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -989/5, 5554/81, 17650/99)$
+Time for real roots counting: 0.3016684055328369
+Time for solving the system of algebraic equations: 0.16118097305297852
+theta1 = -0.333689695472738 + pi
+theta4 = 0.963888614896185 - pi
+theta7 = -1.37282452910152 + pi
+theta1 = -0.333689695472738 + pi
+theta4 = -0.566126149847193
+theta7 = 1.13860703996779 - pi
+Time for error estimation: 0.011712312698364258
+Time for solving inverse kinematic problem: 0.5386464595794678
+-----
+Case: 144
+X = 13612/99
+Y = -7673/99
+Z = 763/65
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 13612/99, -7673/99, 763/65)$
+Time for real roots counting: 0.29093146324157715
+Time for solving the system of algebraic equations: 0.1491231918334961
+theta1 = -0.513295860293997
+theta4 = 0.00826538941675292 - pi
+theta7 = 1.39786515568870
+theta1 = -0.513295860293997
+theta4 = 1.33433173598164 - pi
+theta7 = 1.50951000876736 - pi
+Time for error estimation: 0.00960230827331543
+Time for solving inverse kinematic problem: 0.5088863372802734
+-----
+Case: 145
+X = 1243/46
+Y = -7114/47
+Z = 25597/100
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 1243/46, -7114/47, 25597/100)$
+Time for real roots counting: 0.2965211868286133
+Time for solving the system of algebraic equations: 0.173187255859375
+theta1 = -1.39413316114032
+theta4 = 0.191801157449509
+theta7 = 0.947796448840054 - pi
+theta1 = -1.39413316114032 + pi
+theta4 = -1.5328160069886 + pi
+theta7 = -0.819902825564882
+theta1 = -1.39413316114032
+theta4 = -1.54807112155713
+theta7 = -1.18201393797717 + pi
+theta1 = -1.39413316114032 + pi
+theta4 = 0.979402100253991
+theta7 = 0.585685336434021
+Time for error estimation: 0.018378496170043945
+Time for solving inverse kinematic problem: 0.5482916831970215
+-----
+Case: 146
+X = 9489/94
+Y = -6334/97
+Z = 5446/73
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 9489/94, -6334/97, 5446/73)$
+Time for real roots counting: 0.30029821395874023
+Time for solving the system of algebraic equations: 0.1723031997680664
+theta1 = -0.574168278450356 + pi
+theta4 = -1.53067072013825 + pi
+theta7 = 1.10822932115633
+theta1 = -0.574168278450356
+theta4 = -0.239601244941306 + pi
+theta7 = -0.997395539893161 + pi
+theta1 = -0.574168278450356 + pi
+theta4 = -0.445929726123687 + pi
+theta7 = -1.34244681029018
+theta1 = -0.574168278450356
+theta4 = -1.53906210200366
+theta7 = 0.763178050759502 - pi
+Time for error estimation: 0.021564483642578125
+Time for solving inverse kinematic problem: 0.5571084022521973
+-----
+Case: 147
+X = 6181/71
+Y = 14491/84
+Z = 10077/59
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 6181/71, 14491/84, 10077/59)$
+Time for real roots counting: 0.30197668075561523
+Time for solving the system of algebraic equations: 0.1811060905456543
+theta1 = 1.10344393297642
+theta4 = 0.861620408618581 - pi
+theta7 = -1.20983972892262 + pi
+theta1 = 1.10344393297642
+theta4 = -0.557645987956280
+theta7 = 0.975622239788891 - pi
+Time for error estimation: 0.011260032653808594
+Time for solving inverse kinematic problem: 0.556368350982666
+-----
+Case: 148
+X = -3361/81
+Y = -17399/100
+Z = 6535/39
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -3361/81, -17399/100, 6535/39)$
+Time for real roots counting: 0.29714488983154297
+Time for solving the system of algebraic equations: 0.18200206756591797
+theta1 = 1.3366852943376 - pi
+theta4 = -0.540468945558112
+theta7 = 0.839058558262223 - pi
+theta1 = 1.33668529433760
+theta4 = -1.23219886225227 + pi
+theta7 = -0.622963950251533
+theta1 = 1.3366852943376 - pi
+theta4 = 0.797639130980657 - pi
+theta7 = -1.07327604739575 + pi
+theta1 = 1.33668529433760
+theta4 = 1.45531124128542
+theta7 = 0.388746461117671
+Time for error estimation: 0.017792224884033203
+Time for solving inverse kinematic problem: 0.5582950115203857
+-----
+Case: 149
+X = -4677/40
+Y = -3560/19
+Z = 23246/85
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -4677/40, -3560/19, 23246/85)$
+Time for real roots counting: 0.30051565170288086
+Time for solving the system of algebraic equations: 0.1409163475036621
+theta1 = 1.01288914245419 - pi
+theta4 = -0.245521509278590
+theta7 = -1.51185097114549
+theta1 = 1.01288914245419 - pi
+theta4 = -1.47279818257597
+theta7 = 1.27763348201176
+Time for error estimation: 0.011591434478759766
+Time for solving inverse kinematic problem: 0.5123443603515625
+-----
+Case: 150
+X = -6352/63
+Y = -3272/81
+Z = 2827/69
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -6352/63, -3272/81, 2827/69)$
+Time for real roots counting: 0.3031935691833496
+Time for solving the system of algebraic equations: 0.1705341339111328
+theta1 = 0.381061182149998
+theta4 = -0.327141636867587 + pi
+theta7 = -1.22929184902056
+theta1 = 0.381061182149998 - pi
+theta4 = 1.32524561764803 - pi
+theta7 = 0.999590928090641 - pi
+theta1 = 0.381061182149998 - pi
+theta4 = -0.381609970543092 + pi
+theta7 = -1.23380841722437 + pi
+theta1 = 0.381061182149998
+theta4 = -1.31496121163239 + pi
+theta7 = 0.995074359886852
+Time for error estimation: 0.0199737548828125
+Time for solving inverse kinematic problem: 0.5538175106048584
+-----
+Case: 151
+X = -1117/27
+Y = 1784/39
+Z = 11807/43
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -1117/27, 1784/39, 11807/43)$
+Time for real roots counting: 0.29881763458251953
+Time for solving the system of algebraic equations: 0.16876220703125
+theta1 = -0.835557187098594
+theta4 = 0.229697360001413
+theta7 = -1.55044124883403 + pi
+theta1 = -0.835557187098594 + pi
+theta4 = -0.799064766057185
+theta7 = -0.996658654904704 + pi
+theta1 = -0.835557187098594
+theta4 = -1.43260848371491 + pi
+theta7 = 1.31622375970002 - pi
+theta1 = -0.835557187098594 + pi
+theta4 = 1.04341459034881
+theta7 = 0.7624411657712 - pi
+Time for error estimation: 0.022403955459594727
+Time for solving inverse kinematic problem: 0.5523586273193359
+-----
+Case: 152
+X = 5940/43
+Y = -314/3
+Z = 2252/89
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 5940/43, -314/3, 2252/89)$
+Time for real roots counting: 0.29744410514831543
+Time for solving the system of algebraic equations: 0.14674162864685059
+theta1 = -0.648403293416177
+theta4 = 1.45837552950747 - pi
+theta7 = 1.48315092780994 - pi
+theta1 = -0.648403293416177
+theta4 = 0.110969350071951 - pi
+theta7 = 1.42422423664612
+Time for error estimation: 0.012342214584350586
+Time for solving inverse kinematic problem: 0.5241165161132812
+-----
+Case: 153
+X = 2127/82
+Y = -205/73
+Z = 7419/73
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 2127/82, -205/73, 7419/73)$
+Time for real roots counting: 0.298198938369751
+Time for solving the system of algebraic equations: 0.20491290092468262
+theta1 = -0.107842307049728 + pi
+theta4 = 1.40048114690023
+theta7 = -1.00639149389307 + pi
+theta1 = -0.107842307049728
+theta4 = -1.34928105731203 + pi
+theta7 = -0.687520959020323 + pi
+theta1 = -0.107842307049728 + pi
+theta4 = 0.096731174415473 - pi
+theta7 = 0.772174004759346 - pi
+theta1 = -0.107842307049728
+theta4 = 0.563430593136873 - pi
+theta7 = 0.453303469886595 - pi
+Time for error estimation: 0.021472692489624023
+Time for solving inverse kinematic problem: 0.5834283828735352
+-----
+Case: 154
+X = -14540/81
+Y = -9819/71
+Z = 3373/31
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -14540/81, -9819/71, 3373/31)$
+Time for real roots counting: 0.30687952041625977
+Time for solving the system of algebraic equations: 0.14899325370788574
+theta1 = 0.656444533292148 - pi
+theta4 = 0.653535046063471 - pi
+theta7 = 1.48562873361101
+theta1 = 0.656444533292148 - pi
+theta4 = -1.09144587077398
+theta7 = 1.42174643084505 - pi
+Time for error estimation: 0.00940251350402832
+Time for solving inverse kinematic problem: 0.53104567527771
+-----
+Case: 155
+X = 10768/85
+Y = 6857/74
+Z = 2439/13
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 10768/85, 6857/74, 2439/13)$
+Time for real roots counting: 0.29663872718811035
+Time for solving the system of algebraic equations: 0.17415881156921387
+theta1 = 0.631524849804399
+theta4 = 0.96776950214596 - pi
+theta7 = -0.894405060581465 + pi
+theta1 = 0.631524849804399 - pi
+theta4 = 1.15597843667452
+theta7 = 0.858363588223596
+theta1 = 0.631524849804399 - pi
+theta4 = -1.11632690653806 + pi
+theta7 = -1.09258107735700
+theta1 = 0.631524849804399
+theta4 = -0.289397053193008
+theta7 = 0.660187571447516 - pi
+Time for error estimation: 0.021335124969482422
+Time for solving inverse kinematic problem: 0.5562348365783691
+-----
+Case: 156
+X = -7329/97
+Y = -3561/22
+Z = 16904/89
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -7329/97, -3561/22, 16904/89)$
+Time for real roots counting: 0.3023974895477295
+Time for solving the system of algebraic equations: 0.16941356658935547
+theta1 = 1.13406599611793 - pi
+theta4 = 0.992594233819183 - pi
+theta7 = -1.09326511204939 + pi
+theta1 = 1.13406599611793 - pi
+theta4 = -0.356548178551076
+theta7 = 0.859047622915285 - pi
+theta1 = 1.13406599611793
+theta4 = -1.33851598849892 + pi
+theta7 = -0.592175313426122
+theta1 = 1.13406599611793
+theta4 = 1.37650722789036
+theta7 = 0.357957824292648
+Time for error estimation: 0.032113075256347656
+Time for solving inverse kinematic problem: 0.5706925392150879
+-----
+Case: 157
+X = 10695/77
+Y = -5297/81
+Z = 28586/99
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 10695/77, -5297/81, 28586/99)$
+Time for real roots counting: 0.29757046699523926
+Time for solving the system of algebraic equations: 0.1678004264831543
+theta1 = -0.440032299670639
+theta4 = -1.30987898631961
+theta7 = -1.42575312914641 + pi
+theta1 = -0.440032299670639
+theta4 = 0.263336712762026
+theta7 = 1.19153564001241 - pi
+theta1 = -0.440032299670639 + pi
+theta4 = 1.24522932478976
+theta7 = -0.281194267383037
+theta1 = -0.440032299670639 + pi
+theta4 = 1.09761806168201
+theta7 = 0.0469767782494565
+Time for error estimation: 0.018869638442993164
+Time for solving inverse kinematic problem: 0.5886294841766357
+-----
+Case: 158
+X = -428/57
+Y = 2446/73
+Z = 1339/98
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -428/57, 2446/73, 1339/98)$
+Time for real roots counting: 0.30504727363586426
+Time for solving the system of algebraic equations: 0.17238593101501465
+theta1 = -1.35034189356237 + pi
+theta4 = -0.841525791036919 + pi
+theta7 = -1.44952351605803 + pi
+theta1 = -1.35034189356237
+theta4 = -1.1156109825233 + pi
+theta7 = 1.41117403181586
+theta1 = -1.35034189356237
+theta4 = 0.221245533231756 - pi
+theta7 = 1.49620113264034 - pi
+theta1 = -1.35034189356237 + pi
+theta4 = 0.714146588170666 - pi
+theta7 = 1.21530602692413 - pi
+Time for error estimation: 0.022556543350219727
+Time for solving inverse kinematic problem: 0.5636260509490967
+-----
+Case: 159
+X = 1710/13
+Y = -2539/17
+Z = 17829/61
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 1710/13, -2539/17, 17829/61)$
+Time for real roots counting: 0.3102610111236572
+Time for solving the system of algebraic equations: 0.18178343772888184
+theta1 = -0.848734570855014
+theta4 = -0.0673879467048924
+theta7 = 1.56167539809305 - pi
+theta1 = -0.848734570855014
+theta4 = -1.35087033246477
+theta7 = 1.34569976636301
+Time for error estimation: 0.010914087295532227
+Time for solving inverse kinematic problem: 0.5693721771240234
+-----
+Case: 160
+X = -434/5
+Y = 7943/71
+Z = 9344/39
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -434/5, 7943/71, 9344/39)$
+Time for real roots counting: 0.29123353958129883
+Time for solving the system of algebraic equations: 0.16372156143188477
+theta1 = -0.910937873677433 + pi
+theta4 = 1.51216166448199 - pi
+theta7 = -0.994156999033551 + pi
+theta1 = -0.910937873677433
+theta4 = 0.881374990949387
+theta7 = 0.919021032999066
+theta1 = -0.910937873677433
+theta4 = -1.33816521775467 + pi
+theta7 = -1.15323852214147
+theta1 = -0.910937873677433 + pi
+theta4 = 0.214223981537942
+theta7 = 0.759939509909849 - pi
+Time for error estimation: 0.017673492431640625
+Time for solving inverse kinematic problem: 0.5305159091949463
+-----
+Case: 161
+X = -8119/89
+Y = 6726/35
+Z = 10479/100
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -8119/89, 6726/35, 10479/100)$
+Time for real roots counting: 0.2989380359649658
+Time for solving the system of algebraic equations: 0.14290165901184082
+theta1 = -1.12758879167382 + pi
+theta4 = -1.09314866585761
+theta7 = 1.29419271844911 - pi
+theta1 = -1.12758879167382 + pi
+theta4 = 0.552237657918557 - pi
+theta7 = -1.52841020758285 + pi
+Time for error estimation: 0.013271808624267578
+Time for solving inverse kinematic problem: 0.5184493064880371
+-----
+Case: 162
+X = 12273/79
+Y = -10183/100
+Z = 12505/58
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 12273/79, -10183/100, 12505/58)$
+Time for real roots counting: 0.3017551898956299
+Time for solving the system of algebraic equations: 0.14024591445922852
+theta1 = -0.580210198541456
+theta4 = 1.21305750364811 - pi
+theta7 = -1.22859922866272 + pi
+theta1 = -0.580210198541456
+theta4 = -0.218290325273741
+theta7 = 0.994381739528914 - pi
+Time for error estimation: 0.011325597763061523
+Time for solving inverse kinematic problem: 0.5155913829803467
+-----
+Case: 163
+X = 2243/78
+Y = -9001/82
+Z = 2663/49
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 2243/78, -9001/82, 2663/49)$
+Time for real roots counting: 0.29823756217956543
+Time for solving the system of algebraic equations: 0.16933488845825195
+theta1 = -1.31458039423960
+theta4 = -0.338059447302281 + pi
+theta7 = -1.13331032878065 + pi
+theta1 = -1.3145803942396 + pi
+theta4 = -1.4035507384237 + pi
+theta7 = 1.04853252688268
+theta1 = -1.3145803942396 + pi
+theta4 = -0.369793251056936 + pi
+theta7 = -1.28275001601639
+theta1 = -1.31458039423960
+theta4 = 1.4313505844759 - pi
+theta7 = 0.899092839646908 - pi
+Time for error estimation: 0.029866933822631836
+Time for solving inverse kinematic problem: 0.5610859394073486
+-----
+Case: 164
+X = -8485/61
+Y = 7472/89
+Z = 13090/97
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -8485/61, 7472/89, 13090/97)$
+Time for real roots counting: 0.3026454448699951
+Time for solving the system of algebraic equations: 0.16852974891662598
+theta1 = -0.543037513690043 + pi
+theta4 = 0.457280088657142 - pi
+theta7 = -0.966058303247709 + pi
+theta1 = -0.543037513690043
+theta4 = 1.44511610050971
+theta7 = 0.736084839575870
+theta1 = -0.543037513690043
+theta4 = -0.934283011098429 + pi
+theta7 = -0.970302328709530
+theta1 = -0.543037513690043 + pi
+theta4 = -0.827927257147919
+theta7 = 0.731840814114031 - pi
+Time for error estimation: 0.02337646484375
+Time for solving inverse kinematic problem: 0.5808875560760498
+-----
+Case: 165
+X = 8011/62
+Y = -3857/90
+Z = 21416/75
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 8011/62, -3857/90, 21416/75)$
+Time for real roots counting: 0.303159236907959
+Time for solving the system of algebraic equations: 0.2072618007659912
+theta1 = -0.320256864976203
+theta4 = 0.393774041071795
+theta7 = 1.06599836521541 - pi
+theta1 = -0.320256864976203 + pi
+theta4 = 1.48524098953588
+theta7 = -0.874584789220503
+theta1 = -0.320256864976203
+theta4 = -1.26866086343779
+theta7 = -1.30021585435085 + pi
+theta1 = -0.320256864976203 + pi
+theta4 = 0.807453927413824
+theta7 = 0.640367300088125
+Time for error estimation: 0.019110441207885742
+Time for solving inverse kinematic problem: 0.5972638130187988
+-----
+Case: 166
+X = 5989/50
+Y = 9188/87
+Z = 10319/48
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 5989/50, 9188/87, 10319/48)$
+Time for real roots counting: 0.29837632179260254
+Time for solving the system of algebraic equations: 0.1788339614868164
+theta1 = 0.722608212404059 - pi
+theta4 = -1.29183294633971 + pi
+theta7 = -0.963522904356259
+theta1 = 0.722608212404059
+theta4 = -0.0699685468495432
+theta7 = 0.768129360478736 - pi
+theta1 = 0.722608212404059
+theta4 = 1.2318425341406 - pi
+theta7 = -1.00234684961274 + pi
+theta1 = 0.722608212404059 - pi
+theta4 = 1.09352908354410
+theta7 = 0.729305415223517
+Time for error estimation: 0.018088340759277344
+Time for solving inverse kinematic problem: 0.5601482391357422
+-----
+Case: 167
+X = -17159/90
+Y = -2032/75
+Z = 2531/63
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -17159/90, -2032/75, 2531/63)$
+Time for real roots counting: 0.2894878387451172
+Time for solving the system of algebraic equations: 0.15095043182373047
+theta1 = 0.141161037033477 - pi
+theta4 = -1.55759935412389
+theta7 = 1.5053103452162 - pi
+theta1 = 0.141161037033477 - pi
+theta4 = 0.254518700774289 - pi
+theta7 = 1.40206481923986
+Time for error estimation: 0.012206077575683594
+Time for solving inverse kinematic problem: 0.5159626007080078
+-----
+Case: 168
+X = -6223/50
+Y = -5679/46
+Z = 22933/88
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -6223/50, -5679/46, 22933/88)$
+Time for real roots counting: 0.29408812522888184
+Time for solving the system of algebraic equations: 0.15493083000183105
+theta1 = 0.781350539730645 - pi
+theta4 = -1.56516812935364
+theta7 = -1.36951924288373 + pi
+theta1 = 0.781350539730646 - pi
+theta4 = 0.0487712903877996
+theta7 = 1.13530175374985 - pi
+Time for error estimation: 0.012221336364746094
+Time for solving inverse kinematic problem: 0.5197601318359375
+-----
+Case: 169
+X = 624/49
+Y = -11893/75
+Z = 20295/74
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 624/49, -11893/75, 20295/74)$
+Time for real roots counting: 0.29427456855773926
+Time for solving the system of algebraic equations: 0.16655564308166504
+theta1 = -1.49066039105972
+theta4 = -1.42862442440895
+theta7 = -1.3474123523292 + pi
+theta1 = -1.49066039105972
+theta4 = 0.201000161871943
+theta7 = 1.11319486319519 - pi
+theta1 = -1.49066039105972 + pi
+theta4 = 1.36622474580121
+theta7 = -0.411713998059949
+theta1 = -1.49066039105972 + pi
+theta4 = 1.10134540110776
+theta7 = 0.177496508926371
+Time for error estimation: 0.01915764808654785
+Time for solving inverse kinematic problem: 0.5404026508331299
+-----
+Case: 170
+X = -2159/12
+Y = -2977/85
+Z = 6421/63
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -2159/12, -2977/85, 6421/63)$
+Time for real roots counting: 0.2929093837738037
+Time for solving the system of algebraic equations: 0.14000272750854492
+theta1 = 0.192260804668271 - pi
+theta4 = 0.357546392882115 - pi
+theta7 = -1.26806108859538 + pi
+theta1 = 0.192260804668271 - pi
+theta4 = -1.09983083759992
+theta7 = 1.03384359946166 - pi
+Time for error estimation: 0.012407302856445312
+Time for solving inverse kinematic problem: 0.5101823806762695
+-----
+Case: 171
+X = -4599/68
+Y = -3721/34
+Z = 7817/59
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -4599/68, -3721/34, 7817/59)$
+Time for real roots counting: 0.2927432060241699
+Time for solving the system of algebraic equations: 0.21520304679870605
+theta1 = 1.01726173168858
+theta4 = 1.26168889593381
+theta7 = 1.24761638433406
+theta1 = 1.01726173168858 - pi
+theta4 = 0.26138231765292 - pi
+theta7 = -0.691870285299616 + pi
+theta1 = 1.01726173168858
+theta4 = -0.677623949913833 + pi
+theta7 = -1.48183387346781
+theta1 = 1.01726173168858 - pi
+theta4 = -0.966951533816579
+theta7 = 0.457652796165899 - pi
+Time for error estimation: 0.018794536590576172
+Time for solving inverse kinematic problem: 0.5845928192138672
+-----
+Case: 172
+X = 7661/50
+Y = 3141/23
+Z = 26098/93
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 7661/50, 3141/23, 26098/93)$
+Time for real roots counting: 0.2960820198059082
+Time for solving the system of algebraic equations: 0.14356184005737305
+theta1 = 0.727988467394695
+theta4 = -0.123101214453797
+theta7 = 1.52698133869325 - pi
+theta1 = 0.727988467394695
+theta4 = -1.43495587961350
+theta7 = 1.38039382576282
+Time for error estimation: 0.010616540908813477
+Time for solving inverse kinematic problem: 0.511601448059082
+-----
+Case: 173
+X = -4407/29
+Y = -1089/20
+Z = 10890/61
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -4407/29, -1089/20, 10890/61)$
+Time for real roots counting: 0.29291248321533203
+Time for solving the system of algebraic equations: 0.16357064247131348
+theta1 = 0.344054212388618 - pi
+theta4 = 0.873685016586978 - pi
+theta7 = -0.920142803101737 + pi
+theta1 = 0.344054212388618
+theta4 = 1.22782741874553
+theta7 = 0.790863236479249
+theta1 = 0.344054212388618
+theta4 = -1.10348470062363 + pi
+theta7 = -1.02508072561334
+theta1 = 0.344054212388618 - pi
+theta4 = -0.392760148128125
+theta7 = 0.685925313968527 - pi
+Time for error estimation: 0.020247697830200195
+Time for solving inverse kinematic problem: 0.5375988483428955
+-----
+Case: 174
+X = -5769/35
+Y = 959/16
+Z = 6954/37
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -5769/35, 959/16, 6954/37)$
+Time for real roots counting: 0.30344724655151367
+Time for solving the system of algebraic equations: 0.16852188110351562
+theta1 = -0.348770133719154 + pi
+theta4 = -0.358750146760136
+theta7 = 0.825826238749087 - pi
+theta1 = -0.348770133719154
+theta4 = -1.28415329308167 + pi
+theta7 = -0.698405146870395
+theta1 = -0.348770133719154 + pi
+theta4 = 0.972236930159921 - pi
+theta7 = -1.06004372788333 + pi
+theta1 = -0.348770133719154
+theta4 = 1.33605489482198
+theta7 = 0.464187657737092
+Time for error estimation: 0.021015167236328125
+Time for solving inverse kinematic problem: 0.5559954643249512
+-----
+Case: 175
+X = -8839/60
+Y = -5743/69
+Z = 6841/58
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -8839/60, -5743/69, 6841/58)$
+Time for real roots counting: 0.30189013481140137
+Time for solving the system of algebraic equations: 0.1983625888824463
+theta1 = 0.514276082379599 - pi
+theta4 = -0.977684789498090
+theta7 = 0.845720154242686 - pi
+theta1 = 0.514276082379599
+theta4 = -0.960983387761298 + pi
+theta7 = -0.757635689550679
+theta1 = 0.514276082379599 - pi
+theta4 = 0.364064281486641 - pi
+theta7 = -1.07993764337632 + pi
+theta1 = 0.514276082379599
+theta4 = -1.53508076055778 + pi
+theta7 = 0.523418200416871
+Time for error estimation: 0.022320270538330078
+Time for solving inverse kinematic problem: 0.5900275707244873
+-----
+Case: 176
+X = -7023/64
+Y = -3807/25
+Z = 1433/57
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -7023/64, -3807/25, 1433/57)$
+Time for real roots counting: 0.2976686954498291
+Time for solving the system of algebraic equations: 0.15503478050231934
+theta1 = 0.946372151865497 - pi
+theta4 = 1.47159178373346 - pi
+theta7 = -1.54552762401950
+theta1 = 0.946372151865497 - pi
+theta4 = 0.216420662209844 - pi
+theta7 = 1.31131013488577
+Time for error estimation: 0.010915756225585938
+Time for solving inverse kinematic problem: 0.5440094470977783
+-----
+Case: 177
+X = 2203/44
+Y = -1249/22
+Z = 12760/89
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 2203/44, -1249/22, 12760/89)$
+Time for real roots counting: 0.291398286819458
+Time for solving the system of algebraic equations: 0.2137460708618164
+theta1 = -0.848068592357517 + pi
+theta4 = -0.456389383323363 + pi
+theta7 = 1.06053897259987 - pi
+theta1 = -0.848068592357517 + pi
+theta4 = 1.01903620537730
+theta7 = -1.29475646173361 + pi
+theta1 = -0.848068592357517
+theta4 = 0.336305640136594 - pi
+theta7 = -0.190202088704447 + pi
+theta1 = -0.848068592357517
+theta4 = 0.963130666542724 - pi
+theta7 = -0.0440154004292804 + pi
+Time for error estimation: 0.02003312110900879
+Time for solving inverse kinematic problem: 0.5869543552398682
+-----
+Case: 178
+X = 1579/15
+Y = 1917/91
+Z = 8788/33
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 1579/15, 1917/91, 8788/33)$
+Time for real roots counting: 0.30164122581481934
+Time for solving the system of algebraic equations: 0.17261600494384766
+theta1 = 0.197510656209116 - pi
+theta4 = 0.570429444649696
+theta7 = 1.20746251883740
+theta1 = 0.197510656209116
+theta4 = -1.22463449988971
+theta7 = -1.0097387319898 + pi
+theta1 = 0.197510656209116 - pi
+theta4 = -1.4025066613627 + pi
+theta7 = -1.44168000797236
+theta1 = 0.197510656209116
+theta4 = 0.611590833379257
+theta7 = 0.775521242857062 - pi
+Time for error estimation: 0.01846027374267578
+Time for solving inverse kinematic problem: 0.556394100189209
+-----
+Case: 179
+X = 8387/90
+Y = -2087/15
+Z = 2753/66
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 8387/90, -2087/15, 2753/66)$
+Time for real roots counting: 0.3028571605682373
+Time for solving the system of algebraic equations: 0.15972900390625
+theta1 = -0.980640616526662
+theta4 = 0.0726145621247867 - pi
+theta7 = -1.53346506393165 + pi
+theta1 = -0.980640616526662
+theta4 = 1.56495016949417 - pi
+theta7 = 1.29924757479792 - pi
+Time for error estimation: 0.01088714599609375
+Time for solving inverse kinematic problem: 0.5427231788635254
+-----
+Case: 180
+X = 8111/84
+Y = 4341/98
+Z = 10711/83
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 8111/84, 4341/98, 10711/83)$
+Time for real roots counting: 0.3000829219818115
+Time for solving the system of algebraic equations: 0.1682875156402588
+theta1 = 0.43010002801451 - pi
+theta4 = -0.530987352571501 + pi
+theta7 = 1.40362580808143 - pi
+theta1 = 0.43010002801451 - pi
+theta4 = 1.19961797975833
+theta7 = 1.50374935637463
+theta1 = 0.430100028014510
+theta4 = 0.0639388763221183 - pi
+theta7 = -0.539593749735444 + pi
+theta1 = 0.430100028014509
+theta4 = -1.23260088864622
+theta7 = 0.305376260601715 - pi
+Time for error estimation: 0.01903223991394043
+Time for solving inverse kinematic problem: 0.5528564453125
+-----
+Case: 181
+X = -507/5
+Y = 2325/73
+Z = 4758/25
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -507/5, 2325/73, 4758/25)$
+Time for real roots counting: 0.2954740524291992
+Time for solving the system of algebraic equations: 0.19673991203308105
+theta1 = -0.304338040574939
+theta4 = -0.880106719521473 + pi
+theta7 = 1.37798295646709 - pi
+theta1 = -0.304338040574939
+theta4 = 0.830276556820245
+theta7 = 1.52939220798895
+theta1 = -0.304338040574939 + pi
+theta4 = 1.30522368718235 - pi
+theta7 = -0.470905566068376 + pi
+theta1 = -0.304338040574939 + pi
+theta4 = -0.0701271780487180
+theta7 = 0.236688076934656 - pi
+Time for error estimation: 0.02229022979736328
+Time for solving inverse kinematic problem: 0.5785210132598877
+-----
+Case: 182
+X = 176/7
+Y = -1186/63
+Z = 16720/71
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 176/7, -1186/63, 16720/71)$
+Time for real roots counting: 0.294356107711792
+Time for solving the system of algebraic equations: 0.21090221405029297
+theta1 = -0.642692538118474 + pi
+theta4 = 0.148789646251486
+theta7 = -1.07159440825171 + pi
+theta1 = -0.642692538118474
+theta4 = -0.421511700653116
+theta7 = -0.703581848424122 + pi
+theta1 = -0.642692538118474 + pi
+theta4 = -1.18840517048104 + pi
+theta7 = 0.83737691911794 - pi
+theta1 = -0.642692538118474
+theta4 = 1.49290780846809
+theta7 = 0.469364359290428 - pi
+Time for error estimation: 0.02256011962890625
+Time for solving inverse kinematic problem: 0.598686933517456
+-----
+Case: 183
+X = -2756/67
+Y = 6611/82
+Z = 17641/71
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -2756/67, 6611/82, 17641/71)$
+Time for real roots counting: 0.3004131317138672
+Time for solving the system of algebraic equations: 0.20708107948303223
+theta1 = -1.09901212548034
+theta4 = 0.492751653268397
+theta7 = 1.49297503334296
+theta1 = -1.09901212548034 + pi
+theta4 = -1.16843682100171
+theta7 = -0.803236592976924 + pi
+theta1 = -1.09901212548034
+theta4 = -1.24639290778023 + pi
+theta7 = 1.41440013111302 - pi
+theta1 = -1.09901212548034 + pi
+theta4 = 0.740155409670872
+theta7 = 0.569019103843255 - pi
+Time for error estimation: 0.018453598022460938
+Time for solving inverse kinematic problem: 0.5983562469482422
+-----
+Case: 184
+X = 299/100
+Y = -3509/52
+Z = 3590/33
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 299/100, -3509/52, 3590/33)$
+Time for real roots counting: 0.2996547222137451
+Time for solving the system of algebraic equations: 0.17320585250854492
+theta1 = -1.52651636970949 + pi
+theta4 = 1.27869188633315
+theta7 = -1.31567199233592 + pi
+theta1 = -1.52651636970949 + pi
+theta4 = -0.211104847688391 + pi
+theta7 = 1.08145450320219 - pi
+theta1 = -1.52651636970949
+theta4 = -0.713321195690598 + pi
+theta7 = -0.540261141735903 + pi
+theta1 = -1.52651636970949
+theta4 = 1.13231104758603 - pi
+theta7 = 0.306043652602175 - pi
+Time for error estimation: 0.019325733184814453
+Time for solving inverse kinematic problem: 0.5631768703460693
+-----
+Case: 185
+X = 2858/63
+Y = -13980/83
+Z = 9425/72
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 2858/63, -13980/83, 9425/72)$
+Time for real roots counting: 0.30164241790771484
+Time for solving the system of algebraic equations: 0.1666414737701416
+theta1 = -1.30770452567486
+theta4 = -0.859432750372392
+theta7 = 0.848258187503183 - pi
+theta1 = -1.30770452567486 + pi
+theta4 = -1.05354752980899 + pi
+theta7 = -0.678854805140260
+theta1 = -1.30770452567486
+theta4 = 0.483713176568068 - pi
+theta7 = -1.08247567663711 + pi
+theta1 = -1.30770452567486 + pi
+theta4 = -1.55750739141433 + pi
+theta7 = 0.444637316006682
+Time for error estimation: 0.019144058227539062
+Time for solving inverse kinematic problem: 0.5504062175750732
+-----
+Case: 186
+X = 9001/85
+Y = -2880/79
+Z = 2367/62
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 9001/85, -2880/79, 2367/62)$
+Time for real roots counting: 0.29221320152282715
+Time for solving the system of algebraic equations: 0.22207260131835938
+theta1 = -0.331557068096588 + pi
+theta4 = -0.355928959687021 + pi
+theta7 = -1.15995223461815
+theta1 = -0.331557068096588
+theta4 = 1.32895423586627 - pi
+theta7 = 1.03671501160781 - pi
+theta1 = -0.331557068096588
+theta4 = -0.353336296224447 + pi
+theta7 = -1.2709325007415 + pi
+theta1 = -0.331557068096588 + pi
+theta4 = -1.28380525601924 + pi
+theta7 = 0.925734745484375
+Time for error estimation: 0.027895212173461914
+Time for solving inverse kinematic problem: 0.6060914993286133
+-----
+Case: 187
+X = -2901/22
+Y = -1857/26
+Z = 13158/77
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -2901/22, -1857/26, 13158/77)$
+Time for real roots counting: 0.2924363613128662
+Time for solving the system of algebraic equations: 0.19052577018737793
+theta1 = 0.496404814852115
+theta4 = 1.17472464885162
+theta7 = 0.988863645867237
+theta1 = 0.496404814852115 - pi
+theta4 = 0.787396908333433 - pi
+theta7 = -0.81125075698989 + pi
+theta1 = 0.496404814852115
+theta4 = -0.984401595389854 + pi
+theta7 = -1.22308113500128
+theta1 = 0.496404814852115 - pi
+theta4 = -0.447106629578241
+theta7 = 0.577033267856392 - pi
+Time for error estimation: 0.02362346649169922
+Time for solving inverse kinematic problem: 0.588597297668457
+-----
+Case: 188
+X = 8320/83
+Y = 11739/61
+Z = 3023/30
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 8320/83, 11739/61, 3023/30)$
+Time for real roots counting: 0.29396677017211914
+Time for solving the system of algebraic equations: 0.18763065338134766
+theta1 = 1.09057866074602
+theta4 = -1.12874321243954
+theta7 = 1.35374085257187 - pi
+theta1 = 1.09057866074602
+theta4 = 0.562659294558525 - pi
+theta7 = 1.55363431188420
+Time for error estimation: 0.009648799896240234
+Time for solving inverse kinematic problem: 0.560265302658081
+-----
+Case: 189
+X = 2595/97
+Y = -461/31
+Z = 4629/22
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 2595/97, -461/31, 4629/22)$
+Time for real roots counting: 0.3003230094909668
+Time for solving the system of algebraic equations: 0.21558785438537598
+theta1 = -0.507339114778263 + pi
+theta4 = 0.311234650766550
+theta7 = -0.946022886549506 + pi
+theta1 = -0.507339114778263
+theta4 = -0.169447888211800
+theta7 = -0.509384607455855 + pi
+theta1 = -0.507339114778263 + pi
+theta4 = -0.965457641991406 + pi
+theta7 = 0.711805397415763 - pi
+theta1 = -0.507339114778263
+theta4 = -1.49570070516741 + pi
+theta7 = 0.275167118322137 - pi
+Time for error estimation: 0.018552064895629883
+Time for solving inverse kinematic problem: 0.603501558303833
+-----
+Case: 190
+X = 1687/36
+Y = 14286/89
+Z = 3257/61
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 1687/36, 14286/89, 3257/61)$
+Time for real roots counting: 0.301424503326416
+Time for solving the system of algebraic equations: 0.15889573097229004
+theta1 = 1.28675136096498
+theta4 = 0.0849813673210746 - pi
+theta7 = -1.43949430344865 + pi
+theta1 = 1.28675136096498
+theta4 = -1.49351441662739
+theta7 = 1.20527681431492 - pi
+Time for error estimation: 0.010483264923095703
+Time for solving inverse kinematic problem: 0.536414623260498
+-----
+Case: 191
+X = -11281/100
+Y = -8131/98
+Z = 4714/37
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -11281/100, -8131/98, 4714/37)$
+Time for real roots counting: 0.29375600814819336
+Time for solving the system of algebraic equations: 0.17710566520690918
+theta1 = 0.634142721475132
+theta4 = 1.34604033050319
+theta7 = 1.08269636780888
+theta1 = 0.634142721475132 - pi
+theta4 = 0.270829100076814 - pi
+theta7 = -0.803141326615664 + pi
+theta1 = 0.634142721475132
+theta4 = -0.732574698502494 + pi
+theta7 = -1.31691385694264
+theta1 = 0.634142721475133 - pi
+theta4 = -0.962154261263325
+theta7 = 0.568923837481962 - pi
+Time for error estimation: 0.018260717391967773
+Time for solving inverse kinematic problem: 0.5550220012664795
+-----
+Case: 192
+X = 916/15
+Y = -3016/47
+Z = 16720/91
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 916/15, -3016/47, 16720/91)$
+Time for real roots counting: 0.30541396141052246
+Time for solving the system of algebraic equations: 0.18882226943969727
+theta1 = -0.810174499510961 + pi
+theta4 = -0.779003031602964 + pi
+theta7 = 1.18150715219534 - pi
+theta1 = -0.810174499510961 + pi
+theta4 = 0.782029176974924
+theta7 = -1.41572464132907 + pi
+theta1 = -0.810174499510961
+theta4 = -1.45563763615593
+theta7 = -0.27456419737244 + pi
+theta1 = -0.810174499510961
+theta4 = -0.278934472965877
+theta7 = 0.0403467082387133 - pi
+Time for error estimation: 0.021100521087646484
+Time for solving inverse kinematic problem: 0.5764820575714111
+-----
+Case: 193
+X = 5531/50
+Y = -2005/23
+Z = 18883/80
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 5531/50, -2005/23, 18883/80)$
+Time for real roots counting: 0.2977595329284668
+Time for solving the system of algebraic equations: 0.20772933959960938
+theta1 = -0.667410771169544
+theta4 = 1.48612413261364 - pi
+theta7 = -0.967215871039077 + pi
+theta1 = -0.667410771169544 + pi
+theta4 = 0.882460234799705
+theta7 = 0.949686637755127
+theta1 = -0.667410771169544 + pi
+theta4 = -1.31050682385661 + pi
+theta7 = -1.18390412701594
+theta1 = -0.667410771169544
+theta4 = 0.200410097574677
+theta7 = 0.732998382036295 - pi
+Time for error estimation: 0.022035837173461914
+Time for solving inverse kinematic problem: 0.5963118076324463
+-----
+Case: 194
+X = 78/73
+Y = -11289/92
+Z = 8045/34
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 78/73, -11289/92, 8045/34)$
+Time for real roots counting: 0.29081082344055176
+Time for solving the system of algebraic equations: 0.22052836418151855
+theta1 = -1.56208883406453 + pi
+theta4 = 0.745314236270392
+theta7 = 1.19453457363649
+theta1 = -1.56208883406453
+theta4 = -1.54098831000298
+theta7 = -0.855630783728649 + pi
+theta1 = -1.56208883406453 + pi
+theta4 = -1.23849007197319 + pi
+theta7 = -1.42875206277064
+theta1 = -1.56208883406453
+theta4 = 0.355506171015480
+theta7 = 0.62141329459522 - pi
+Time for error estimation: 0.021922588348388672
+Time for solving inverse kinematic problem: 0.6128020286560059
+-----
+Case: 195
+X = -10000/57
+Y = 2711/92
+Z = 13838/65
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -10000/57, 2711/92, 13838/65)$
+Time for real roots counting: 0.29138636589050293
+Time for solving the system of algebraic equations: 0.23660516738891602
+theta1 = -0.166410808372333 + pi
+theta4 = 1.19138367461274 - pi
+theta7 = -1.14912754332096 + pi
+theta1 = -0.166410808372333 + pi
+theta4 = -0.190218798014862
+theta7 = 0.914910054187023 - pi
+theta1 = -0.166410808372333
+theta4 = -1.47705262664772 + pi
+theta7 = -0.492317074393997
+theta1 = -0.166410808372333
+theta4 = 1.32736175157416
+theta7 = 0.258099585260400
+Time for error estimation: 0.021311521530151367
+Time for solving inverse kinematic problem: 0.6151158809661865
+-----
+Case: 196
+X = 490/19
+Y = -2567/15
+Z = 15182/89
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 490/19, -2567/15, 15182/89)$
+Time for real roots counting: 0.2935049533843994
+Time for solving the system of algebraic equations: 0.21742916107177734
+theta1 = -1.42122367936866
+theta4 = -0.498849032999626
+theta7 = 0.786045485757239 - pi
+theta1 = -1.42122367936866 + pi
+theta4 = -1.17304725808034 + pi
+theta7 = -0.784908776784866
+theta1 = -1.42122367936866
+theta4 = 0.811677459222668 - pi
+theta7 = -1.02026298684687 + pi
+theta1 = -1.42122367936866 + pi
+theta4 = 1.37021808659090
+theta7 = 0.550691299578610
+Time for error estimation: 0.024569988250732422
+Time for solving inverse kinematic problem: 0.6049184799194336
+-----
+Case: 197
+X = -1033/32
+Y = 4011/25
+Z = 4386/61
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -1033/32, 4011/25, 4386/61)$
+Time for real roots counting: 0.30027294158935547
+Time for solving the system of algebraic equations: 0.2243819236755371
+theta1 = -1.37224286247662 + pi
+theta4 = 0.101384016858964 - pi
+theta7 = -1.28202441133173 + pi
+theta1 = -1.37224286247662 + pi
+theta4 = -1.36539131394358
+theta7 = 1.047806922198 - pi
+theta1 = -1.37224286247662
+theta4 = -0.892865834924016 + pi
+theta7 = -0.484868238338109
+theta1 = -1.37224286247662
+theta4 = -1.22336755419514 + pi
+theta7 = 0.250650749204382
+Time for error estimation: 0.025411128997802734
+Time for solving inverse kinematic problem: 0.6281132698059082
+-----
+Case: 198
+X = -3261/92
+Y = 18143/95
+Z = 13121/75
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -3261/92, 18143/95, 13121/75)$
+Time for real roots counting: 0.3063533306121826
+Time for solving the system of algebraic equations: 0.16964483261108398
+theta1 = -1.38728468311992 + pi
+theta4 = 0.896469730539034 - pi
+theta7 = -1.2215551084797 + pi
+theta1 = -1.38728468311992 + pi
+theta4 = -0.530318565000135
+theta7 = 0.987337619345945 - pi
+Time for error estimation: 0.013010740280151367
+Time for solving inverse kinematic problem: 0.5707988739013672
+-----
+Case: 199
+X = -8233/85
+Y = -93/5
+Z = 8958/41
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -8233/85, -93/5, 8958/41)$
+Time for real roots counting: 0.2997775077819824
+Time for solving the system of algebraic equations: 0.22062921524047852
+theta1 = 0.189722477857532
+theta4 = -1.04747429441576 + pi
+theta7 = 1.3658574679586 - pi
+theta1 = 0.189722477857532
+theta4 = 0.653398093063026
+theta7 = 1.54151769649744
+theta1 = 0.189722477857532 - pi
+theta4 = -1.43295413841009
+theta7 = -0.594867314981844 + pi
+theta1 = 0.189722477857532 - pi
+theta4 = 0.450363826123365
+theta7 = 0.360649825848132 - pi
+Time for error estimation: 0.020329952239990234
+Time for solving inverse kinematic problem: 0.6087863445281982
+Shutdown time: 2.00087571144104
+-----
+Range of sample points: [ 100 , 199 ]
+The average of computing time for choosing the partition: 0.06738587379455567
+The average of cpmputing time for the CGS-QE 0.29742223739624024
+The average of computing time for substitution 0.27983478784561155
+The average of computing time for the Descartes' rule of signs: 0.017587449550628662
+The average of computing time for solving algebraic equations: 0.17890324115753173
+The average of time for inverse kinematics computation: 0.5617157411575318
+The average of computing time for errors: 0.018004388809204103
+The average of errors: 1.6588241456014822e-08
+-----
+Partition indices used for CGS-QE: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+The number of valid sample points: 100
+Valid sample points: [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199]
+The number of real roots: [4, 4, 2, 2, 2, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 2, 2, 4, 4, 4, 2, 2, 2, 2, 4, 4, 2, 4, 4, 2, 4, 4, 4, 2, 2, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 4, 4, 2, 4, 2, 4, 4, 2, 4, 2, 4, 4, 4, 4, 2, 4, 2, 2, 4, 4, 4, 4, 2, 2, 4, 2, 4, 2, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 4, 2, 4]
+2021-09-05 13:38:29.187704
+terui@poulenc:~/project/ev3/otakishuto/experiments/main-new$ 
