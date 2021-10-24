@@ -1,6 +1,6 @@
 # Main steps
 
-This section contains the main steps.
+This section contains the main steps of the inverse kinematic computation.
 
 Details are contained as follows:
 
