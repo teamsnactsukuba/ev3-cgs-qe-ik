@@ -1,0 +1,24 @@
+[flopsy5:otakishuto/article/mcs] terui% /usr/sbin/system_profiler SPHardwareDataType
+Hardware:
+
+    Hardware Overview:
+
+      Model Name: MacBook Pro
+      Model Identifier: MacBookPro15,2
+      Processor Name: Quad-Core Intel Core i5
+      Processor Speed: 2.3 GHz
+      Number of Processors: 1
+      Total Number of Cores: 4
+      L2 Cache (per Core): 256 KB
+      L3 Cache: 6 MB
+      Hyper-Threading Technology: Enabled
+      Memory: 16 GB
+      System Firmware Version: 1554.120.19.0.0 (iBridge: 18.16.14663.0.0,0)
+      Serial Number (system): C02Y110MJHD3
+      Hardware UUID: DE93B248-E66E-5C7E-BC78-CA5B752FB85D
+      Provisioning UDID: DE93B248-E66E-5C7E-BC78-CA5B752FB85D
+      Activation Lock Status: Disabled
+
+[flopsy5:otakishuto/article/mcs] terui% sysctl -n machdep.cpu.brand_string
+Intel(R) Core(TM) i5-8259U CPU @ 2.30GHz
+[flopsy5:otakishuto/article/mcs] terui% 
