@@ -1,0 +1,94 @@
+// 
+// Computing Multivarite Hermitian Quadratic Form
+// Copyright (C) Team SNAC Tsukuba, 2021
+
+
+import("oh_base.rr")$
+import("nabeshima.rr")$
+
+def quadratic_form (H, G, X, Ord) {
+
+	// Calculate the Hermite quadratic form
+	// Inputs:
+	// 	H: a polynomial to multiply
+	// 	G: a Groebner basis of the residue class ring
+	// 	X: the list of variables in the polynomial ring
+	// 	Ord: a monomial order (defined by Asir)
+	// Output:
+	// 	W: the Hermite quadratic form (matrix) for multiplying H
+
+	dp_ord(Ord);  // Set term order of monomials in the distributed representation to DegRevLex
+	Trace = 0;
+	G0 = map(dp_ptod, G, X); // Change the polynomials in the Groenber basis to the distributed representation
+	G1 = ltov(G0); // Change the list to the vector to apply dp_nf
+	L = length(G);
+	C = dp_mbase(G0); // Calculate the monomial base of the residue class ring
+	B = sort_leftl(C);  // Sort the elements
+	N = length(B);
+	W = newmat(N, N); // The Hermitian quadratic form
+	H = dp_ptod(H, X); // Transform H to the distributed representation
+	R = B;
+	// print(R);
+	for(I = 0; I < N; I++) {  
+		for(J = 0; J < N; J++) {
+			Q = R[I]*R[J]*H; // a biliniar form
+			L1 = [];
+			for(K = 0; K < N; K++) {
+				A = dp_nf(oh_base.range(0, L - 1), R[K]*Q, G1, 1);  // Get the normal form of the product
+				Row = make_row_nabe(A, B); // Take coefficients
+				L1 = cons(Row, L1); // Add each row to L1
+			}
+			L2 = matrix_transpose(matrix_list_to_matrix(L1)); // Take the matrix transpose
+			// print(I);
+			// print(J);
+			// print(L2);
+			for(P = 0; P < N; P++) {
+				Trace = Trace + L2[P][P]; // Calculate the trace of L2
+			}
+			// print(Trace);
+			W[I][J] = Trace; // Set the trace as the (i,j) component in W
+			Trace = 0;
+		}
+	}
+	// print(W);
+	return W;
+	// T = matrix_identity_matrix(N);
+	// J = T*t - W;
+	// matrix_det(J);
+}
+
+
+def quadratic_form_char_poly (H, G, X, Ord, Var) {
+
+	// Calculate the characteristic polynomial of the Hermite quadratic form
+	// Inputs:
+	// 	H: a polynomial to multiply
+	// 	G: a Groebner basis of the residue class ring
+	// 	X: the list of variables in the polynomial ring
+	// 	Ord: a monomial order (defined by Asir)
+	//  Var: the variable of the characteristic polynomial
+	// Output:
+	// 	W: the Hermite quadratic form (matrix) for multiplying H
+
+	W = quadratic_form (H, G, X, Ord);
+	return char_poly (W, Var);
+
+}
+
+
+def char_poly (A, Var) {
+
+	// Caculate the characteristic polynomial of a matrix
+	// Inputs:
+	//	A: a square matrix
+	//	Var: a variable
+
+	S = size(A)[0];
+	T = matrix_identity_matrix(S);
+	B = T * Var - A;
+	return matrix_det(B);
+
+}
+
+
+end$
