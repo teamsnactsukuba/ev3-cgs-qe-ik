@@ -18,3 +18,7 @@ Verification of the existence of real points in the segments are done as follows
 ## Segments that do not contain real points
 
 * There exists f \in F_NN_1 satisfying that the discriminant of f < 0 (i = 33, 34)
+
+## Summary
+
+* The result of computation is summarized in Mathematica notebook: H-verification.nb.
