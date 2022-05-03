@@ -25,3 +25,7 @@ f divided by $G_{i,1}$ is not equal to zero (i = 05, 08, 10, 12, 14, 17, 18, 24,
 * The only point(s) in V_R(<F_NN_1>) also exists in V_R(<F_NN_2>) (i = 03, 04, 16)
 * There exists f \in F_NN_1 satisfying that the discriminant of f < 0 (i = 06, 07, 09, 11, 13, 19, 20, 21, 22, 23, 25, 26, 27, 28)
 * There exists f \in F_NN_1 with no real roots, founded by the QE computation (i = 15)
+
+## Summary
+
+* The result of computation is summarized in Mathematica notebook: F-verification.nb.
