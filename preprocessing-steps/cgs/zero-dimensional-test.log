@@ -1,0 +1,165 @@
+[3676] load("zero-dimensional-test.rr")$
+redeclaration of find_base_data
+The leading monomial in each polynomial in a Groebner basis of each segments:
+
+I = 0:
+g_0: s_7^4
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 1:
+g_0: s_7^4
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 2:
+g_0: s_7^2
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: c_1^2
+Variables which do not appear in the leading monomial in the Groebner basis:
+[s_1]
+
+I = 5:
+g_0: s_7^2
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 8:
+g_0: s_7^2
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 10:
+g_0: s_7^2
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 12:
+g_0: s_7
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 14:
+g_0: s_7^3
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 17:
+g_0: s_7^3
+g_1: c_7*s_7
+g_2: c_7^2
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 18:
+g_0: s_7^2
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 24:
+g_0: s_7^3
+g_1: c_7*s_7
+g_2: c_7^2
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 29:
+g_0: s_7^2
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: c_1^2
+Variables which do not appear in the leading monomial in the Groebner basis:
+[s_1]
+
+I = 30:
+g_0: s_7^3
+g_1: c_7*s_7
+g_2: c_7^2
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 31:
+g_0: s_7^3
+g_1: c_7*s_7
+g_2: c_7^2
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 32:
+g_0: s_7^4
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 35 (H[1]):
+g_0: s_7
+g_1: c_7
+g_2: s_4
+g_3: c_4
+Variables which do not appear in the leading monomial in the Groebner basis:
+[c_1,s_1]
+
+[3820] 

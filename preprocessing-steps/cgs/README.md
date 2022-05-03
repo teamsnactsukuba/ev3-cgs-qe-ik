@@ -45,4 +45,10 @@ Logs of the verification are stored as follows:
 - The segments of the CGS of H: see 
 [H-segments/](./H-segments/) 
 
+### Verification of zero-dimensional ideals
+
+Verification of zero-dimensional ideals was executed with Risa/Asir.
+
+- Program: [zero-dimensional-test.rr](./zero-dimensional-test.rr)
+- Log: [zero-dimensional-test.log](./zero-dimensional-test.log)
 
