@@ -1,0 +1,77 @@
+terui@fermat:~/project/ev3-cgs-qe-ik/main-steps/present-method$ python3 ./cgs-qe-ik-example.py 
+2022-05-07 23:09:23.217074
+OpenXM_Home = /usr/local/openxm/OpenXM
+Platform = Linux
+PATH=/usr/local/openxm/OpenXM/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/maple2021/bin
+Found: /usr/bin/xterm
+ox_command_string: C=bload("/home/terui/project/ev3-cgs-qe-ik/main-steps/present-method/C.dat")$
+ox_command_string: load("/home/terui/project/ev3-cgs-qe-ik/main-steps/present-method/subst_char_poly.rr")$
+-----
+Case: 0
+X = -6061/41
+Y = -7679/51
+Z = 4379/27
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, -6061/41, -7679/51, 4379/27)$
+Time for real roots counting: 0.06285333633422852
+Time for solving the system of algebraic equations: 0.17846965789794922
+theta1 = 0.794578128292431 - pi
+theta4 = 0.859415097289073 - pi
+theta7 = -1.38522249366716 + pi
+theta1 = 0.794578128292431 - pi
+theta4 = -0.679494508722899
+theta7 = 1.15100500453343 - pi
+Time for error estimation: 0.012508869171142578
+Time for solving inverse kinematic problem: 0.3327443599700928
+-----
+Case: 1
+X = 0
+Y = 0
+Z = 200
+The index of partition: 13
+ox_command_string: V = subst_char_poly_vect (C, 13, 0, 0, 200)$
+Time for real roots counting: 0.00551152229309082
+Time for solving the system of algebraic equations: 0.01877593994140625
+theta1 = 0
+theta4 = 0.236922524685754
+theta7 = -0.658765540873251 + pi
+theta1 = 0
+theta4 = -0.997268873826373 + pi
+theta7 = 0.424548051739522 - pi
+Time for error estimation: 0.006161928176879883
+Time for solving inverse kinematic problem: 0.3233344554901123
+-----
+Case: 2
+X = 300
+Y = 400
+Z = 500
+The index of partition: 12
+ox_command_string: V = subst_char_poly_vect (C, 12, 300, 400, 500)$
+Time for real roots counting: 0.08026647567749023
+no real root!
+-----
+Case: 3
+X = 300
+Y = 0
+Z = 400
+The index of partition: 0
+ox_command_string: V = subst_char_poly_vect (C, 0, 300, 0, 400)$
+Time for real roots counting: 0.015603780746459961
+no real root!
+Shutdown time: 2.218125343322754
+-----
+Range of sample points: [ 0 , 3 ]
+The average of computing time for choosing the partition: 0.12344157695770264
+The average of cpmputing time for the CGS-QE 0.04105877876281738
+The average of computing time for substitution 0.02577340602874756
+The average of computing time for the Descartes' rule of signs: 0.015285372734069824
+The average of computing time for solving algebraic equations: 0.09862279891967773
+The average of time for inverse kinematics computation: 0.32803940773010254
+The average of computing time for errors: 0.00933539867401123
+The average of errors: 7.229170070657696e-10
+-----
+Partition indices used for CGS-QE: [12, 13, 12, 0]
+The number of varid sample points: 2
+Valid sample points: [0, 1]
+The number of real roots: [2, 2, 0, 0]
+2022-05-07 23:09:31.772245
