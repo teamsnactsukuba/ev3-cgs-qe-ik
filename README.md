@@ -3,7 +3,7 @@ An inverse kinematics solver based on the CGS-QE algorithm for an EV3 manipulato
 
 This repository contains an implementation of an inverse kinematics solver based on the CGS-QE algorithm for an EV3 manipulator, described in the following paper:
 
-Shuto Otaki, Akira Terui and Masahiko Mikawa. A Design and an implementation of an inverse kinematics computation in robotics using real quantifier elimination based on Comprehensive Groebner Systems.
+Shuto Otaki, Akira Terui and Masahiko Mikawa. A Design and an implementation of an inverse kinematics computation in robotics using real quantifier elimination based on Comprehensive Groebner Systems. https://doi.org/10.48550/arXiv.2111.00384
 
 ## Contents
 
