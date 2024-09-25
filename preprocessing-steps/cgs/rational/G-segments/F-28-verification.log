@@ -1,0 +1,31 @@
+terui@flopsy6 G-segments % fep asir
+Welcome to fep! Editmode is emacs
+I'm a front end processor for asir
+History will be saved to .fephistory
+This is Risa/Asir, full GMP Version 20230315 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision$ (20230107), Copyright 2000-2023, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[2077] load("F-28-1.rr");
+[2079] F_28_1;
+[y,x,z^4-249280*z^3+31044293120*z^2-1933062141132800*z+60133538272511852544]
+
+---
+
+terui@flopsy6 G-segments % /Applications/Mathematica.app/Contents/MacOS/wolframscript
+Wolfram Language 14.0.0 Engine for Mac OS X ARM (64-bit)
+Copyright 1988-2023 Wolfram Research, Inc.
+
+In[1]:= Reduce[Exists[{z},z^4-249280*z^3+31044293120*z^2-1933062141132800*z+601335382725118525
+44==0], Reals]                                                                                
+
+Out[1]= False
+
+---
+
+We see that the affine variety of F_28_1 do not contain real points.
