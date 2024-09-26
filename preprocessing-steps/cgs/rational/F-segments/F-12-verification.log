@@ -1,0 +1,30 @@
+terui@flopsy6 G-segments % fep asir                                                  
+Welcome to fep! Editmode is emacs
+I'm a front end processor for asir
+History will be saved to .fephistory
+This is Risa/Asir, full GMP Version 20230315 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision$ (20230107), Copyright 2000-2023, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[2077] load("F-12-1.rr")$
+[2079] F_12_1;           
+[2365857126809757559675592357*z^2-294880404891729334208331265813040*z+18346377888205438110908549609260128400,6475005866541970373*x^2+6475005866541970373*y^2-298942529424*z-379639838551049488]
+
+---
+
+terui@flopsy6 G-segments % /Applications/Mathematica.app/Contents/MacOS/wolframscript
+Wolfram Language 14.0.0 Engine for Mac OS X ARM (64-bit)
+Copyright 1988-2023 Wolfram Research, Inc.
+
+In[1]:= << F-12-verification.m                                                                
+
+Out[1]= False
+
+---
+
+We see that the affine variety of F_12_1 do not contain real points.
