@@ -17,4 +17,4 @@ http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
 
 ---
 
-Since x = y = 0 is contained in F_07_2, this partition does not contain real points.
+Since x = y = 0 and any real z are contained in F_07_2, this partition does not contain real points.
