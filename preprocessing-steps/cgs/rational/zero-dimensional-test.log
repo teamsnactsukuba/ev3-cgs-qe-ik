@@ -1,0 +1,65 @@
+terui@flopsy6 rational % fep asir 
+Welcome to fep! Editmode is emacs
+I'm a front end processor for asir
+History will be saved to .fephistory
+This is Risa/Asir, full GMP Version 20230315 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision$ (20230107), Copyright 2000-2023, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[2077] load("zero-dimensional-test.rr")$
+redeclaration of find_base_data
+The leading monomial in each polynomial in a Groebner basis of each segments:
+
+I = 0:
+g_0: s_7^4
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 1:
+g_0: s_7^2
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: c_1^2
+Variables which do not appear in the leading monomial in the Groebner basis:
+[s_1]
+
+I = 7:
+g_0: s_7^2
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 9:
+g_0: s_7^2
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 31:
+g_0: s_7^4
+g_1: c_7
+g_2: s_4
+g_3: c_4
+g_4: s_1
+g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
