@@ -1,0 +1,19 @@
+terui@flopsy6 G-basis % fep asir
+Welcome to fep! Editmode is emacs
+I'm a front end processor for asir
+History will be saved to .fephistory
+This is Risa/Asir, full GMP Version 20230315 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision$ (20230107), Copyright 2000-2023, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[2077] load("G-1.rr")$
+[2079] G_1;
+[-z^4+249280*z^3+(-7168*s_7-31044293120)*z^2+(893419520*s_7+1933062141132800)*z-940900352*s_7^2-55584842055680*s_7-60133538271596642304,-z^2+124640*z-3584*s_7+30464*c_7-7754581760,(34*s_4-7777)*z^2+(3808*s_7-4237760*s_4+969324736)*z-265187328*s_7+263656843904*s_4-60307636132224,-s_4*z-112*s_7+62320*s_4+62216*c_4+16,s_1^2+c_1^2-1]
+[2081] map(subst,G_1,x,0,y,0,c_1,1,s_1,0);
+[-z^4+249280*z^3+(-7168*s_7-31044293120)*z^2+(893419520*s_7+1933062141132800)*z-940900352*s_7^2-55584842055680*s_7-60133538271596642304,-z^2+124640*z-3584*s_7+30464*c_7-7754581760,(34*s_4-7777)*z^2+(3808*s_7-4237760*s_4+969324736)*z-265187328*s_7+263656843904*s_4-60307636132224,-s_4*z-112*s_7+62320*s_4+62216*c_4+16,0]
+[2082] 
