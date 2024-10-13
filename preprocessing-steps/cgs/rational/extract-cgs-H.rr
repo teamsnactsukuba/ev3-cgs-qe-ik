@@ -1,0 +1,69 @@
+def extractcgs_H(G, Offset, Index) {
+
+    // Inputs:
+    // H: a CGS
+    //  Offset: the offset of the index
+    // Index: a list of indices of the G to extract
+
+    // Outputs (as files):
+    // F-I-1.rr: the first variety of the I-th segment
+    // F-I-2.rr: the second variety of the I-th segment
+    // G-I.rr: the Groebner basis of the I-th segment
+
+    // Usage example:
+    // load("H.rr")$
+    // load("extract-cgs-H.rr")$
+    // extractcgs(G, 34, [2])$ => extracting F-36-1.rr, F-36-2.rr, G-36.rr
+
+    for (J = 0; J < length(Index); J++) {
+        I = Index[J];
+        // Segment S = V1 \setminus V2
+        V1 = G[I][0][0];
+        V2 = G[I][0][1];
+        GG = G[I][1];
+
+        I += Offset;
+
+        Segment_path = "H-segments/";
+        Gbase_path = "H-basis/";
+
+        V1file = Segment_path + "F-" + rtostr(I) + "-1.rr";
+        V2file = Segment_path + "F-" + rtostr(I) + "-2.rr";
+        GGfile = Gbase_path + "G-" + rtostr(I) + ".rr";
+
+        V1Str = "F_" + rtostr(I) + "_1 = ";
+        V2Str = "F_" + rtostr(I) + "_2 = ";
+        GGStr = "G_" + rtostr(I) + " = ";
+
+        EndStr = "$";
+        EOFStr = "end$";
+
+        output(V1file);
+        print(V1Str);
+        print(V1,0);
+        print(EndStr);
+        print(EOFStr);
+        
+        output();
+
+        output(V2file);
+        print(V2Str);
+        print(V2,0);
+        print(EndStr);
+        print(EOFStr);
+        output();
+
+        output(GGfile);
+        print(GGStr);
+        print(GG,0);
+        print(EndStr);
+        print(EOFStr);
+        output();
+        
+    }
+
+}
+
+
+
+end$
