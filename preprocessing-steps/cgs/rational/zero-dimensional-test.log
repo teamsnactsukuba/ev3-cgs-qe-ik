@@ -1,4 +1,4 @@
-terui@flopsy6 rational % fep asir 
+terui@flopsy6 rational % fep asir
 Welcome to fep! Editmode is emacs
 I'm a front end processor for asir
 History will be saved to .fephistory
@@ -34,7 +34,7 @@ g_4: c_1^2
 Variables which do not appear in the leading monomial in the Groebner basis:
 [s_1]
 
-I = 7:
+I = 8:
 g_0: s_7^2
 g_1: c_7
 g_2: s_4
@@ -44,17 +44,50 @@ g_5: c_1
 Variables which do not appear in the leading monomial in the Groebner basis:
 []
 
-I = 9:
+I = 10:
 g_0: s_7^2
 g_1: c_7
 g_2: s_4
 g_3: c_4
 g_4: s_1
 g_5: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 18:
+g_0: s_7^3
+g_1: c_7*s_7
+g_2: c_7^2
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 25:
+g_0: s_7^3
+g_1: c_7*s_7
+g_2: c_7^2
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
 Variables which do not appear in the leading monomial in the Groebner basis:
 []
 
 I = 31:
+g_0: s_7^3
+g_1: c_7*s_7
+g_2: c_7^2
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 33:
 g_0: s_7^4
 g_1: c_7
 g_2: s_4
