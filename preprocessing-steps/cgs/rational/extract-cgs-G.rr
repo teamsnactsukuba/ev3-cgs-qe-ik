@@ -1,4 +1,4 @@
-def extractcgs(G, Index) {
+def extractcgs_G(G, Index) {
 
     // Inputs:
     // G: a CGS
