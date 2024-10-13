@@ -1,0 +1,21 @@
+load("KapuCGS.rr");
+load("inconsistent.rr");
+
+// Computing CGS: G-1 after substituting c_1 -> 1, s_1 -> 0, x -> 0, y -> 0 with lex order
+
+load("G-basis/G-1.rr")$
+
+G_1_1 = map(subst,G_1,c_1,1,s_1,0,x,0,y,0)$
+
+G10 = G_1_1[0]$
+G11 = G_1_1[1]$
+G12 = G_1_1[2]$
+G13 = G_1_1[3]$
+
+G= [G10, G11, G12, G13]$
+
+H = kcgs_main(G, [z], [c_4,s_4,c_7,s_7], 2)$
+
+// bsave(H, "H.dat")$
+
+end$
