@@ -1,0 +1,38 @@
+// generate-b.rr
+// Generating a CGS after subsituting s_7^2 with 1 - c_7^2 in certain basis
+// Akira Terui, Team SNAC Tsukuba, October 2024
+load("oh_base.rr")$
+
+G = bload("../../preprocessing-steps/cgs/rational/G.dat")$
+GG = map(oh_base.nth, G, 1)$
+GGV = ltov(GG)$
+
+L = [18, 25, 31]$
+
+for (J = 0; J < length(L); J++) {
+    I = L[J];
+
+    // Extract the I-th G-basis
+    CurrentGGV = GGV[I]$
+    print(CurrentGGV);
+    CurrentGGV = oh_base.remove_nth(CurrentGGV, 2)$
+    CurrentGGVV = ltov(CurrentGGV)$
+    
+    // Extract the 2nd polynomial
+    CurrentGGVVpoly = CurrentGGVV[1]$
+    CurrentGGVVcoef = coef(CurrentGGVVpoly, 2, s_7)$
+    
+    // Substitute the term of s_7^2 
+    NewGGVVpoly = CurrentGGVVpoly - CurrentGGVVcoef * s_7^2 + CurrentGGVVcoef * (1 - c_7^2)$
+    
+    // Construct the I-th G-basis
+    CurrentGGVV[1] = NewGGVVpoly$
+
+    // Construct G
+    CurrentGGV = vtol(CurrentGGVV)$
+    GGV[I] = CurrentGGV$
+    print(CurrentGGV);
+}
+
+
+end$

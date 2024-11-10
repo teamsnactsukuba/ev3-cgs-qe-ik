@@ -1,0 +1,665 @@
+
+extern LENP$
+
+
+/*---------------------------*/
+/*Sup=[[G],[L]]*/
+/*G is a GB */
+
+def empty_check(Sup,Para){
+LENP=length(Para);
+if(Sup[0][0]==1){return 0;}
+if(Sup[1][0]==1){
+	return 1;}
+if(Sup[0][0]==0){
+	return 1;}
+
+G=Sup[0];
+L=Sup[1];
+
+dp_ord(0);
+DG=map(dp_ptod,G,Para);
+VG=newvect(length(G),DG);
+Leg=length(G);
+LG=make_indexp(Leg);
+I=1;
+while(L!=[]){
+	L1=car(L);
+	L=cdr(L);
+N=single_empty_nabe(L1,dp_ptod(L1,Para),VG,DG,G,LG,Para);
+	if(N==1){
+		return 1;
+	}
+}
+return 0;
+}
+
+
+
+
+/*==============================*/
+/*------------------------------*/
+/*S0=Sup[0], S1=Sup[1],Co,R1=R[1]=[setのset]*/
+
+def set_kuu_check(S0,S1,Co,R1,Para){
+dp_ord(0);
+DG=map(dp_ptod,S0,Para);
+VG=newvect(length(S0),DG);
+Leg=length(S0);
+LG=make_indexp(Leg);
+
+if(Co!=[]){
+U1=unifirst_nabe(S0,S1,Co,DG,VG,Leg,LG,Para);
+if(U1==0){
+	return 0;}
+}else{
+	U1=[];}
+
+if(R1!=[]){
+UU=uniseco_nabe(S0,R1,DG,VG,Leg,LG,Para);
+	if(UU==0){
+	return 0;}
+}else{
+	UU=[];}
+
+Uni=append(U1,UU);
+A=set_loop_check(S0,Uni,DG,VG,Leg,LG,Para);
+return A;
+}
+
+/*------------------------------*/
+
+def unifirst_nabe(S0,S1,Co,DG,VG,Leg,LG,Para){
+L=[];
+while(S1!=[]){
+	K1=car(S1);
+	S1=cdr(S1);
+	L=cons(Co[0]*K1,L);
+}
+
+U=[];
+while(L!=[]){
+	L1=car(L);
+	L=cdr(L);
+N=single_empty_nabe(L1,dp_ptod(L1,Para),VG,DG,S0,LG,Para);
+	if(N==1){
+		U=cons(L1,U);}
+}
+if(U==[]){return 0;}
+}
+
+/*---------------------------*/
+
+def uniseco_nabe(S0,R1,DG,VG,Leg,LG,Para){
+
+W=[];
+while(R1!=[]){
+	K1=car(R1);
+	R1=cdr(R1);
+	if(R1!=[]){
+		K2=car(R1);
+		R1=cdr(R1);
+		L=cup_two_set(K1,K2);
+		U=[];
+		while(L!=[]){
+			L1=car(L);
+			L=cdr(L);
+N=single_empty_nabe(L1,dp_ptod(L1,Para),VG,DG,S0,LG,Para);
+	if(N==1){
+		U=cons(L1,U);}
+		}
+		if(U==[]){return 0;}
+		W=cons(U,W);
+		}else{
+		W=cons(K1,W);}
+}
+return W;
+}
+
+/*---------------------*/
+def cup_two_set(K,M){
+L=[];
+while(K!=[]){
+	K1=car(K);
+	K=cdr(K);
+	S=M;
+	while(S!=[]){
+		S1=car(S);
+		S=cdr(S);
+		L=cons(S1*K1,L);
+	}
+}
+return L;
+}
+
+/*---------------------*/
+
+def set_loop_check(S0,Uni,DG,VG,Leg,LG,Para){
+if(length(Uni)==1){
+		return set_loop_check2211(S0,Uni,DG,VG,Leg,LG,Para);}
+
+if(length(Uni)==2){
+		return set_loop_check22(S0,Uni,DG,VG,Leg,LG,Para);}
+W=[];
+while(Uni!=[]){
+	K1=car(Uni);
+	Uni=cdr(Uni);
+	if(Uni!=[]){
+		K2=car(Uni);
+		Uni=cdr(Uni);
+		L=cup_two_set(K1,K2);
+		U=[];
+		while(L!=[]){
+			L1=car(L);
+			L=cdr(L);
+N=single_empty_nabe(L1,dp_ptod(L1,Para),VG,DG,S0,LG,Para);
+	if(N==1){
+		U=cons(L1,U);}
+		}
+		if(U==[]){return 0;}
+		W=cons(U,W);
+		}else{
+		W=cons(K1,W);}
+}
+return set_loop_check(S0,W,DG,VG,Leg,LG,Para);
+}
+
+/*----------------*/
+def set_loop_check22(S0,Uni,DG,VG,Leg,LG,Para){
+L=cup_two_set(Uni[0],Uni[1]);
+
+while(L!=[]){
+	L1=car(L);
+	L=cdr(L);
+N=single_empty_nabe(L1,dp_ptod(L1,Para),VG,DG,S0,LG,Para);
+	if(N==1){
+		return 1;}
+}
+return 0;
+}
+def set_loop_check2211(S0,L,DG,VG,Leg,LG,Para){
+L=car(L);
+while(L!=[]){
+	L1=car(L);
+	L=cdr(L);
+N=single_empty_nabe(L1,dp_ptod(L1,Para),VG,DG,S0,LG,Para);
+	if(N==1){
+		return 1;}
+}
+return 0;
+}
+
+/*==============================*/
+/*==============================*/
+
+
+
+
+/*---------------------------*/
+/*メインの計算*/
+/*VG:vec のGB*/
+/*DG:dp のGB*/
+/*G:pの GB*/
+/*0:空、1:空ではない*/
+
+def single_empty_nabe(S,DS,VG,DG,G,Leg,Para){
+
+N1=check_first_nabe(DS,VG,Leg,Para);
+
+/*return N1;*//*これでいいかも*/
+	if(N1==0){
+		return 0;
+	}
+if(zero_dim(G,Para,0)==1){
+N2=check_second_nabe(DS,VG,DG,Leg,Para);
+		return N2;
+}else{
+N3=check_third_nabe(S,DG,G,Para);
+	if(N3==1){
+		return 1;}
+}
+N4=check_fourth_nabe(S,G,Para);
+return N4;
+}
+
+/*---------------------------*/
+/*第一*/
+/*0:空で確定, 1:確定しない*/
+
+def check_first_nabe(DS,VG,Leg,Para){
+dp_ord(0);
+if(dp_nf(Leg,DS,VG,1)!=0){
+	return 1;
+	}
+return 0;
+}
+
+/*---------------------------*/
+/*第二 zero-dim*/
+/*0,1:確定*/
+
+def check_second_nabe(DS,VG,DG,Leg,Para){
+
+MB=dp_mbase(DG);
+
+B=sort_leftl(MB);  /*大きいものから並べる*/
+Le=length(B);
+
+MM=make_matrix(Le,DS,VG,B,Leg,Para); /*SにMBの要素をかけ行列を作る。*/
+CP=det(MM-make_ttt(Le));
+De=deg(CP,t);
+if(CP!=t^De){
+	return 1;}
+else{
+	return 0;}
+
+}
+
+/*---------------------------*/
+/*第三 positive-dim*/
+/*1:空でない確定, 0:分からない*/
+
+def check_third_nabe(S,DG,G,Para){
+
+MV=max_indep(DG,Para,0);
+for(I=0;I<length(MV);I++){
+	G=map(subst,G,MV[I],1);
+	S=subst(S,MV[I],1);
+}
+G=gr(G,Para,0);
+LS=setminus(Para,MV);
+if(zero_dim(G,LS,0)==1){
+DG1=map(dp_ptod,G,LS);
+VG=newvect(length(G),DG1);
+
+Leg=make_indexp(length(G));
+
+N3=check_second_nabe(dp_ptod(S,LS),VG,DG1,Leg,LS);
+if(N3==1){
+return 1;
+}}
+return 0;
+}
+
+/*-----------------------------------------------*/
+/*第四 ラヴィノビッチトリック*/
+/*1:空でない確定, 0:空確定*/
+
+def check_fourth_nabe(S,G,Para){
+
+T1=strtov("t"+rtostr(1)); 
+G=cons(S*T1-1,G);
+RG=gr(G,cons(T1,Para),0);
+if(RG[0]==1){
+	return 1;
+}else{
+	return 0;
+}
+}
+
+/*-----------------------------------------------*/
+
+def make_matrix(Le,DS,VG,B,Leg,Para){
+dp_ord(0);
+R=B;
+
+L=[];
+while(R!=[]){
+	R1=car(R);
+	R=cdr(R);
+	L1=dp_nf(Leg,R1*DS,VG,1);
+
+	Row=make_row_nabe(L1,B);
+	L=cons(Row,L);
+}
+M=tenchi(Le,L);
+return M;
+}
+
+/*-----------------------------------------------*/
+
+def make_row_nabe(Po,B){
+L=[];
+dp_ord(0);
+while(B!=[]){
+	B1=car(B);
+	B=cdr(B);
+	if(dp_ht(Po)==B1){
+		HC=dp_hc(Po);
+		L=cons(HC,L);
+		Po=Po-HC*dp_ht(Po);
+	}else{
+		L=cons(0,L);}
+}
+
+return L;
+}
+
+/*-----------------------------------------------*/
+
+def tenchi(Le,L){
+
+A=newmat(Le,Le);
+
+for(I=0;I<Le;I++){
+	for(J=0;J<Le;J++){
+		A[I][J]=L[J][I];
+	}
+}
+return A;
+}
+
+/*-----------------------------------------------*/
+/*分散表現の項, 左が大*/
+
+def sort_leftl(W){
+dp_ord(0);
+if(W==[]){ return W;}
+L=[];
+S=[];
+W1=car(W);
+W=cdr(W);
+
+while(W!=[]){
+	W2=car(W);
+	W=cdr(W);
+	if(W1<W2){
+		L=cons(W2,L);
+	}else if(W1>W2){
+		S=cons(W2,S);
+	}
+}
+S=sort_leftl(S);
+L=sort_leftl(L);
+
+return append(L,cons(W1,S));
+}
+
+/*-----------------------------------------------*/
+
+def make_indexp(Le){
+L=[];
+for(I=0;I<Le;I++){
+	L=cons(I,L);
+	}
+return L;
+}
+
+/*-----------------------------------------------*/
+
+def make_ttt(Le){
+
+T=strtov("t");
+L=[];
+for(I=0;I<Le;I++){
+	A=[T];
+	for(J=0;J<I;J++){
+		A=cons(0,A);
+	}
+	L=cons(A,L);
+}
+return newmat(Le,Le,reverse(L));
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------*/
+
+def max_indep(Gb,V,Do){
+
+HS=head_set11(Gb,V,Do);
+
+S=term2dp_list(HS,V);
+M=dim_naibu(S[0],S[1],[],[]);
+Ma=max_length11(M);
+return erabu_ma(V,reverse(Ma));
+}
+
+/*-------------------------------------------------------------*/
+
+def dime_term(T,V){
+
+S=term2num_list(T,V);
+M=dim_naibu(S[0],S[1],[],[]);
+
+
+return max_length(M);
+}
+
+/*-------------------------------------------------------------*/
+
+def dim_naibu(S,N,U,M){
+
+for(I=N;I>0;I--){
+	K=cons(I,U);
+	if(inter_list(K,S)==0){
+		M=dim_naibu(S,I-1,K,M);}
+	}
+if(contain_u(U,M)==0){
+	M=cons(U,M);
+}
+return M;
+}
+
+/*-------------------------------------------------------------*/
+
+def head_set11(Gb,V,Do){
+dp_ord(Do);
+
+return map(dp_ht,Gb);
+
+}
+
+/*-------------------------------------------------------------*/
+
+def contain_u(U,M){
+
+while(M!=[]){
+	M1=car(M);
+	M=cdr(M);
+	if(U==M1){
+		return 1;
+	}
+return 0;
+}
+}
+
+/*-------------------------------------------------------------*/
+
+def term2num_list(T,V){
+
+/*単項のリスト*/
+/*変数のリスト*/
+F=[];
+N=length(V);
+T=map(dp_ptod,T,V);
+V1=map(dp_ptod,reverse(V),V);
+
+while(T!=[]){
+	T1=car(T);
+	T=cdr(T);
+	H=num_oneterm(T1,V1,N);
+	F=cons(H,F);
+}
+return [F,N];
+}
+
+/*-------------------------------------------------------------*/
+
+def term2dp_list(T,V){
+
+/*単項のリスト内部表現*/
+/*変数のリスト*/
+F=[];
+K=[];
+N=length(V);
+V1=map(dp_ptod,reverse(V),V);
+
+while(T!=[]){
+	T1=car(T);
+	T=cdr(T);
+	H=num_oneterm(T1,V1,N);
+K=cons(T1,K);
+	F=cons(H,F);
+}
+
+return [F,N];
+}
+
+/*-------------------------------------------------------------*/
+
+def max_length11(L){
+K=0;
+S=0;
+while(L!=[]){
+	L1=car(L);
+	L=cdr(L);
+	B=length(L1);
+	if(K<=B){
+		K=B;
+		S=L1;}
+}
+return S;
+}
+
+/*-------------------------------------------------------------*/
+
+def num_oneterm(T,R,N){
+F=[];
+for(I=N;I>0;I--){
+	R1=car(R);
+	R=cdr(R);
+	if(dp_redble(T,R1)==1){
+		F=cons(I,F);
+	}
+}
+return F;
+}
+
+/*-------------------------------------------------------------*/
+
+def inter_list(Mon,S){
+
+while(S!=[]){
+	S1=car(S);
+	S=cdr(S);
+	if(intersec_nabe(Mon,S1)==1){
+		return 1;
+	}
+}
+return 0;
+}
+
+/*-------------------------------------------------------------*/
+
+def intersec_nabe(Mon,S){
+M1=car(Mon);
+S1=car(S);
+while(S!=[]){
+	S1=car(S);
+	M1=car(Mon);
+	if(M1<S1){
+		Mon=cdr(Mon);
+		if(Mon==[]){
+			return 0;}
+	}else if(M1>S1){
+		return 0;
+	}else{
+S=cdr(S);
+}
+}
+return 1;
+}
+
+/*-------------------------------------------------------------*/
+
+def max_length(L){
+K=0;
+while(L!=[]){
+	L1=car(L);
+	L=cdr(L);
+	B=length(L1);
+	if(K<=B){
+		K=B;}
+}
+return K;
+}
+
+/*-------------------------------------------------------------*/
+
+def erabu_ma(V,Ma){
+L=[];
+while(Ma!=[]){
+	M1=car(Ma);
+	Ma=cdr(Ma);
+	L=cons(V[M1-1],L);
+}
+return L;
+}
+
+/*---------------------------*/
+/*Sup=[[G],[L]]*/
+/*G is a GB */
+
+def empty_check77(Sup,Para){
+if(Sup[1][0]==1){
+	return 1;}
+if(Sup[0][0]==0){
+	return 1;}
+
+G=Sup[0];
+L=Sup[1];
+DG=map(dp_ptod,G,Para);
+VG=newvect(length(G),DG);
+Leg=length(G);
+LG=make_indexp(Leg);
+L=[];
+while(L!=[]){
+	L1=car(L);
+	L=cdr(L);
+N=single_empty_nabe77(L1,dp_ptod(L1,Para),VG,DG,G,LG,Para);
+	if(N!=0){
+		L=cons(N,L);
+	}
+}
+if(L==[]){
+return 0;}
+return L;
+}
+/*---------------------------*/
+/*メインの計算*/
+/*VG:vec のGB*/
+/*DG:dp のGB*/
+/*G:pの GB*/
+/*0:空、1:空ではない*/
+
+def single_empty_nabe77(S,DS,VG,DG,G,Leg,Para){
+
+N1=check_first_nabe77(DS,VG,Leg,Para);
+
+return N1;
+}
+
+/*---------------------------*/
+/*第一*/
+/*0:空で確定, 1:確定しない*/
+
+def check_first_nabe77(DS,VG,Leg,Para){
+dp_ord(0);
+K=dp_nf(Leg,DS,VG,1);
+if(K==0){
+	return 0;
+}else{
+return dp_dtop(K,Para);
+}
+}
+
+end$

@@ -1,0 +1,758 @@
+/*KapurのCGSアルゴリズム*/
+/*平成24年1月*/
+/*by Ksatususke Nabeshima*/
+
+load("gr");
+
+extern Order$
+extern PARA$
+extern PaVa$
+
+/*-------------------------------------------------------------*/
+
+def kcgs(F,Para,Vari,Jun){
+tstart();
+
+ALL=kcgs_main(F,Para,Vari,Jun);
+
+N=length(ALL);
+CGB=ALL;
+while(CGB!=[]){
+	CB=car(CGB);
+	CGB=cdr(CGB);
+	print(CB[0],1);
+	print(CB[1],1);
+	print(" ", 1);
+}
+
+print("No. of segments is"); 
+print(N);
+//return tstop();
+return ALL;
+}
+
+/*-------------------------------------------------------------*/
+
+def kcgsbb(F,Para,Vari,Jun){
+tstart();
+
+ALL=kcgs_mainbb(F,Para,Vari,Jun);
+
+N=length(ALL);
+CGB=ALL;
+while(CGB!=[]){
+	CB=car(CGB);
+	CGB=cdr(CGB);
+	print(CB[0],1);
+	print(CB[1],1);
+	print(" ", 1);
+}
+
+print("No. of segments is"); 
+print(N);
+return tstop();
+}
+
+/*-------------------------------------------------------------*/
+
+def kcgs_mainbb(F,Para,Vari,Jun){
+
+Pa=length(Para);
+Va=length(Vari);
+/*Order=reverse(cons([0,Pa],reverse(Jun)));
+print(Order);*/
+Order=append(Jun,[[0,Pa]]);
+PaVa=append(Vari,Para);
+/*G=gr(F,PaVa,Order);
+G=dp_gr_main(F,PaVa,0,1,Order);*/
+G=nd_gr_trace(F,PaVa,0,-1,Order);
+print("gb終了");
+if(G[0]==1){
+	return [[[[0],[1]],[1]]];
+}
+
+dp_ord(Jun);
+GD=map(dp_ptod,G,Vari);
+MH=miniht_ka(GD,Vari,Jun); /*kapur 戦略 */
+/*MH[0]=MHT, MH[1]=[head coefs], MH[2]=[GB]*/
+
+if(MH[1]!=[]){
+	Kake=kake_mult(MH[1],Para);
+}else{
+Kake=[1,[]];
+}
+
+One=one_cgs_make(MH[2],Kake[0],Para,Vari,Jun);
+
+ALL=[One];
+
+Pc=Kake[1]; /*掛け算の要素*/
+NV=1;
+while(Pc!=[]){
+		Pc1=car(Pc);
+		Pc=cdr(Pc);	
+		AA=empty_check([[Pc1],[NV]],Para);
+		if(AA!=0){
+		ZA=kcgs_body(G,[[Pc1],[NV]],Para,Vari,Jun);}
+		NV=NV*Pc1;
+		ALL=append(ZA,ALL);}
+return ALL;
+}
+
+
+
+/*-------------------------------------------------------------*/
+
+def kcgs_main(F,Para,Vari,Jun){
+
+Pa=length(Para);
+Va=length(Vari);
+/*Order=reverse(cons([0,Pa],reverse(Jun)));
+print(Order);*/
+Order=[[Jun,Va],[0,Pa]];
+PaVa=append(Vari,Para);
+/*G=gr(F,PaVa,Order);
+G=dp_gr_main(F,PaVa,0,1,Order);*/
+G=nd_gr_trace(F,PaVa,0,-1,Order);
+if(G[0]==1){
+	return [[[[0],[1]],[1]]];
+}
+
+dp_ord(Jun);
+GD=map(dp_ptod,G,Vari);
+MH=miniht_ka(GD,Vari,Jun); /*kapur 戦略 */
+/*MH[0]=MHT, MH[1]=[head coefs], MH[2]=[GB]*/
+
+if(MH[1]!=[]){
+	Kake=kake_mult(MH[1],Para);
+}else{
+Kake=[1,[]];
+}
+
+One=one_cgs_make(MH[2],Kake[0],Para,Vari,Jun);
+
+ALL=[One];
+
+Pc=Kake[1]; /*掛け算の要素*/
+NV=1;
+while(Pc!=[]){
+		Pc1=car(Pc);
+		Pc=cdr(Pc);	
+		AA=empty_check([[Pc1],[NV]],Para);
+		if(AA!=0){
+		ZA=kcgs_body(G,[[Pc1],[NV]],Para,Vari,Jun);}
+		NV=NV*Pc1;
+		ALL=append(ZA,ALL);}
+return ALL;
+}
+
+
+
+def kcgs_sup(F,Sup,Para,Vari,Jun){
+
+Pa=length(Para);
+Va=length(Vari);
+Order=[[Jun,Va],[0,Pa]];
+PaVa=append(Vari,Para);
+
+return kcgs_body(F,Sup,Para,Vari,Jun);
+
+}
+
+
+/*-------------------------------------------------------------*/
+
+
+def kcgs_body(F,Sup,Para,Vari,Jun){
+
+FA=append(F,Sup[0]);
+
+/*G=dp_gr_main(FA,PaVa,0,1,Order);*/
+
+G=nd_gr_trace(FA,PaVa,0,-1,Order);
+
+if(G==[1]){
+	return [[Sup,G]];}
+
+dp_ord(Jun);
+GD=map(dp_ptod,G,Vari);
+/*GDからパラメタのみの多項式を引く*/
+GZ=minu_para(GD,Vari,Jun);
+GG=map(dp_dtop,GZ,Vari);
+
+
+if(GZ==[]){
+	return [[Sup,G]];}
+MH=miniht_ka(GZ,Vari,Jun); /*kapur 戦略 */
+
+/*MH[0]=MHT, MH[1]=[MHT coefs], MH[2]=[GB]*/
+
+if(MH[1]!=[]){
+	Kake=kake_mult(MH[1],Para);
+}else{
+Kake=[1,[]];
+}
+One=one_cgs_make22(Sup,MH[2],Kake[0],Para,Vari,Jun);
+  if(One==0){
+	ALL=[];}else{
+  ALL=[One];}
+
+Pc=Kake[1]; /*１つづつの元*/
+
+NV=1;
+
+while(Pc!=[]){
+		Pc1=car(Pc);
+		Pc=cdr(Pc);
+/*SU1=variety_refine(cons(Pc1,Sup[0]),Para);*/
+SU1=gr(cons(Pc1,Sup[0]),Para,0);
+SU2=Sup[1][0]*NV;
+		AA=empty_check([SU1,[SU2]],Para);
+		if(AA!=0){
+		ZA=kcgs_body(GG,[SU1,[SU2]],Para,Vari,Jun);
+		ALL=append(ZA,ALL);}
+		NV=NV*Pc1;}
+return ALL;
+}
+
+
+/*-------------------------------------------------------------*/
+/*Rはひとつだけ*/
+
+def one_cgs_make22(Sup,F,R,Para,Vari,Jun){
+
+AA=empty_check([Sup[0],[Sup[1][0]*R]], Para);
+
+if(AA!=0){
+return [[Sup[0],[Sup[1][0]*R]],map(dp_dtop,F,Vari)];
+}else{
+return 0;
+}
+}
+
+/*-------------------------------------------------------------*/
+
+def kakeru(R){
+ W=1;
+while(R!=[]){
+	R1=car(R);
+	R=cdr(R);
+	W=R1*W;
+}
+return W;
+}
+
+/*-------------------------------------------------------------*/
+/*R!=0となるもの、１つだけ*/
+
+def one_cgs_make(F,R,Para,Vari,Jun){
+
+return [[[0],[R]],map(dp_dtop,F,Vari)];
+
+}
+
+
+/*-------------------------------------------------------------*/
+
+def minu_para(G,Va,Jun){
+dp_ord(Jun);
+
+L=[];
+while(G!=[]){
+	G1=car(G);
+	G=cdr(G);
+	if(dp_dtop(dp_ht(G1),Va)!=1){
+		L=cons(G1,L);
+	}
+}
+return L;
+}
+
+/*-------------------------------------------------------------*/
+/*D=[１つずつの元], R=[集合の集合]*/
+
+def uni_para(D,R,Para){
+
+W=0;
+if(D!=[]){
+	A=car(D);
+	D=cdr(D);
+W=1;
+}
+while(D!=[]){
+	D1=car(D);
+	D=cdr(D);
+	A=A*D1;
+}
+if(W==1){
+L=[A];}else{
+L=[];
+}
+
+L=multi_uni(L,R);
+
+return variety_refine(L,Para);
+
+}
+
+/*-------------------------------------------------------------*/
+
+def uni_para11(R,Para){
+
+L=[];
+L=multi_uni(L,R);
+return variety_refine(L,Para);
+}
+
+/*-------------------------------------------------------------*/
+/* Rはリストのリスト */
+def multi_uni(L,R){
+
+if(L==[] && R!=[]){
+	R1=car(R);
+	L=R1;
+	R=cdr(R);
+}
+if(R==[]){
+	return L;}
+W=[];
+while(R!=[]){
+	R1=car(R);
+	R=cdr(R);
+	W=setxele(L,R1,W);
+}
+return W;
+}
+
+/*-------------------------------------------------------------*/
+
+def setxele(L,E,W){
+
+while(L!=[]){
+	L1=car(L);
+	L=cdr(L);
+	K=E;
+	while(K!=[]){
+		K1=car(K);
+		K=cdr(K);
+		W=cons(L1*K1,W);
+		}
+}
+return W;
+}
+
+/*-------------------------------------------------------------*/
+
+def multi_bothset(L,R){
+W=[];
+while(L!=[]){
+	L1=car(L);
+	L=cdr(L);
+	K=R;
+	while(K!=[]){
+		K1=car(K);
+		K=cdr(K);
+		W=cons(L1*K1,W);
+		}
+}
+return W;
+}
+
+/*-------------------------------------------------------------*/
+/* computation of minimal head terms */
+/*outputs [[M1,M2,...minimal head terms],[MHTの係数(定数なし)],[MHTをもつ多項式たち]]*/
+
+def miniht_ka(G,Va,Jun){
+dp_ord(Jun);
+F=[];
+HG=G;
+while(HG!=[]){
+	F1=car(HG);
+	HG=cdr(HG);
+	Ht=dp_ht(F1);
+	F=cons(Ht,F);
+}
+MT=dp_gr_main(map(dp_dtop,F,Va),Va,0,1,Jun);
+/*G=sort_degmini(G,Jun);*/
+MD=sort_degmini(map(dp_ptod,MT,Va),Jun);
+
+P=G;
+LL=[];
+while(MD!=[]){
+	M1=car(MD);
+	MD=cdr(MD);
+	K=P;
+	P=[];
+	L=[];
+	while(K!=[]){
+		K1=car(K);
+		if(M1==dp_ht(K1)){
+			L=cons(K1,L);
+			K=cdr(K);
+		}else{
+			K=cdr(K);
+			P=cons(K1,P);
+		}
+}
+LL=cons(L,LL);
+}
+CO=[];
+EM=[];
+while(LL!=[]){
+	LP=car(LL);
+	LL=cdr(LL);
+	while(LP!=[]){
+		U1=car(LP);
+		if(constant(U1,Va)!=1){
+			EM=cons(U1,EM);
+			CO=cons(keisu_para(U1,Va,Jun),CO);
+			break;
+		}else if(length(LP)==1){
+			EM=cons(U1,EM);
+			break;
+		}else{
+			LP=cdr(LP);}
+}
+}
+return [MT,CO,EM];
+}
+
+
+
+/*-------------------------------------------------------------*/
+
+def constant(K,Va){
+
+while(K!=0){
+	HT=dp_ht(K);
+	HC=dp_hc(K);
+	P=K-HT*HC;
+	if(dp_ht(P)!=HT){
+		break;
+	}else{
+	K=P;}
+}
+if(type(HC)==1){
+	return 1;
+}
+return 0;
+}
+
+
+/*-------------------------------------------------------------*/
+
+def kake_mult(MH,Para){
+A=1;
+while(MH!=[]){
+	M1=car(MH);
+	MH=cdr(MH);
+	A=A*M1;
+}
+
+if(type(A)==1){
+		return [1,[]];}
+L=[];
+K=fctr(A);
+N=length(K);
+for(I=1;I<=N-1;I++){
+	L=cons(K[I][0],L);
+}
+B=1;
+LL=L;
+while(L!=[]){
+	L1=car(L);
+	L=cdr(L);
+	B=B*L1;
+}
+return [B,LL];
+}
+
+
+/*-------------------------------------------------------------*/
+/* computation of minimal head terms */
+/*outputs [[M1,M2,...minimal head terms],[[M1,[M1を先頭に持つ多項式の係数たち]],[M2,[--]],..],[MHTをもつ多項式たち]]*/
+
+def miniht(G,Va,Jun){
+
+dp_ord(Jun);
+F=[];
+HG=G;
+while(HG!=[]){
+	F1=car(HG);
+	HG=cdr(HG);
+	Ht=dp_ht(F1);
+	F=cons(Ht,F);
+}
+MT=dp_gr_main(map(dp_dtop,F,Va),Va,0,1,Jun);
+G=sort_degmini(G,Jun);
+MD=sort_degmini(map(dp_ptod,MT,Va),Jun);
+L=[];
+EM=[];
+while(MD!=[]){
+	M1=car(MD);
+	MD=cdr(MD);
+	K=G;
+	P=[];
+	while(K!=[]){
+		K1=car(K);
+		if(M1==dp_ht(K1)){
+			EM=cons(K1,EM);
+			P=cons(keisu_para(K1,Va,Jun),P);
+			K=cdr(K);
+			G=cdr(G);
+		}else if(K1<M1){
+			K=cdr(K);
+			G=cdr(G);
+		}else{
+			break;}
+}
+MM1=cons(M1,[P]);
+L=cons(MM1,L);
+}
+
+return [MT,L,EM];
+}
+
+/*-------------------------------------------------------------*/
+
+def keisu_para(K1,Va,Jun){
+dp_ord(Jun);
+
+HT=dp_ht(K1);
+HC=dp_hc(K1);
+K1=K1-HC*HT;
+	while(dp_ht(K1)==HT){
+		HC1=dp_hc(K1);
+		HC=HC+HC1;
+		K1=K1-HC1*HT;
+		}
+return HC;
+}
+
+
+
+/*-------------------------------------------------------------*/
+
+def factorset(A,K){
+
+L=fctr(A);
+L=cdr(L);
+while(L!=[]){
+	L1=car(L);
+	L=cdr(L);
+	K=L1[0]*K;
+}
+return K;
+}
+
+
+
+/*-------------------------------------------------------------*/
+/* 零集合の精製 */
+/*-------------------------------------------------------------*/
+
+def mysqfr(P) {
+  for (R = 1, PS = sqfr(P); PS != []; PS = cdr(PS))
+    R *= car(car(PS));
+
+  return R;
+}
+
+/**** 次がメインの精製関数 ****/
+
+def variety_refine(NPs,Para) {
+    NPs2 = [];
+    while (NPs != NPs2) {
+      NPs2 = NPs;
+if(NPs2==[0]){
+	NPs=[0];}else{
+NPs=dp_gr_main(NPs,Para,0,1,0);
+/*NPs = gr(NPs, Para, 0);*/}
+      for (NPs3 = NPs, NPs = []; length(NPs3); NPs3 = cdr(NPs3)) {
+	P = car(NPs3);
+	NPs = cons(mysqfr(P), NPs);
+      }
+    }
+if(NPs==[-1]){return [1];}
+  return NPs;
+}
+
+/*-------------------------------------------------------------*/
+/* 空集合のチェック */
+/*-------------------------------------------------------------*/
+/*現在不完全な形だが大丈夫だろう*/
+
+def zero_check(Sup){
+if(Sup[0]==[1]){
+	return 1;
+}else if(variety_equal(Sup[0],Sup[1])==1){
+	return 1;
+}
+return 0;
+}
+
+def variety_equal(S, T) {
+
+  return gb_comp(S, T);
+}
+
+/*-------------------------------------------------------------*/
+/*チェック用*/
+/*
+def empty_check1(Vari,Para){
+dp_ord(0);
+Sup=[variety_refine(Vari[0],Para),variety_refine(Vari[1],Para)];
+
+if(Sup[0]==[1]){
+	return 1;
+}else if(variety_equal(Sup[0],Sup[1])==1){
+	return 1;
+}
+return 0;
+}
+*/
+
+/*-------------------------------------------------------------*/
+/* 	intersection の計算 */
+/*-------------------------------------------------------------*/
+/*zero checkあり*/
+
+def inter_para(P1,P2,Para){
+
+V1=append(P1[0],P2[0]);
+PG1=variety_refine(V1,Para);
+	if(PG1==[]){
+		PG1=[0];
+	}
+
+if(type(PG1[0])==1){
+	return 0;
+	}
+PV1=P1[1];
+PV2=P2[1];
+
+if((PV1[0]==1) && (PV2[0]==1)){
+	return [PG1,[1]];
+}
+if(PV1[0]==1){
+V2=append(P1[0],P2[1]);
+PG2=variety_refine(V2,Para);
+Pz=zero_check([PG1,PG2]);
+	if(Pz==0){
+		return [PG1,PG2];
+ 	}else{
+		return 0;}
+}
+
+if(PV2[0]==1){
+V3=append(P1[1],P2[0]);
+PG3=variety_refine(V3,Para);
+Pz=zero_check([PG1,PG3]);
+	if(Pz==0){
+		return [PG1,PG3];
+ 	}else{
+		return 0;}
+}
+
+if(P2[0][0]==0){
+	PP2=[];
+}else{
+	PP2=P2[0];}
+if(P1[0][0]==0){
+	PP1=[];
+}else{
+	PP1=P1[0];}
+
+PV1=append(PV1,PP2);
+PV2=append(PV2,PP1);
+
+L=[];
+while(PV1!=[]){
+	S1=car(PV1);
+	PV1=cdr(PV1);
+	CC=PV2;
+	while(CC!=[]){
+		C1=car(CC);
+		CC=cdr(CC);
+		L=cons(C1*S1,L);
+	}
+}
+PG4=variety_refine(L,Para);
+Pz=zero_check([PG1,PG4]);
+if(Pz==0){
+	return [PG1,PG4];
+ 	}else{
+		return 0;}
+}
+
+
+/*-------------------------------------------------------------*/
+/* 	supportの引き算 */
+/*-------------------------------------------------------------*/
+/*zero check あり*/
+/*[0]と[1]のときだめ。改良しないと。2月3日*/
+
+
+def dele_para(P1,P2,Para){
+L=[];
+PV1=P1[1];
+PW=append(P1[0],P2[0]);
+SP=PV1;
+Vr1=variety_refine(vari_prod(SP,PW),Para);
+if(zero_check([P1[0],Vr1])==0){
+L=cons([P1[0],Vr1],L);
+}
+Vr2=variety_refine(append(P1[0],P2[1]),Para);
+Vr3=variety_refine(append(P1[1],P2[1]),Para);
+if(zero_check([Vr2,Vr3])==0){
+L=cons([Vr2,Vr3],L);
+}
+
+return L;
+}
+
+/**********動作確認用***************/
+
+def testdele_para(P1,P2,Para){
+L=[];
+PV1=P1[1];
+PW=append(P1[0],P2[0]);
+SP=PV1;
+L=cons([P1[0],variety_refine(vari_prod(SP,PW),Para)],L);
+print(L);
+L=cons([variety_refine(append(P1[0],P2[1]),Para),variety_refine(append(P1[1],P2[1]),Para)],L);
+return L;
+}
+
+
+/*--------------------*/
+/*   sort 関係の関数  */
+/*--------------------*/
+/*left small, right big*/
+
+def sort_degmini(H,Jun){
+
+if(length(H)==1) return(H);
+if(H==[]) return(H);
+dp_ord(Jun);
+H1=car(H);
+H0=dp_ht(H1);
+H=cdr(H);
+L=[];
+S=[];
+while(H!=[]){
+	H2=car(H);
+	H=cdr(H);
+	if(H0>dp_ht(H2)){
+		S=cons(H2,S);
+	}else{
+		L=cons(H2,L);
+}}
+S=sort_degmini(S,Jun);
+L=sort_degmini(L,Jun);
+Sor=append(S,cons(H1,L));
+return(Sor);
+}
+
+
+end$
