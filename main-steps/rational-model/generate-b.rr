@@ -1,20 +1,26 @@
 // generate-b.rr
 // Generating a CGS after subsituting s_7^2 with 1 - c_7^2 in certain basis
 // Akira Terui, Team SNAC Tsukuba, October 2024
+
 load("oh_base.rr")$
 
 G = bload("../../preprocessing-steps/cgs/rational/G.dat")$
 GG = map(oh_base.nth, G, 1)$
 GGV = ltov(GG)$
 
-L = [18, 25, 31]$
+H = bload("../../preprocessing-steps/cgs/rational/H.dat")$
+HH = map(oh_base.nth, H, 1)$
+HHV = ltov(HH)$
 
+L = [18,25,31]$ // Replace the polynomials GGV[L[J]]
+
+// Re-arrange G with substituting variables
 for (J = 0; J < length(L); J++) {
-    I = L[J];
+    I = L[J]$
 
     // Extract the I-th G-basis
     CurrentGGV = GGV[I]$
-    print(CurrentGGV);
+    // print(CurrentGGV);
     CurrentGGV = oh_base.remove_nth(CurrentGGV, 2)$
     CurrentGGVV = ltov(CurrentGGV)$
     
@@ -31,8 +37,24 @@ for (J = 0; J < length(L); J++) {
     // Construct G
     CurrentGGV = vtol(CurrentGGVV)$
     GGV[I] = CurrentGGV$
-    print(CurrentGGV);
+    // print(CurrentGGV);
 }
 
+// Output G[I] and H[J] for I = [0,8,10,18,25,31,33] and J = [1]
+
+LG = [0,8,10,18,25,31,33]$
+BL = []$
+
+for (J = 0; J < length(LG); J++) {
+    I = LG[J]$
+    BL = cons(GGV[I], BL)$
+}
+
+BL = cons(HHV[1], BL)$
+BL = reverse(BL)$
+
+// output("B.rr")$
+// BL;
+// output()$
 
 end$
