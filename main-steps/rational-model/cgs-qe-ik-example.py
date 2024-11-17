@@ -4,9 +4,9 @@
 # Inverse kinematic computation 
 # with Quantifier Elimination based on Comprehensive Groebner Systems (CGS-QE)
 # for solving inverse kinematic problems
-# base varsion
+# base version
 
-# Copyright (C) Team SNAC Tsukuba, 2022
+# Copyright (C) Team SNAC Tsukuba, 2022, 2024
 
 from math import sqrt, sin, cos
 from ctypes import * 
@@ -46,7 +46,7 @@ t = sp.Symbol('t')
 
 # A: a list of partitions in the CGS
 # B: a list of Groebner bases of the CGS
-# E: a list of degree of each polyonials in the CGS
+# E: a list of degree of each polynomials in the CGS
 # Points: a list of sample points
 A = partition.A
 B = cgs.B
@@ -228,7 +228,7 @@ for k in r:
 
     TimeStart = time.time()
     
-    # Choose a partition in A that containts the sample point (e1, e2, e3)
+    # Choose a partition in A that contains the sample point (e1, e2, e3)
     # by testing the following conditions:
     # for a partition expressed as X = [W, V]
     # where W = [w1, ... , wk] and V = [v1, ... , vl] with w1, ..., wk, v1, ... , vl are polynomials in x, y, z,
