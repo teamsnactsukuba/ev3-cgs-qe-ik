@@ -2,11 +2,27 @@
 // Generating a CGS after subsituting s_7^2 with 1 - c_7^2 in certain basis
 // Akira Terui, Team SNAC Tsukuba, October 2024
 
+// G and H are the results of the following computations on Risa/Asir, respectively:
+// G: ../../preprocessing-steps/cgs/rational/cgs-F-input-rational.rr
+// H: ../../preprocessing-steps/cgs/rational/cgs-H-input-rational.rr
+
+// F corresponds to the inverse kinematic problem in 6 variables where the end effector is located in generic position;
+// H corresponds to the inverse kinematic problem in 6 variables where the end effector is located on the z axis;
+
+// B contains Comprehensive Groebner System whose partition is nonempty in R^3, where 
+// B = [G[0][1],G[8][1],G[10][1],G[18][1],G[25][1],G[31][1],G[33][1],H[2][1]];
+// Note that the corresponding partition is defined as A in partition.py; 
+
+// The basis in G[18][1],G[25][1],G[31][1] are modified as follows:
+// these basis contains s_7^2+c_7^2-1 which is redundant, thus make it s_7^2=1-c_7^2 and substitute s_7 in g1 with s_7^2=1-c_7^2;
+
+
 load("oh_base.rr")$
 
 G = bload("../../preprocessing-steps/cgs/rational/G.dat")$
-GG = map(oh_base.nth, G, 1)$
+GG = map(oh_base.nth, G, 1)$ // Extract the Groebner basis
 GGV = ltov(GG)$
+Gpart = map(oh_base.nth, G, 1)$ // Extract the partition
 
 H = bload("../../preprocessing-steps/cgs/rational/H.dat")$
 HH = map(oh_base.nth, H, 1)$
@@ -54,7 +70,10 @@ BL = cons(HHV[1], BL)$
 BL = reverse(BL)$
 
 // output("B.rr")$
+// print("B = ")$
 // BL;
+// print("$")$
+// print("end$")$
 // output()$
 
 end$
