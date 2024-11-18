@@ -1,4 +1,4 @@
-// generate-b.rr
+// generate-ab.rr
 // Generating a CGS after subsituting s_7^2 with 1 - c_7^2 in certain basis
 // Akira Terui, Team SNAC Tsukuba, October 2024
 
@@ -27,6 +27,8 @@ Gpart = map(oh_base.nth, G, 1)$ // Extract the partition
 H = bload("../../preprocessing-steps/cgs/rational/H.dat")$
 HH = map(oh_base.nth, H, 1)$
 HHV = ltov(HH)$
+HA = map(oh_base.nth, H, 0)$
+HAV = ltov(HA)$
 
 L = [18,25,31]$ // Replace the polynomials GGV[L[J]]
 
@@ -59,15 +61,46 @@ for (J = 0; J < length(L); J++) {
 // Output G[I] and H[J] for I = [0,8,10,18,25,31,33] and J = [1]
 
 LG = [0,8,10,18,25,31,33]$
+LH = [1]$
+AL = []$
 BL = []$
 
 for (J = 0; J < length(LG); J++) {
     I = LG[J]$
+    AL = cons(G[I][0], AL)$
     BL = cons(GGV[I], BL)$
 }
 
+// Rewrite partition for H
+
+for (J = 0; J < length(LH); J++) {
+    I = LH[J]$
+
+    // Extract the I-th partition
+    CurrentHAV = ltov(HAV[I])$
+    NewHAV1 = [x,y];
+    for (K = 0; K < length(CurrentHAV[0]); K++) {
+        if (CurrentHAV[0][K] != 0) {
+            NewHAV1 = cons(CurrentHAV[0][K], NewHAV1)$
+        }
+    }
+    CurrentHAV[0] = reverse(NewHAV1)$
+    HAV[I] = vtol(CurrentHAV)$
+}
+
+AL = cons(HAV[1], AL)$
+AL = reverse(AL)$
+
 BL = cons(HHV[1], BL)$
 BL = reverse(BL)$
+
+output("A.rr")$
+print("A = ")$
+AL;
+print("$")$
+print("end$")$
+output()$
+
 
 // output("B.rr")$
 // print("B = ")$
