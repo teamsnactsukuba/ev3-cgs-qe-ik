@@ -9,8 +9,11 @@
 // F corresponds to the inverse kinematic problem in 6 variables where the end effector is located in generic position;
 // H corresponds to the inverse kinematic problem in 6 variables where the end effector is located on the z axis;
 
+// A contains the partition of the CGS used for solving the inverse kinematic problem, which has an element in R^3
+// A = [G[0][0],G[8][0],G[10][0],G[18][0],G[25][0],G[31][0],G[33][0],H[1][0]]
+
 // B contains Comprehensive Groebner System whose partition is nonempty in R^3, where 
-// B = [G[0][1],G[8][1],G[10][1],G[18][1],G[25][1],G[31][1],G[33][1],H[2][1]];
+// B = [G[0][1],G[8][1],G[10][1],G[18][1],G[25][1],G[31][1],G[33][1],H[1][1]];
 // Note that the corresponding partition is defined as A in partition.py; 
 
 // The basis in G[18][1],G[25][1],G[31][1] are modified as follows:
