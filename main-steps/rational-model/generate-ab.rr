@@ -1,5 +1,5 @@
 // generate-ab.rr
-// Generating a CGS after subsituting s_7^2 with 1 - c_7^2 in certain basis
+// Generating a CGS and their partitions after subsituting s_7^2 with 1 - c_7^2 in certain basis
 // Akira Terui, Team SNAC Tsukuba, October 2024
 
 // G and H are the results of the following computations on Risa/Asir, respectively:
@@ -97,13 +97,12 @@ AL = reverse(AL)$
 BL = cons(HHV[1], BL)$
 BL = reverse(BL)$
 
-output("A.rr")$
-print("A = ")$
-AL;
-print("$")$
-print("end$")$
-output()$
-
+// output("A.rr")$
+// print("A = ")$
+// AL;
+// print("$")$
+// print("end$")$
+// output()$
 
 // output("B.rr")$
 // print("B = ")$
