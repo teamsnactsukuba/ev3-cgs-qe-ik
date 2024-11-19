@@ -25,6 +25,10 @@ for (I = 0; I < L; I++) {
 }
 E = reverse(E)$
 
+if (OUTPUT) {
+    bsave(E, "E.dat")$
+} else {}
+
 // output("E.rr")$
 // print("E = ")$
 // E;

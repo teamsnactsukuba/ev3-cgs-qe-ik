@@ -97,6 +97,11 @@ AL = reverse(AL)$
 BL = cons(HHV[1], BL)$
 BL = reverse(BL)$
 
+if (OUTPUT) {
+    bsave(AL, "A.dat")$
+    bsave(BL, "B.dat")$
+} else {}
+
 // output("A.rr")$
 // print("A = ")$
 // AL;
