@@ -21,6 +21,8 @@ while (L2 != []) {
     C = cons(P, C);
 }
 
+C = reverse(C)$
+
 if (OUTPUT) {
     bsave(C, "C.dat")$
 } else {}
