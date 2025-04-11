@@ -25,6 +25,8 @@ import partition
 import descartes
 import SamplePoint2
 
+import ipdb
+
 print (datetime.datetime.now())
 
 # SymPy initializations
@@ -309,6 +311,8 @@ for k in r:
         chi2.append(f)
 
     TimeSubstitution = time.time()
+
+    ipdb.set_trace()
     
     # Count the number of real roots with the Descarts' rule of signs
     
