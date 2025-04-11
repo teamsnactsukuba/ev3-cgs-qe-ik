@@ -1,0 +1,49 @@
+def subst_char_poly (C, I, X, Y, Z) {
+
+    // subst_char_poly
+    // select a characteristic polynomial
+
+    // Inputs:
+    // C: a list of characteristic polynomials of the Hermite quadratic form
+    //      corresponding to each partition
+    // I: index to choose the characteristic polynomial
+    // X, Y, Z: values which substitute variables x, y, z
+
+    // Output:
+    // C[I] with substituting x=X, y=Y, z=Z
+
+    Char_poly = C[I];
+    return subst(Char_poly, x, X, y, Y, z, Z);
+
+}
+
+def subst_char_poly_vect (C, I, X, Y, Z) {
+
+    // subst_char_poly_vect
+    // obtain coeffeificient list of the result of subst_char_poly
+
+    // Inputs:
+    // C: a list of characteristic polynomials of the Hermite quadratic form
+    //      corresponding to each partition
+    // I: index to choose the characteristic polynomial
+    // X, Y, Z: values which substitute variables x, y, z
+
+    // Output:
+    // V = (l0, ... , lm): array
+    //      coefficient vector of C[I] s.t. C[I](t) = l_0 t^m + l_1 t^{m-1} + ... + l_m,
+    //      which is the output of subst_char_poly (C, I, X, Y, Z)
+
+    Ch = subst_char_poly (C, I, X, Y, Z);
+    T = var(Ch);
+    Deg = deg(Ch, T);
+    V = vector(Deg + 1);
+
+    for (I = 0; I <= Deg; I++) {
+        V[I] = coef(Ch, Deg - I, T);
+    }
+
+    return V;
+
+}
+
+end$
