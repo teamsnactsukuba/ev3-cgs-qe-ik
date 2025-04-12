@@ -25,7 +25,6 @@ load("oh_base.rr")$
 G = bload("../../preprocessing-steps/cgs/rational/G.dat")$
 GG = map(oh_base.nth, G, 1)$ // Extract the Groebner basis
 GGV = ltov(GG)$
-Gpart = map(oh_base.nth, G, 1)$ // Extract the partition
 
 H = bload("../../preprocessing-steps/cgs/rational/H.dat")$
 HH = map(oh_base.nth, H, 1)$
