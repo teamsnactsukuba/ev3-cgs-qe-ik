@@ -17,7 +17,7 @@ load("inconsistent.rr");
 // F4 = s_4^2+c_4^2-1$
 // F5 = s_7^2+c_7^2-1$
 
-// Approximating the square root of 2 as 1414/1000
+// Approximating the square root of 2 as 1414213562/1000000000
 
 Sqrt2 = 1414213562/1000000000$
 F0 = -112*c_1*c_4*s_7+16*c_1*c_4-112*c_1*c_7*s_4-136*c_1*s_4+44*Sqrt2*c_1-x$
