@@ -1,0 +1,9 @@
+Computation started at: 
+terui@fermat:~$ tmux ls
+0: 1 windows (created Sat Apr 26 15:17:33 2025)
+
+Computation finished at:
+terui@fermat:~/project/ev3-cgs-qe-ik/preprocessing-steps/cgs/algn$ pwd
+/home/terui/project/ev3-cgs-qe-ik/preprocessing-steps/cgs/algn
+terui@fermat:~/project/ev3-cgs-qe-ik/preprocessing-steps/cgs/algn$ ls -l G2.dat 
+-rw-rw-r-- 1 terui terui 2566642 May  2 17:54 G2.dat
