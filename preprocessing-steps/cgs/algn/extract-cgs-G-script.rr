@@ -1,0 +1,7 @@
+load("oh_base.rr")$
+load("extract-cgs-G.rr")$
+G2r = bload("G2-reverse.dat")$
+OUTPUT=1$
+extractcgs_G(G2r,oh_base.range(0,39))$
+OUTPUT=0$
+end$
