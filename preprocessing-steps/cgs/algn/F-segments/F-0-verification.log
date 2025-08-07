@@ -1,0 +1,33 @@
+terui@flopsy7 F-segments % fep asir
+afo
+Welcome to fep! Editmode is emacs
+I'm a front end processor for asir
+History will be saved to .fephistory
+This is Risa/Asir, full GMP Version 20250329 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision$ (20250117), Copyright 2000-2025, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[2113] load("F-0-1.rr")$
+[2115] load("F-0-2.rr")$
+[2117] F_0_1;
+[0]
+
+---
+
+[2118] length(F_0_2[0]);
+length : invalid argument
+return to toplevel
+[2118] length(F_0_2);   
+1
+[2119] subst(F_0_2[0],x,1,y,1,z,1);
+-41497299526370238309181084488956103998
+[2120] 
+
+---
+
+Since (x,y,z) = (1,1,1) is contained in F_0_1 but not contained in F_0_2, this partition contain real point(s).
