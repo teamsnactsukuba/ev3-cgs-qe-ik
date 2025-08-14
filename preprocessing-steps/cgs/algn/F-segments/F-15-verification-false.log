@@ -1,0 +1,19 @@
+[2113] load("F-15-1.rr")$
+[2115] load("F-15-2.rr")$
+[2117] V = vars(F_15_1);
+[x,y,z]
+[2118] length(F_14_1);
+internal error (SEGV)
+return to toplevel
+[2118] length(F_15_1);
+2
+[2119] G_15_1 = nd_gr(F_15_1, V, 0, 2)$ 
+[2120] vars(G_15_1[0]);
+[z]
+[2121] G_15_1;
+[z^4-416*z^3-4864*z^2+10010624*z+98824192,289*x^2+289*y^2+2133504]
+
+---
+
+At this time, <G_15_1> does not have real roots because of 289*x^2+289*y^2+2133504 == 0.
+Thus, this segment is empty.
