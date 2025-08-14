@@ -1,0 +1,44 @@
+[2168] load("F-8-1.rr")$
+[2170] load("F-8-2.rr")$
+[2172] length(F_8_1);
+2
+[2173] V = vars(F_8_1);
+[x,y,z]
+[2174] length(F_8_2);
+1
+[2175] G_8_1 = nd_gr(F_8_1, V, 0, 2)$
+[2176] vars(G_8_1[0]);
+[z]
+[2177] G_8_1[0];
+2299*z^2-478192*z+23692480
+[2182] G_8_1[1]/2299;                          
+x^2+y^2-52972544/2299
+
+---
+
+In[7]:= f = 2299*z^2-478192*z+23692480                                                                                                    
+                                    2
+Out[7]= 23692480 - 478192 z + 2299 z
+
+In[8]:= Discriminant[f,z]                                                                                                                 
+
+Out[8]= 10791542784
+
+---
+
+Since <G_8_1> has real roots, we can compute the normal form of F_8_2[0] with respect to <G_8_1>.
+
+---
+
+G_8_1_dp = newvect(length(G_8_1), map(dp_ptod, G_8_1, V));
+F_8_2_dp = dp_ptod(F_8_2[0],V)$
+
+dp_nf([0,1],F_8_2_dp,G_8_1_dp,0);  
+(176187152551402004995680679824070603608947875972599047908987468416811008)*<<0,0,0>>
+
+dp_dtop(dp_nf([0,1],F_8_2_dp,G_8_1_dp,0),V);
+176187152551402004995680679824070603608947875972599047908987468416811008
+
+---
+
+The normal form of F_8_2[0] with respect to <G_8_1> is nonzero, indicating that this segment is not empty.
