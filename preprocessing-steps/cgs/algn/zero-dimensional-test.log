@@ -1,0 +1,229 @@
+terui@flopsy7 algn % fep asir
+afo
+Welcome to fep! Editmode is emacs
+I'm a front end processor for asir
+History will be saved to .fephistory
+This is Risa/Asir, full GMP Version 20250329 (Kobe Distribution).
+Copyright (C) 1994-2000, all rights reserved, FUJITSU LABORATORIES LIMITED.
+Copyright 2000-2021, Risa/Asir committers, http://www.openxm.org/.
+GC 7.6.12 copyright 1988-2018, H-J. Boehm, A. J. Demers, Xerox, SGI, HP, I. Maidanski.
+Debug windows of ox servers will not be opened. Set Xm_noX=0 to open it.
+OpenXM/Risa/Asir-Contrib $Revision$ (20250117), Copyright 2000-2025, OpenXM.org committers
+helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
+     for help messages (unix version only).
+http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
+[2113] load("zero-dimensional-test.rr")$
+redeclaration of find_base_data
+The leading monomial in each polynomial in a Groebner basis of each segments:
+
+I = 0:
+g_0: 1
+g_1: s_7^4
+g_2: c_7
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 1:
+g_0: 1
+g_1: s_7^2
+g_2: c_7
+g_3: s_4
+g_4: c_4
+g_5: c_1^2
+Variables which do not appear in the leading monomial in the Groebner basis:
+[s_1]
+
+I = 6:
+g_0: 1
+g_1: s_7^2
+g_2: s_7^4
+g_3: c_7
+g_4: s_4
+g_5: c_4
+g_6: s_1
+g_7: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 8:
+g_0: 1
+g_1: s_7^3
+g_2: c_7
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 9:
+g_0: 1
+g_1: s_7^3
+g_2: s_7^4
+g_3: c_7
+g_4: s_4
+g_5: c_4
+g_6: s_1
+g_7: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 11:
+g_0: 1
+g_1: s_7^3
+g_2: s_7^4
+g_3: c_7
+g_4: s_4
+g_5: c_4
+g_6: s_1
+g_7: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 12:
+g_0: 1
+g_1: s_7
+g_2: s_7^2
+g_3: c_7
+g_4: s_4
+g_5: c_4
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[s_1]
+
+I = 13:
+g_0: 1
+g_1: s_7^3
+g_2: c_7
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 14:
+g_0: 1
+g_1: s_7
+g_2: s_7^2
+g_3: c_7
+g_4: s_4
+g_5: c_4
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[s_1]
+
+I = 16:
+g_0: 1
+g_1: s_7^3
+g_2: c_7
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 18:
+g_0: 1
+g_1: s_7^3
+g_2: c_7
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 19:
+g_0: 1
+g_1: s_7^2
+g_2: s_7^4
+g_3: c_7
+g_4: s_4
+g_5: c_4
+g_6: s_1
+g_7: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 20:
+g_0: 1
+g_1: s_7^2
+g_2: s_7^3
+g_3: c_7
+g_4: s_4
+g_5: c_4
+g_6: s_1
+g_7: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 33:
+g_0: 1
+g_1: s_7^3
+g_2: c_7
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 36:
+g_0: 1
+g_1: s_7^3
+g_2: s_7^4
+g_3: c_7
+g_4: c_7*s_7
+g_5: c_7^2
+g_6: s_4
+g_7: c_4
+g_8: s_1
+g_9: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 37:
+g_0: 1
+g_1: s_7^3
+g_2: c_7
+g_3: c_7*s_7
+g_4: c_7^2
+g_5: s_4
+g_6: c_4
+g_7: s_1
+g_8: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 38:
+g_0: 1
+g_1: s_7^3
+g_2: s_7^4
+g_3: c_7
+g_4: c_7*s_7
+g_5: c_7^2
+g_6: s_4
+g_7: c_4
+g_8: s_1
+g_9: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+I = 39:
+g_0: 1
+g_1: s_7^4
+g_2: c_7
+g_3: s_4
+g_4: c_4
+g_5: s_1
+g_6: c_1
+Variables which do not appear in the leading monomial in the Groebner basis:
+[]
+
+[2249] 
