@@ -1,0 +1,33 @@
+[2113] load("verification.rr")$
+0
+[2150] extern F_30_1;
+[2151] extern F_30_2;
+[2152] loadsystem(30);
+[2155] V = vars(F_30_1);
+[x,y,z]
+[2157] G_30_1 = nd_gr(F_30_1, V, 0, 2);
+[z^4-416*z^3+64896*z^2-4499456*z+176955392,x^2+y^2-15488]
+
+---
+
+In[1]:= f = z^4-416*z^3+64896*z^2-4499456*z+176955392                                                                       
+
+                                       2        3    4
+Out[1]= 176955392 - 4499456 z + 64896 z  - 416 z  + z
+
+In[2]:= g = x^2+y^2-15488                                                                                                   
+
+                  2    2
+Out[2]= -15488 + x  + y
+
+In[3]:= Reduce[Exists[{x,y,z}, f == 0 && g == 0], Reals]                                                                    
+
+Out[3]= False
+
+In[4]:= Reduce[Exists[{z}, f == 0], Reals]                                                                                  
+
+Out[4]= False
+
+---
+
+Thus, <G_30_1> does not have zeros.
