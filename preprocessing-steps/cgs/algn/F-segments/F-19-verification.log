@@ -35,7 +35,7 @@ Out[30]= True
 
 ---
 
-Since G_19_1[0](z) > 0 for real z, G_19_1[1](x,y,z) has a real root.
+Since G_19_1[0](z) < 0 for real z, G_19_1[1](x,y,z) has a real root.
 
 ---
 
