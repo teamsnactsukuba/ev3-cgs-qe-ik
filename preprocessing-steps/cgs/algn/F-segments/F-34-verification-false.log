@@ -1,0 +1,41 @@
+[2113] load("verification.rr")$
+0
+[2150] extern F_34_1;
+[2151] extern F_34_2;
+[2152] loadsystem(34);
+[2155] V = vars(F_34_1);
+[x,y,z]
+[2156] G_34_1 = nd_gr(F_34_1, V, 0, 2);
+[z^2-208*z+6944,x^4+(2*y^2+23232)*x^2+y^4+23232*y^2+374809600]
+[2157] G_34_1[0];
+z^2-208*z+6944
+[2158] G_34_1[1];
+x^4+(2*y^2+23232)*x^2+y^4+23232*y^2+374809600
+
+---
+
+In[20]:= f = z^2-208*z+6944                                                                                                 
+
+                         2
+Out[20]= 6944 - 208 z + z
+
+In[21]:= g = x^4+(2*y^2+23232)*x^2+y^4+23232*y^2+374809600                                                                  
+
+                      4          2    4    2             2
+Out[21]= 374809600 + x  + 23232 y  + y  + x  (23232 + 2 y )
+
+In[22]:= Reduce[Exists[{x,y,z}, f == 0 && g == 0], Reals]                                                                   
+
+Out[22]= False
+
+In[23]:= Reduce[Exists[{z}, f == 0], Reals]                                                                                 
+
+Out[23]= True
+
+In[24]:= Reduce[Exists[{x,y}, g == 0], Reals]                                                                               
+
+Out[24]= False
+
+---
+
+Thus, <G_34_1> does not have zeros.
