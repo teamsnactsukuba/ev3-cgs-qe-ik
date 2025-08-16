@@ -1,0 +1,18 @@
+[2113] load("F-23-1.rr")$
+[2115] load("F-23_2.rr")$
+load : "F-23_2.rr" not found in the search path
+return to toplevel
+[2115] load("F-23-2.rr")$
+[2117] V = vars(F_23_1);
+[x,y,z]
+[2118] G_23_1 = nd_gr(F_23_1, V, 0, 2)$
+[2119] vars(G_23_1[0]);
+[z]
+[2120] length(G_23_1);
+3
+[2121] G_23_1;
+[z-104,y^4+59969536,x]
+
+---
+
+Since G_23_1[1](y) == 0 does not have real roots, <G_23_1> does not have zeros.
