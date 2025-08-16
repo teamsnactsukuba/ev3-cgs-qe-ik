@@ -1,0 +1,17 @@
+[2113] extern F_24_1;
+[2114] extern F_24_2;
+[2115] load("verification.rr")$
+0
+[2152] loadsystem(24);
+
+[2155] V = vars(F_24_1);
+[x,y,z]
+[2156] G_24_1 = nd_gr(F_24_1, V, 0, 2)$
+[2157] vars(G_24_1[0]);
+[z]
+[2158] G_24_1;
+[z-104,y,x^4+59969536]
+
+---
+
+Since G_24_1[2](x) == 0 does not have real roots, <G_24_1> does not have zeros.
