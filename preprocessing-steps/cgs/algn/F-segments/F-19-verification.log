@@ -25,17 +25,19 @@ Out[28]= 10402668330614784 - 917830279102464 z + 33483041013760 z  - 66885196185
              6        7    8
 >    302848 z  - 832 z  + z
 
-In[29]:= Reduce[Exists[{z}, z == 0], Reals]                                                                               
 
-Out[29]= True
+In[46]:= g = 14992384*x^2+14992384*y^2+z^6-624*z^5+162240*z^4-22497280*z^3+1724803072*z^2-66762342400*z+941003767808      
 
-In[30]:= Reduce[Exists[{z}, z < 0], Reals]                                                                                
+                                  2             2                               2             3           4        5    6
+Out[46]= 941003767808 + 14992384 x  + 14992384 y  - 66762342400 z + 1724803072 z  - 22497280 z  + 162240 z  - 624 z  + z
 
-Out[30]= True
+In[48]:= Reduce[Exists[{x,y,z}, f == 0 && g == 0], Reals]                                                                 
+
+Out[48]= True
 
 ---
 
-Since G_19_1[0](z) < 0 for real z, G_19_1[1](x,y,z) has a real root.
+Thus, <G_19_1> has a real zero (x,y,z).
 
 ---
 
@@ -46,7 +48,7 @@ Since G_19_1[0](z) < 0 for real z, G_19_1[1](x,y,z) has a real root.
 
 ---
 
-Since <G_19_1> has real roots, we can compute the normal form of F_19_2[0] with respect to <G_19_1>.
+Since <G_19_1> has real zeros, we can compute the normal form of F_19_2[0] with respect to <G_19_1>.
 
 ---
 
