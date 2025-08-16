@@ -1,5 +1,15 @@
 load("oh_base.rr")$
 
+def loadsystem(I) {
+
+    V1name = "F-" + rtostr(I) + "-1.rr"$
+    V2name = "F-" + rtostr(I) + "-2.rr"$
+
+    load(V1name)$
+    load(V2name)$
+    
+}
+
 def normalform(F, G, V) {
     // Compute the normal form of F with respect to <G>
 
