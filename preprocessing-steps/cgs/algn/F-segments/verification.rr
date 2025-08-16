@@ -1,0 +1,18 @@
+load("oh_base.rr")$
+
+def normalform(F, G, V) {
+    // Compute the normal form of F with respect to <G>
+
+    // Inputs:
+    // F: the polynomial to be reduced
+    // G: the set of polynomials to reduce with respect to
+    // V: the variables of the polynomials
+
+    G_dp = newvect(length(G), map(dp_ptod, G, V))$
+    F_dp = dp_ptod(F, V)$
+    L = oh_base.range(0, length(G_dp)-1)$
+    return dp_dtop(dp_nf(L, F_dp, G_dp, 0), V);
+
+}
+
+end$
