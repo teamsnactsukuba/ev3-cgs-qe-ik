@@ -1,0 +1,27 @@
+[2113] load("verification.rr")$
+0
+[2150] extern F_26_1;
+[2151] extern F_26_2;
+[2152] loadsystem(26);
+[2155] V = vars(F_26_1);
+[x,y,z]
+[2156] G_26_1 = nd_gr(F_26_1, V, 0, 2)$
+[2157] vars(G_26_1[0]);
+[z]
+[2158] G_26_1;
+[z-104,x^4+2*y^2*x^2+y^4+59969536]
+
+---
+
+In[53]:= f = x^4+2*y^2*x^2+y^4+59969536                                                                                   
+
+                     4      2  2    4
+Out[53]= 59969536 + x  + 2 x  y  + y
+
+In[54]:= Reduce[Exists[{x,y}, f == 0], Reals]                                                                             
+
+Out[54]= False
+
+---
+
+Since G_26_1[1](x,y) == 0 does not have real roots, <G_26_1> does not have zeros.
