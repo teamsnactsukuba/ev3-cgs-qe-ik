@@ -17,21 +17,22 @@ F3 = s_1^2+c_1^2-1$
 F4 = s_4^2+c_4^2-1$
 F5 = s_7^2+c_7^2-1$
 F6 = a^2-2$ // The minimum polynomial of 2^(1/2)
+F7 = b^2-3$ // The minimum polynomial of 3^(1/2)
 
-F = ltov([F0, F1, F2, F3, F4, F5, F6])$
-F = subst(F,c_1,1/a,s_1,1/a)$
+F = ltov([F0, F1, F2, F3, F4, F5, F6, F7])$
+F = subst(F,c_1,1/2,s_1,b/2)$
 
-F[0] = red(F[0]*a)$
-F[1] = red(F[1]*a^5)$
-F = [F[0], F[1], F[2], F[4], F[5], F[6]]$ // Reordering to match the original order
+// F[0] = red(F[0]*a)$
+// F[1] = red(F[1]*a)$
+F = [F[0], F[1], F[2], F[4], F[5], F[6], F[7]]$ // Reordering to match the original order
 
 Plist = [x,y,z]$
-Vlist = [c_1,s_1,c_4,s_4,c_7,s_7,a]$
+Vlist = [c_1,s_1,c_4,s_4,c_7,s_7,b]$
 PVlist = append(Plist, Vlist)$
 VPlist = append(Vlist, Plist)$
 
 if (OUTPUT == 1) {
-    H2 = kcgs_main(F, [x,y,z], [c_4,s_4,c_7,s_7,a], 2)$
+    H2 = kcgs_main(F, [x,y,z], [c_4,s_4,c_7,s_7,a,b], 2)$
     bsave(H2, "H2.dat")$
 }
 
