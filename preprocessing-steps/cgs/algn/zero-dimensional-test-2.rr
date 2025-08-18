@@ -1,6 +1,6 @@
 load("oh_sets.rr")$
 
-F = bload("G2.dat")$
+F = bload("G2-reverse.dat")$
 // H = bload("H.dat")$
 L = [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]$
 L1 = L$
