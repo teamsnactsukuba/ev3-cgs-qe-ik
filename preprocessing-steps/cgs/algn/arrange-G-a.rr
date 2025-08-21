@@ -1,0 +1,44 @@
+load("oh_base.rr")$
+load("left_variables.rr")$
+
+G2r = bload("G2-reverse.dat")$
+// G2rl = ltov(map(ltov, G2r))$
+
+L1 = oh_base.range(0, 39)$
+// L1 = [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]$
+// L1 = [36]$
+
+G2newa = []$
+Vlist = [c_1,s_1,c_4,s_4,c_7,s_7]$
+
+while (L1 != []) {
+    I = car(L1)$
+    L1 = cdr(L1)$
+    // printf("I = %a\n", I);
+    S = G2r[I]$
+    V = S[0]$
+    G = S[1]$
+    if (G[0] == a^2-2) {
+        G = cdr(G)$
+    }
+    // G = subst(G, a, 2^(1/2))$
+    if (left_variables(G, Vlist) != []) {
+        G = reverse(G)$
+        if (car(G) == c_1^2+s_1^2-1) {
+            G = cdr(G)$
+        } else {
+            G = cons(c_1^2+s_1^2-1, G)$
+        }
+        G = reverse(G)$
+    }
+    S2 = [V,G]$
+    G2newa = cons(S2, G2newa)$
+}
+
+G2newa = reverse(G2newa)$
+
+if (OUTPUT) {
+    bsave(G2newa, "G2-new-a.dat")$
+} else {}
+
+end$
