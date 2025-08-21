@@ -1,0 +1,22 @@
+load("hermite.rr")$
+G2new = bload("../../cgs/algn/G2-new-a.dat")$
+
+// L = [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]$
+// H = [11,36,38]$
+
+def hermite_i (I, Mode) {
+    extern G2new, OUTPUT;
+    if (Mode == 1) {
+        H = quadratic_form_char_poly(1, G2new[I][1], [c_1,s_1,c_4,s_4,c_7,s_7], 2, t);
+    }
+    if (Mode == 2) {
+        H = quadratic_form_char_poly(1, G2new[I][1], [c_4,s_4,c_7,s_7], 2, t);
+    }
+    Filename = "H-" + rtostr(I) + ".dat";
+    if (OUTPUT) {
+        bsave(H, Filename);
+    }
+    return H;
+}
+
+end$
