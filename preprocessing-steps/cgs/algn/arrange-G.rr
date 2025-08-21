@@ -1,25 +1,11 @@
-load("oh_sets.rr")$
-
-def left_variables(G, Vlist) {
-    // Input: G: a list of polynomials
-    //        Vlist: a list of variables
-    // Output: a list of variables in G that are not in Vlist
-
-    L = length(G);
-    // Vlist1 = [c_1,s_1,c_4,s_4,c_7,s_7]$
-    Vlist2 = []$
-    for (I = 0; I < L; I++) {
-        LM = p_terms(G[I], Vlist, 2)[0];
-        LV = var(LM)$
-        Vlist2 = cons(LV, Vlist2);
-    }
-    return sets_setMinus(Vlist, Vlist2);
-}
+load("oh_base.rr")$
+load("left_variables.rr")$
 
 G2r = bload("G2-reverse.dat")$
 // G2rl = ltov(map(ltov, G2r))$
 
-L1 = [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]$
+L1 = oh_base.range(0, 39)$
+// L1 = [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]$
 // L1 = [36]$
 
 G2new = []$

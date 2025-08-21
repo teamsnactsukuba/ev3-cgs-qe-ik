@@ -1,0 +1,19 @@
+load("oh_sets.rr")$
+
+def left_variables(G, Vlist) {
+    // Input: G: a list of polynomials
+    //        Vlist: a list of variables
+    // Output: a list of variables in G that are not in Vlist
+
+    L = length(G);
+    // Vlist1 = [c_1,s_1,c_4,s_4,c_7,s_7]$
+    Vlist2 = []$
+    for (I = 0; I < L; I++) {
+        LM = p_terms(G[I], Vlist, 2)[0];
+        LV = var(LM)$
+        Vlist2 = cons(LV, Vlist2);
+    }
+    return sets_setMinus(Vlist, Vlist2);
+}
+
+end$
