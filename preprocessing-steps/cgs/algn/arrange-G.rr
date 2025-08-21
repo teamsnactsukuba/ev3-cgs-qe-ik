@@ -31,7 +31,7 @@ while (L1 != []) {
         }
         G = reverse(G)$
     }
-    S2 = [S,G]$
+    S2 = [V,G]$
     G2new = cons(S2, G2new)$
 }
 
