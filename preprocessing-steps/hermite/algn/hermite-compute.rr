@@ -6,6 +6,7 @@ H = [11,36,38]$
 while (L != []) {
     I = car(L)$
     L = cdr(L)$
+    Filename = "H-" + rtostr(I) + ".dat";
     printf("I = %a\n", I);
     if (I == car(H)) {
         H = cdr(H)$
@@ -20,6 +21,9 @@ while (L != []) {
         } else {
             print(quadratic_form_char_poly(1, G2new[I][1], [c_1,s_1,c_4,s_4,c_7,s_7], 2, t));
         }
+    }
+    if (OUTPUT) {
+        bsave(H, Filename);
     }
 }
 
