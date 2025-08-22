@@ -2,6 +2,64 @@
 
 sqrt(2) を代数的数として扱った計算を記録
 
+## Computing instructons
+
+### Computing CGS
+
+1. Programs in this directory use CGS program by Prof. Katsusuke Nabeshima.
+1. Computation of the CGS of the basis F w.r.t. Lex order can be executed as follows:
+    ```
+    % asir
+    load("cgs-F-input-algn-2.rr")$
+    ```
+    The output is stored in ```G2```.
+    If the variable ```OUTPUT = 1```, then the contents of ```G2``` is stored in ```G2.dat```.
+1. Or, w.r.t. DegRevLex order, do the following:
+    ```
+    % asir
+    load("cgs-F-input-algn-0.rr")$
+    ```
+    The output is stored in ```G0```.
+    If the variable ```OUTPUT = 1```, then the contents of ```G0``` is stored in ```G0.dat```.
+1. Reverse the order of the elements in 
+    ```
+    % G2r = reverse(G2)$
+    bsave(G2r, "G2-reverse.rr")$
+    ```
+### Extracting CGS
+
+Run the script as follows:
+````
+% asir
+load("extract-cgs-G-script.rr")$
+````
+Then, it reads the contents of ```G2-reverse.dat```. 
+For the segment (S_i,G_i) with S_i = V_R(I_{i,1})\ V_R(I_{i,2}), these are extracted as <br />
+* I_{i,1}: ```F-segments/F-i-1.rr```
+* I_{i,2}: ```F-segments/F-i-2.rr```
+* G_i: ```G-basis/G-i.rr```
+
+### Verifying the segments
+
+The presence of real points in each segment was verified by manual calculation.
+The results of the verification for each segment S_i are recorded as follows:
+* If S_i has real point(s): ```F-segments/F-i-verification.log``` 
+* Otherwise:  ```F-segments/F-i-verification-false.log```
+
+### Arrangements on the elements in G (Algorithm 2)
+
+1. Arrange the elements in G as shown in Algorithm 2 as:
+    ```
+    % asir
+    load("arrange-G.rr")$
+    ```
+    Then, the program reads ```G2-reverse.dat``` and output to the variable ```G2new```. if the variable ```OUTPUT = 1```, the contents of ```G2new``` is saved in ```G2-new.dat```. Note: ```arrange-G.rr``` substitutes ```a``` with ```2^(1/2)```.
+1. ```arrange-G-a.rr``` can also be used for the same purpose. 
+The difference between ```arrange-G.rr``` is that, with the use of ```arrange-G-a.rr```, the variable of ```a``` is preserved.
+
+For the subsequent calculation steps, refer to [[../../hermite/algn/README.md]].
+
+
 ## スクリプト
 
 * cgs-F-input-algn.0.rr: 単項式順序 DegRevLex でCGSを計算するスクリプト。出力先はG0.dat。
