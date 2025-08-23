@@ -1,0 +1,21 @@
+ord([t,x,y,z,a])$
+L = [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]$
+C = []$
+
+while (L != []) {
+    I = car(L)$
+    L = cdr(L)$
+    HFilename = "H-" + rtostr(I) + ".dat";
+    H = bload(HFilename)$
+    printf("I = %a\n", I);
+    Hp = red(H*dn(H))$
+    C = cons(Hp, C)$
+}
+if (OUTPUT) {
+    PFilename = "Hp.dat";
+    bsave(C, PFilename)$
+} else {
+}
+
+
+end$
