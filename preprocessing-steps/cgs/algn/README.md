@@ -23,7 +23,9 @@ sqrt(2) を代数的数として扱った計算を記録
     If the variable ```OUTPUT = 1```, then the contents of ```G0``` is stored in ```G0.dat```.
 1. Reverse the order of the elements in 
     ```
-    % G2r = reverse(G2)$
+    % asir
+    G2 = bload("G2.dat")$
+    G2r = reverse(G2)$
     bsave(G2r, "G2-reverse.rr")$
     ```
 ### Extracting CGS
@@ -34,7 +36,7 @@ Run the script as follows:
 load("extract-cgs-G-script.rr")$
 ````
 Then, it reads the contents of ```G2-reverse.dat```. 
-For the segment (S_i,G_i) with S_i = V_R(I_{i,1})\ V_R(I_{i,2}), these are extracted as <br />
+For the segment (S_i,G_i) with S_i = V_R(I_{i,1})\ V_R(I_{i,2}), its elements are extracted as <br />
 * I_{i,1}: ```F-segments/F-i-1.rr```
 * I_{i,2}: ```F-segments/F-i-2.rr```
 * G_i: ```G-basis/G-i.rr```
