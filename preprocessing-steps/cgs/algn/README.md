@@ -53,10 +53,10 @@ The results of the verification for each segment S_i are recorded as follows:
 1. Arrange the elements in G as shown in Algorithm 2 as:
     ```
     % asir
-    load("arrange-G.rr")$
+    load("generate-G2-new.rr")$
     ```
     Then, the program reads ```G2-reverse.dat``` and output to the variable ```G2new```. if the variable ```OUTPUT = 1```, the contents of ```G2new``` is saved in ```G2-new.dat```. Note: ```arrange-G.rr``` substitutes ```a``` with ```2^(1/2)```.
-1. ```arrange-G-a.rr``` can also be used for the same purpose. 
+1. ```generate-G2-new-a.rr``` can also be used for the same purpose. 
 The difference between ```arrange-G.rr``` is that, with the use of ```arrange-G-a.rr```, the variable of ```a``` is preserved.
 
 ### Verifying zero-dimensional ideals
@@ -89,13 +89,13 @@ For the subsequent calculation steps, refer to [[../../hermite/algn/README.md]].
 * extract-cgs-g-script.rr: extract-cgs-G.rr を用いて CGS から断片とGroebner基底を抽出するスクリプト。G2-reverse.dat を用いて逆順（
 * zero-dimensional-test.rr: CGS の(断片,基底)のペアに収められている基底 G で生成されるイデアル \<G\> がゼロ次元かどうかを判定する。実際には G に属する多項式 g の頭単項式
  (leading monomial) が1変数であり、すべての変数が網羅されているかどうかを調べる。
-* arrange-G.rr: G2-reverse.dat の CGS に対し、以下の処理を行う。
+* generate-G2-new.rr: G2-reverse.dat の CGS に対し、以下の処理を行う。
     1. 断片が実根を含むもののみを抽出。
     1. sqrt(2) の定義多項式　a^2-2 を取り除く。
     1. 第 k 番目の断片のGroebner 基底 G_k が s_1 を頭単項式に持つ多項式を持たない場合は以下の処理を行う。
         1. g = c_1^2 + s_1^2 = 1 を含む場合（c_1 を頭単項式に含む多項式が g の場合）: g を G_k から取り除く。
         1. それ以外の場合（c_1 を頭単項式に含む多項式が上の g でない場合）: g を G_k に加える。
-* arrange-G-a.rr: arrange-G.rr から「sqrt(2) の定義多項式　a^2-2 を取り除く」を除いたもの。
+* generate-G2-new-a.rr: arrange-G.rr から「sqrt(2) の定義多項式　a^2-2 を取り除く」を除いたもの。
 
 ## データファイル
 
