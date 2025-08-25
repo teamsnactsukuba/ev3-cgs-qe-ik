@@ -59,6 +59,25 @@ The results of the verification for each segment S_i are recorded as follows:
 1. ```arrange-G-a.rr``` can also be used for the same purpose. 
 The difference between ```arrange-G.rr``` is that, with the use of ```arrange-G-a.rr```, the variable of ```a``` is preserved.
 
+### Verifying zero-dimensional ideals
+
+1. Verify zero-dimensional ideals as:
+    ```
+    % asir
+    load("zero-dimensional-test.rr")$
+    G2new = bload("G2-new.dat")$
+    zerodimtest (G2new)$
+    ```
+    Then, variables which do not appear in the leading monomial in the Groebner basis appears.
+
+1. By using a modified program, you can check the leading coefficient in each element in the Groebner basis.
+    ```
+    % asir
+    load("zero-dimensional-test-2.rr")$
+    G2new = bload("G2-new.dat")$
+    zerodimtest2 (G2new)$
+    ```
+
 For the subsequent calculation steps, refer to [[../../hermite/algn/README.md]].
 
 
