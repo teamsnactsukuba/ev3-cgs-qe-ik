@@ -15,6 +15,8 @@ helph(); [html help], ox_help(0); ox_help("keyword"); ox_grep("keyword");
 http://www.math.kobe-u.ac.jp/OpenXM/Current/doc/index-doc.html
 [2113] load("zero-dimensional-test.rr")$
 redeclaration of find_base_data
+[2241] G2rev = bload("G2-reverse.dat")$
+[2242] zerodimtest(G2rev);
 The leading monomial in each polynomial in a Groebner basis of each segments:
 
 I = 0:
@@ -33,7 +35,7 @@ g_0: 1
 g_1: s_7^3
 g_2: s_7^4
 g_3: c_7
-g_4: c_7*s_7
+g_4: s_7*c_7
 g_5: c_7^2
 g_6: s_4
 g_7: c_4
@@ -56,7 +58,7 @@ Variables which do not appear in the leading monomial in the Groebner basis:
 I = 8:
 g_0: 1
 g_1: s_7^3
-g_2: c_7*s_7
+g_2: s_7*c_7
 g_3: c_7^2
 g_4: s_4
 g_5: c_4
@@ -68,7 +70,7 @@ Variables which do not appear in the leading monomial in the Groebner basis:
 I = 9:
 g_0: 1
 g_1: s_7^3
-g_2: c_7*s_7
+g_2: s_7*c_7
 g_3: c_7^2
 g_4: s_4
 g_5: c_4
@@ -92,7 +94,7 @@ g_0: 1
 g_1: s_7^3
 g_2: s_7^4
 g_3: c_7
-g_4: c_7*s_7
+g_4: s_7*c_7
 g_5: c_7^2
 g_6: s_4
 g_7: c_4
@@ -106,7 +108,7 @@ g_0: 1
 g_1: s_7^3
 g_2: s_7^4
 g_3: c_7
-g_4: c_7*s_7
+g_4: s_7*c_7
 g_5: c_7^2
 g_6: s_4
 g_7: c_4
@@ -120,7 +122,7 @@ g_0: 1
 g_1: s_7^3
 g_2: s_7^4
 g_3: c_7
-g_4: c_7*s_7
+g_4: s_7*c_7
 g_5: c_7^2
 g_6: s_4
 g_7: c_4
@@ -231,4 +233,5 @@ g_6: c_1
 Variables which do not appear in the leading monomial in the Groebner basis:
 []
 
-[2249] 
+0
+[2243] 
