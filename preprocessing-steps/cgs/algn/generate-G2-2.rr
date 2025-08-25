@@ -1,0 +1,118 @@
+// generate-G3.rr
+// Generating a CGS and their partitions re-arranged
+// Akira Terui, Team SNAC Tsukuba, August 2025
+
+// Reading a CGS G2-new:
+// G2-new.dat
+
+// For the Groeber basis in every partition, re-arrange necessary elements 
+
+load("oh_base.rr")$
+
+def sort_list(L, Key) {
+
+    // Sorting a list
+    // Inputs: L - the list to be sorted
+    //         Key - the list of 0,1,...,n-1 indicating the sorting order
+    // Outputs: L2 - the sorted list
+
+    L2 = [];
+    for (I = 0; I < length(L); I++) {
+        L2 = cons(L[Key[I]], L2)$
+    }
+    return reverse(L2);
+}
+
+GFile = "G2-new.dat"$
+
+G = bload(GFile)$
+GG = map(oh_base.nth, G, 1)$ // Extract the Groebner basis
+GGV = ltov(GG)$
+
+end$
+
+L = [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]$
+L2 = [18,25,31]$ // Replace the polynomials GGV[L[J]]
+
+// Re-arrange G with substituting variables
+for (J = 0; J < length(L); J++) {
+    I = L[J]$
+
+    // Extract the I-th G-basis
+    CurrentGGV = GGV[I]$
+    // print(CurrentGGV);
+    CurrentGGV = oh_base.remove_nth(CurrentGGV, 2)$
+    CurrentGGVV = ltov(CurrentGGV)$
+    
+    // Extract the 2nd polynomial
+    CurrentGGVVpoly = CurrentGGVV[1]$
+    CurrentGGVVcoef = coef(CurrentGGVVpoly, 2, s_7)$
+    
+    // Substitute the term of s_7^2 
+    NewGGVVpoly = CurrentGGVVpoly - CurrentGGVVcoef * s_7^2 + CurrentGGVVcoef * (1 - c_7^2)$
+    
+    // Construct the I-th G-basis
+    CurrentGGVV[1] = NewGGVVpoly$
+
+    // Construct G
+    CurrentGGV = vtol(CurrentGGVV)$
+    GGV[I] = CurrentGGV$
+    // print(CurrentGGV);
+}
+
+// Output G[I] and H[J] for I = [0,8,10,18,25,31,33] and J = [1]
+
+LG = [0,8,10,18,25,31,33]$
+LH = [1]$
+AL = []$
+BL = []$
+
+for (J = 0; J < length(LG); J++) {
+    I = LG[J]$
+    AL = cons(G[I][0], AL)$
+    BL = cons(GGV[I], BL)$
+}
+
+// Rewrite partition for H
+
+for (J = 0; J < length(LH); J++) {
+    I = LH[J]$
+
+    // Extract the I-th partition
+    CurrentHAV = ltov(HAV[I])$
+    NewHAV1 = [x,y];
+    for (K = 0; K < length(CurrentHAV[0]); K++) {
+        if (CurrentHAV[0][K] != 0) {
+            NewHAV1 = cons(CurrentHAV[0][K], NewHAV1)$
+        }
+    }
+    CurrentHAV[0] = reverse(NewHAV1)$
+    HAV[I] = vtol(CurrentHAV)$
+}
+
+AL = cons(HAV[1], AL)$
+AL = reverse(AL)$
+
+BL = cons(HHV[1], BL)$
+BL = reverse(BL)$
+
+if (OUTPUT) {
+    bsave(AL, "A.dat")$
+    bsave(BL, "B.dat")$
+} else {}
+
+// output("A.rr")$
+// print("A = ")$
+// AL;
+// print("$")$
+// print("end$")$
+// output()$
+
+// output("B.rr")$
+// print("B = ")$
+// BL;
+// print("$")$
+// print("end$")$
+// output()$
+
+end$
