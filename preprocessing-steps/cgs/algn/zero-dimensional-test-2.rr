@@ -1,34 +1,53 @@
 load("oh_sets.rr")$
 
-def zerodimtest2 (F) {
+def zerodimtest2 (S, Vlist) {
 
-    // F = bload("G2-reverse.dat")$
-    L1 = [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]$
-    Vlist = [c_1,s_1,c_4,s_4,c_7,s_7]$
+    // Zero-dimensional test (Algorithm 2) for a segment
+    // with printing the leading coefficients
+    // Input:
+    // S: a segment
+    // Vlist: a list of variables
 
-    print("The leading monomial in each polynomial in a Groebner basis of each segments:")$
-    print('')$
+    // L1 = [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]$
+    // Vlist = [c_1,s_1,c_4,s_4,c_7,s_7]$
 
-    while (L1 != []) {
-        I = car(L1);
-        L1 = cdr(L1);
-        F2 = F[I][1];
-        L2 = length(F2);
-        printf("I = %a:\n", I);
-        Vlist2 = [c_1,s_1,c_4,s_4,c_7,s_7]$
-        Vlist3 = [];
-        for (J = 0; J < L2; J++) {
-            LM = p_terms(F2[J], Vlist, 2)[0];
-            LV = var(LM)$
-            LD = deg(F2[J], LM)$
-            LC = coef(F2[J], LD, LM)$
-            Vlist3 = cons(LV, Vlist3);
-            printf("g_%a: %a, %a\n", J, LM, LC);
-        }
-        print("Variables which do not appear in the leading monomial in the Groebner basis:")$
-        print(sets_setMinus(Vlist2, Vlist3))$
-        print('');
+    // print("The leading monomial in each polynomial in a Groebner basis of each segments:")$
+    // print('')$
+
+    F2 = S[1];
+    L2 = length(F2);
+    // printf("I = %a:\n", I);
+    Vlist3 = [];
+    for (J = 0; J < L2; J++) {
+        LM = p_terms(F2[J], Vlist, 2)[0];
+        LV = var(LM)$
+        LD = deg(F2[J], LM)$
+        LC = coef(F2[J], LD, LM)$
+        Vlist3 = cons(LV, Vlist3);
+        printf("g_%a: %a, %a\n", J, LM, LC);
+    }
+    print("Variables which do not appear in the leading monomial in the Groebner basis:")$
+    print(sets_setMinus(Vlist, Vlist3))$
+    print('');
+}
+
+def zerodimtest2_segs(L, Index, Vlist) {
+
+    // Zero-dimensional test for segments in L
+    // with printing the leading coefficients
+    // Input:
+    // L: a Comprehensive Gröbner System
+    // Index: a list of segment indices
+    // Vlist: a list of variables
+
+    while (Index != []) {
+        I = car(Index);
+        Index = cdr(Index);
+
+        printf("Segment %a:\n", I);
+        zerodimtest2(L[I], Vlist);
     }
 }
+
 
 end$
