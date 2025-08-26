@@ -5,7 +5,7 @@
 // Reading a CGS G2-new:
 // G2-new.dat
 
-// For the Groeber basis in every partition, re-arrange necessary elements 
+// For the Gröbner basis in every partition, re-arrange necessary elements
 
 load("oh_base.rr")$
 
@@ -17,17 +17,45 @@ def sort_list(L, Key) {
     // Outputs: L2 - the sorted list
 
     L2 = [];
-    for (I = 0; I < length(L); I++) {
+    for (I = 0; I < length(Key); I++) {
         L2 = cons(L[Key[I]], L2)$
     }
     return reverse(L2);
 }
 
-GFile = "G2-new.dat"$
+def generate_G2_2 (G, SortOrder) {
 
+    GA =  map(oh_base.nth, G, 0)$ // segments
+    GB =  map(oh_base.nth, G, 1)$ // Gröbner bases
+    GBV = ltov(GB)$
+
+    while (SortOrder != []) {
+        Head = car(SortOrder)$
+        I = car(Head)$
+        Key = cadr(Head)$
+        SortOrder = cdr(SortOrder)$
+
+        GBV[I] = sort_list(GBV[I], Key)$
+    }
+
+    L = [];
+    for (I = 0; I < length(G); I++) {
+        L = cons([GA[I], vtol(GBV[I])], L)$
+    }
+
+    return reverse(L)$
+
+}
+
+
+GFile = "G2-new.dat"$
 G = bload(GFile)$
-GG = map(oh_base.nth, G, 1)$ // Extract the Groebner basis
-GGV = ltov(GG)$
+
+SortOrder = [
+[1, [1,3,5,6,7,8]]
+]$
+
+G2_2 = generate_G2_2(G, SortOrder)$
 
 end$
 
