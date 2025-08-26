@@ -64,18 +64,14 @@ The difference between ```arrange-G.rr``` is that, with the use of ```arrange-G-
 1. Verify zero-dimensional ideals as:
     ```
     % asir
-    load("zero-dimensional-test.rr")$
-    G2new = bload("G2-new.dat")$
-    zerodimtest (G2new)$
+    load("zero-dimensional-test-script-G2-new.rr")$
     ```
     Then, variables which do not appear in the leading monomial in the Groebner basis appears.
 
 1. By using a modified program, you can check the leading coefficient in each element in the Groebner basis.
     ```
     % asir
-    load("zero-dimensional-test-2.rr")$
-    G2new = bload("G2-new.dat")$
-    zerodimtest2 (G2new)$
+    load("zero-dimensional-test-script-2-G2-new.rr")$
     ```
 
 For the subsequent calculation steps, refer to [[../../hermite/algn/README.md]].
@@ -96,6 +92,10 @@ For the subsequent calculation steps, refer to [[../../hermite/algn/README.md]].
         1. g = c_1^2 + s_1^2 = 1 を含む場合（c_1 を頭単項式に含む多項式が g の場合）: g を G_k から取り除く。
         1. それ以外の場合（c_1 を頭単項式に含む多項式が上の g でない場合）: g を G_k に加える。
 * generate-G2-new-a.rr: arrange-G.rr から「sqrt(2) の定義多項式　a^2-2 を取り除く」を除いたもの。
+* zero-dimensional-test.rr: CGS（およびその断片）のGroebner基底の各多項式のleading monomialを出力。
+* zero-dimensional-test-2.rr: CGS（およびその断片）のGroebner基底の各多項式のleading monomialとleading coefficientを出力。
+* zero-dimensional-test-script-G2-new.rr: G2-new.dat のCGSに対してzero-dimensional-test.rrの計算を実行。
+* zero-dimensional-test-2-script-G2-new-a.rr: G2-new-a.dat のCGSに対してzero-dimensional-test-2.rrの計算を実行。
 
 ## データファイル
 
