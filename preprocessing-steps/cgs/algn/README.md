@@ -74,6 +74,19 @@ The difference between ```arrange-G.rr``` is that, with the use of ```arrange-G-
     load("zero-dimensional-test-script-2-G2-new.rr")$
     ```
 
+### Re-arranging the CGS
+
+According to the above observation, re-arrange CGS as:
+
+```
+% asir
+load("generate-G2-2.rr$)$
+```
+With this operation, the program reads ```G2-new.dat``` and ```G2-new-a.dat``` and outputs to the variables ```G2_2``` and ```G2_2a```, respectively. 
+In this program, we reduce the number of CGS bases and adjust them so that each basis consists of six polynomials whose leading variables are arranged in the order [s_7, c_7, s_4, c_4, s_1, c_1].
+If the variable ```OUTPUT = 1```, the contents are saved in ```G2-2.dat``` and ```G2-2-a.dat```, respectively.
+Note: while in ```G2-2.dat```, the variable ```a``` is substituted with ```2^(1/2)```, in ```G2-2-a.dat```, the variable ```a``` remains.
+
 For the subsequent calculation steps, refer to [[../../hermite/algn/README.md]].
 
 
@@ -91,16 +104,19 @@ For the subsequent calculation steps, refer to [[../../hermite/algn/README.md]].
     1. 第 k 番目の断片のGroebner 基底 G_k が s_1 を頭単項式に持つ多項式を持たない場合は以下の処理を行う。
         1. g = c_1^2 + s_1^2 = 1 を含む場合（c_1 を頭単項式に含む多項式が g の場合）: g を G_k から取り除く。
         1. それ以外の場合（c_1 を頭単項式に含む多項式が上の g でない場合）: g を G_k に加える。
-* generate-G2-new-a.rr: arrange-G.rr から「sqrt(2) の定義多項式　a^2-2 を取り除く」を除いたもの。
+* generate-G2-new-a.rr: generate-G2-new.rr から「sqrt(2) の定義多項式　a^2-2 を取り除く」を除いたもの。
 * zero-dimensional-test.rr: CGS（およびその断片）のGroebner基底の各多項式のleading monomialを出力。
 * zero-dimensional-test-2.rr: CGS（およびその断片）のGroebner基底の各多項式のleading monomialとleading coefficientを出力。
 * zero-dimensional-test-script-G2-new.rr: G2-new.dat のCGSに対してzero-dimensional-test.rrの計算を実行。
 * zero-dimensional-test-2-script-G2-new-a.rr: G2-new-a.dat のCGSに対してzero-dimensional-test-2.rrの計算を実行。
+* generate-G2-2.rr: G2-new.dat, G2-new-a.dat からそれぞれ G2-2.dat, G2-2-a.dat を生成する。
 
 ## データファイル
 
 * G0.dat: 単項式順序 DegRevLex で計算したCGS. (断片,基底)のペアは計算順に収められている。成分のペアは最後に計算されたものが最初に入っているので注意。
 * G2.dat: 辞書式順序 Lex で計算したCGS. (断片,基底)のペアは計算順に収められている。成分のペアは最後に計算されたものが最初に入っているので注意。
 * G2-reverse.dat: G2.dat の(断片,基底)のペアの並び方を逆にしたもの。成分のペアのは計算した順番に収められている。
-* G2-new.dat: G2-reverse.dat から arrange-G.rr による処理を行ったCGSのデータ。次の Hermite の2次形式の計算に用いる。
+* G2-new.dat: G2-reverse.dat から generate-G2-new.rr による処理を行ったCGSのデータ。
 * G2-new-a.dat: G2-new.dat と同じ内容だが a (= sqrt(2)) をそのまま残している。
+* G2-2.dat: G2-new.dat から generate-G2-2.rr による処理を行ったCGSのデータ。次の Hermite の2次形式の計算に用いる。
+* G2-2-a.dat: G2-2.dat と同じ内容だが a (= sqrt(2)) をそのまま残している。
