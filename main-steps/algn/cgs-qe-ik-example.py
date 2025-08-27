@@ -305,18 +305,18 @@ for k in r:
         libox.ox_execute_string(sv5, OX_COMMAND)
         OX_OUTPUT = libox.ox_popString(sv5)
         f = OX_OUTPUT.decode("utf-8")
-        f = f.replace("^","**")
+        # f = f.replace("^","**")
         f = f.replace("(2)^(1/2)", "sqrt(2)")
         # chi2.append(sympify(f))
         chi2.append(f)
 
     TimeSubstitution = time.time()
 
-    ipdb.set_trace()
+    # ipdb.set_trace()
     
     # Count the number of real roots with the Descarts' rule of signs
     
-    boo = descartes.descaltes4(chi2)
+    boo = descartes.descartes4(chi2)
     list_CountRealRoots.append(boo)
     TimeDescartes = time.time()
     
