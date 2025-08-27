@@ -312,11 +312,11 @@ for k in r:
 
     TimeSubstitution = time.time()
 
-    ipdb.set_trace()
+    # ipdb.set_trace()
     
     # Count the number of real roots with the Descarts' rule of signs
     
-    boo = descartes.descaltes4(chi2)
+    boo = descartes.descartes4(chi2)
     list_CountRealRoots.append(boo)
     TimeDescartes = time.time()
     
