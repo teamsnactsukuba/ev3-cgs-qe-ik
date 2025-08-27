@@ -1,0 +1,105 @@
+// generate-ab.rr
+// Generating a CGS and their partitions 
+// Akira Terui, Team SNAC Tsukuba, August 2025
+
+// G is the results of the following computations on Risa/Asir
+// G: ../../preprocessing-steps/cgs/rational/cgs-F-input-rational.rr
+
+// A: the list contains the partition of the CGS used for solving the inverse kinematic problem, which has an element in R^3
+// A = [G[0][I] | I in [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]]
+// Note that the corresponding partition is defined as A in partition.py; 
+
+// #  B contains Comprehensive Groebner System, where 
+// #  B = [G[I][1] | I in [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]]
+// Note that B is defined as B in cgs.py;
+
+load("oh_base.rr")$
+
+L = [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]$
+
+AL = []$
+BL = []$
+
+ALrr = "A.rr"$
+ALdat = "A.dat"$
+ALpy = "A.py"$
+BLrr = "B.rr"$
+BLdat = "B.dat"$
+BLpy = "B.py"$
+
+G2new = bload("../../preprocessing-steps/cgs/algn/G2-2.dat")$
+
+while (L != []) {
+    I = car(L)$
+    L = cdr(L)$
+    AL = cons(G2new[I][0], AL)$
+    BL = cons(G2new[I][1], BL)$
+}
+
+AL = reverse(AL)$
+BL = reverse(BL)$
+
+if (OUTPUT) {
+    // Output AL in binary mode
+
+    bsave(AL, ALdat)$
+
+    // Output AL in text mode
+
+    if (access(ALrr)) {
+        remove_file(ALrr)$
+    }
+
+    output(ALrr)$
+    print("A = ",0)$
+    print(AL);
+    print("$")$
+    print("end$")$
+    output()$
+
+    // Output AL in Python mode
+
+    if (access(ALpy)) {
+        remove_file(ALpy)$
+    }
+
+    ctrl("fortran_output", 1)$
+    output(ALpy)$
+    print("A = ",0)$
+    print(AL);
+    output()$
+    ctrl("fortran_output", 0)$
+
+    // Output BL in binary mode
+
+    bsave(BL, BLdat)$
+
+    // Output BL in text mode
+
+    if (access(BLrr)) {
+        remove_file(BLrr)$
+    }
+
+    output(BLrr)$
+    print("B = ",0)$
+    print(BL);
+    print("$")$
+    print("end$")$
+    output()$
+
+    // Output BL in Python mode
+
+    if (access(BLpy)) {
+        remove_file(BLpy)$
+    }
+
+    ctrl("fortran_output", 1)$
+    output(BLpy)$
+    print("B = ",0)$
+    print(BL);
+    output()$
+    ctrl("fortran_output", 0)$
+
+} else {}
+
+end$

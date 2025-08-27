@@ -1,0 +1,58 @@
+// generate-e.rr
+// Generating a list of the degree of elements in the CGS w.r.t. certain variables
+// Akira Terui, Team SNAC Tsukuba, 2024, 2025
+
+// E containts the degrees
+// [deg(g0,s_7), deg(g1,c_7), deg(g2,s_4), deg(g3,c_4), deg(g4,s_1), deg(g5,c_1)]
+// for each CGS in B.rr;
+
+load("B.rr")$
+
+L = length(B)$
+Vlist = [c_1,s_1,c_4,s_4,c_7,s_7]$
+E = []$
+
+ELrr = "E.rr"$
+ELdat = "E.dat"$
+ELpy = "E.py"$
+
+for (I = 0; I < L; I++) {
+    F2 = B[I];
+    L2 = length(B[I])$
+    Vlist2 = reverse(Vlist)$
+    Dlist = [];
+    Tlist = [];
+    for (J = 0; J < L2; J++) {
+        Dlist = cons(deg(F2[J], Vlist2[J]), Dlist);
+    }
+    E = cons(reverse(Dlist), E);
+}
+E = reverse(E)$
+
+if (OUTPUT) {
+    bsave(E, ELdat)$
+
+    if (access(ELrr)) {
+        remove_file(ELrr)$
+    }
+
+    output(ELrr)$
+    print("E = ", 0)$
+    print(E);
+    print("$")$
+    print("end$")$
+    output()$
+
+    if (access(ELpy)) {
+        remove_file(ELpy)$
+    }
+
+    output(ELpy)$
+    print("E = ", 0)$
+    print(E);
+    output()$
+
+} else {}
+
+
+end$
