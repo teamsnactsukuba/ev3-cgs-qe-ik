@@ -1,0 +1,21 @@
+F = bload("../../preprocessing-steps/cgs/algn/G2-2.dat")$
+L = [0,1,6,8,9,11,12,13,14,16,18,19,20,33,36,37,38,39]$
+Vlist = [c_1,s_1,c_4,s_4,c_7,s_7]$
+
+while (L != []) {
+    I = car(L);
+    L = cdr(L);
+    F2 = F[I][1];
+    L2 = length(F2);
+    printf("I = %a:\n", I);
+    // F2d = map(dp_ptod, F[I][1], Vlist)$
+    // print(F2)$
+    for (J = 0; J < L2; J++) {
+        // printf("ht(g_%a) = %a\n", J, dp_dtop(dp_hm(F2d[J]), Vlist));
+        printf("g_%a: %a\n", J, p_terms(F2[J], Vlist, 2));
+    }
+    print('');
+}
+
+
+end$
