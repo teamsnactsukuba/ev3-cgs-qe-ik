@@ -4,7 +4,7 @@ import sympy as sp
 
 # Used for real root counting with the Descartes' rule of signs
 
-def descaltes4(H):
+def descartes4(H):
 
     # Count the number of sign changes of the nonzero elements in sequence
     # Input: H = [h1, ... , hn]
