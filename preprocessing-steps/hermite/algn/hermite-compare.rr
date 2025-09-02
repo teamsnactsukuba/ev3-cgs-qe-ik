@@ -1,0 +1,12 @@
+load("hermite-compute-i.rr")$
+
+F = bload("../../cgs/F.dat")$
+G2new = bload("../../cgs/algn/G2-new-a.dat")$
+
+WF = quadratic_form(1, F[0][1], [c_1,s_1,c_4,s_4,c_7,s_7], 2)$
+WG2 = quadratic_form(1, G2new[0][1], [c_1,s_1,c_4,s_4,c_7,s_7], 2)$
+
+WFchar = char_poly(WF, t)$
+WG2char = char_poly(WG2, t)$
+
+end$
