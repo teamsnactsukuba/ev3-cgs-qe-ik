@@ -310,9 +310,9 @@ for k in r:
 
     TimeSubstitution = time.time()
     
-    # Count the number of real roots with the Descarts' rule of signs
-    
-    boo = descartes.descaltes4(chi2)
+    # Count the number of real roots with the Descartes' rule of signs
+
+    boo = descartes.descartes4(chi2)
     list_CountRealRoots.append(boo)
     TimeDescartes = time.time()
     
