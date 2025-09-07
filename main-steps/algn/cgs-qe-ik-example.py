@@ -87,24 +87,24 @@ print("OpenXM_Home =", OpenXM_HOME)
 pf = platform.system()
 print("Platform =", pf)
 if pf == 'Linux':
-    LIBGMP = OpenXM_HOME + "lib/libgmp.so"   
-    LIBGC = OpenXM_HOME + "lib/libgc.so"     
-    LIBMPFR = OpenXM_HOME + "lib/libmpfr.so" 
-    LIBOX = OpenXM_HOME + "lib/libox.so"     
+    LIBGMP = OpenXM_HOME + "/lib/libgmp.so"   
+    LIBGC = OpenXM_HOME + "/lib/libgc.so"     
+    LIBMPFR = OpenXM_HOME + "/lib/libmpfr.so" 
+    LIBOX = OpenXM_HOME + "/lib/libox.so"     
 elif pf == 'Darwin':
-    LIBGMP = OpenXM_HOME + "lib/libgmp.dylib"
-    LIBGC = OpenXM_HOME + "lib/libgc.dylib"
-    LIBMPFR = OpenXM_HOME + "lib/libmpfr.dylib"
-    LIBOX = OpenXM_HOME + "lib/libox.dylib"
+    LIBGMP = OpenXM_HOME + "/lib/libgmp.dylib"
+    LIBGC = OpenXM_HOME + "/lib/libgc.dylib"
+    LIBMPFR = OpenXM_HOME + "/lib/libmpfr.dylib"
+    LIBOX = OpenXM_HOME + "/lib/libox.dylib"
     
 OX_SERVER_HOST = create_string_buffer("127.0.0.1".encode('utf-8'))
 OX_PROG1 = create_string_buffer("ox".encode('utf-8'))
 OX_PROG2 = create_string_buffer("ox_asir".encode('utf-8'))    
 
-libox=CDLL("libgmp.so", mode=RTLD_GLOBAL)
-libox=CDLL("libgc.so", mode=RTLD_GLOBAL)
-libox=CDLL("libmpfr.so", mode=RTLD_GLOBAL)
-libox=CDLL("libox.so", mode=RTLD_GLOBAL)
+libox=CDLL(LIBGMP, mode=RTLD_GLOBAL)
+libox=CDLL(LIBGC, mode=RTLD_GLOBAL)
+libox=CDLL(LIBMPFR, mode=RTLD_GLOBAL)
+libox=CDLL(LIBOX, mode=RTLD_GLOBAL)
 
 # from OpenXM_HOME/src/ox_toolkit/ox_toolkit.h
 # typedef struct {
